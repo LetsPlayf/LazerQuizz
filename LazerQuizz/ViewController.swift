@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Cell \(indexPath.row) selected")
+//        print("Cell \(indexPath.row) selected")
         if(indexPath.row <= 5){
             performSegueWithIdentifier("toGame", sender: nil)
         }
