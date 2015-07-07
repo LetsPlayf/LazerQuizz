@@ -95,9 +95,10 @@ class AccessJSON {
         
         var dic : Dictionary<String,Int>
         
-        for (key : String, quest: JSON ) in json["Perguntas"][question][level][option1]{
+        for (var i = 0; i < json["Perguntas"][question][level][option1].count; i++){
             
-            dic = [key : 0]
+            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option1][i]) : 1]
+            
             
             vet.append(dic)
          
@@ -106,7 +107,7 @@ class AccessJSON {
         
         for (var i = 0; i < json["Perguntas"][question][level][option2].count; i++){
             
-            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option2][i]) : 1]
+            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option2][i]) : 2]
             
             
             vet.append(dic)

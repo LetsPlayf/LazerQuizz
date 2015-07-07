@@ -12,7 +12,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+   // Do any additional setup after loading the view, typically from a nib.
+   
+    AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: "Fiat", option2: "Ford")
     }
     
     override func didReceiveMemoryWarning() {
