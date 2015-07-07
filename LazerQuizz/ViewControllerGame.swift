@@ -1,20 +1,14 @@
-//
-//  ViewController.swift
-//  IOS8SwiftDraggingViewsTutorial
-//
-//  Created by Arthur Knopper on 27/07/14.
-//  Copyright (c) 2014 Arthur Knopper. All rights reserved.
-//
-
 import UIKit
 
 
 class ViewControllerGame: UIViewController {
-                            
+    
+    var labelTopPositions : [Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        
         
         let halfSizeOfView = 25.0
         let maxViews = 10
@@ -26,17 +20,19 @@ class ViewControllerGame: UIViewController {
         
         // Add the Views
         for i in 0..<maxViews {
-//            var pointX = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.width))))
-//            var pointY = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.height))))
+            //            var pointX = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.width))))
+            //            var pointY = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.height))))
             
             var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth, labelHeight))
             self.view.addSubview(newView)
+            
+            self.labelTopPositions.append(Int(pointY))
             
             pointY += 50
             
         }
         
-
+        
         
         
     }
@@ -47,14 +43,14 @@ class ViewControllerGame: UIViewController {
         
         generateLabels()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func generateLabels(){
-       
+        
         var label = UILabel(frame: CGRectMake(0, 0, self.view.frame.width + self.view.bounds.width, 15))
         label.backgroundColor = UIColor.redColor()
         label.center = CGPointMake(160, 0)
@@ -65,18 +61,18 @@ class ViewControllerGame: UIViewController {
         self.view.addSubview(label)
         
         /*UIView.animateWithDuration(15, animations: { () -> Void in
-            label.center.y = self.view.bounds.height
-            
+        label.center.y = self.view.bounds.height
+        
         })*/
         
         UIView.animateWithDuration(15, delay: 0, options: .CurveLinear, animations: { () -> Void in
-             label.center.y = self.view.bounds.height
-        }) { (result) -> Void in
-            
+            label.center.y = self.view.bounds.height
+            }) { (result) -> Void in
+                
         }
         
     }
-
-
+    
+    
 }
 
