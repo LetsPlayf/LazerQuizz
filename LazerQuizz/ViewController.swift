@@ -51,7 +51,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         
-        return CGSize(width: 125, height: 125)
+        return CGSize(width: 130, height: 100)
     }
     
     

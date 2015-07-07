@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="157" height="173"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Asl-tv-7fJ">
@@ -59,7 +59,7 @@
                                             <constraint firstItem="Asl-tv-7fJ" firstAttribute="leading" secondItem="Kqm-SM-Idd" secondAttribute="leadingMargin" id="dfg-Vv-NPg"/>
                                             <constraint firstItem="8fx-7r-pvQ" firstAttribute="top" secondItem="Asl-tv-7fJ" secondAttribute="bottom" constant="4" id="v0e-Kq-dc2"/>
                                         </constraints>
-                                        <size key="customSize" width="157" height="173"/>
+                                        <size key="customSize" width="115" height="132"/>
                                         <connections>
                                             <outlet property="imgCell" destination="Asl-tv-7fJ" id="iKp-Ft-KCl"/>
                                             <outlet property="lblCell" destination="8fx-7r-pvQ" id="m76-rb-Vzv"/>

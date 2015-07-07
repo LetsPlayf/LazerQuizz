@@ -14,6 +14,7 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
         
         let halfSizeOfView = 25.0
         let maxViews = 10
@@ -34,11 +35,46 @@ class ViewControllerGame: UIViewController {
             pointY += 50
             
         }
+        
+
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        generateLabels()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func generateLabels(){
+       
+        var label = UILabel(frame: CGRectMake(0, 0, self.view.frame.width + self.view.bounds.width, 15))
+        label.backgroundColor = UIColor.redColor()
+        label.center = CGPointMake(160, 0)
+        label.textAlignment = NSTextAlignment.Center
+        
+        
+        
+        self.view.addSubview(label)
+        
+        /*UIView.animateWithDuration(15, animations: { () -> Void in
+            label.center.y = self.view.bounds.height
+            
+        })*/
+        
+        UIView.animateWithDuration(15, delay: 0, options: .CurveLinear, animations: { () -> Void in
+             label.center.y = self.view.bounds.height
+        }) { (result) -> Void in
+            
+        }
+        
     }
 
 
