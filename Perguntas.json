@@ -1,0 +1,110 @@
+{
+    "Perguntas": {
+        "Qual a marca do carro?": {
+            "Facil": {
+                "Fiat": [
+                         "Uno",
+                         "Pálio",
+                         "Punto",
+                         "Bravo",
+                         "Siena",
+                         "Freemont",
+                         "Doblò",
+                         "Strada",
+                         "Marea",
+                         "Linea"
+                         ],
+                "Chevrolet": [
+                              "Onix",
+                              "Camaro",
+                              "Cruze",
+                              "Prisma",
+                              "Agille",
+                              "Captiva",
+                              "Celta",
+                              "Montana",
+                              "S10",
+                              "Spin",
+                              "Corsa",
+                              "Astra"
+                              ],
+                "Ford": [
+                         "KA",
+                         "Fiesta",
+                         "Focus",
+                         "Ecosport",
+                         "Fusion",
+                         "Edge",
+                         "Ranger",
+                         "Del Rey",
+                         "Mustang",
+                         "Corcel"
+                         ]
+            },
+            "Dificil": {
+                "Fiat": [
+                         "Uno",
+                         "Pálio"
+                         ],
+                "Chevrolet": [
+                              "Onix",
+                              "Camaro"
+                              ]
+            },
+            "Medio": {
+                "Fiat": [
+                         "Uno",
+                         "Pálio"
+                         ],
+                "Chevrolet": [
+                              "Onix",
+                              "Camaro"
+                              ]
+            }
+        },
+        "Vertebrado ou Invertebrado?": {
+            "Facil": {
+                "Vertebrado": [
+                               "Cachorro",
+                               "Leão",
+                               "Cobra",
+                               "Rato",
+                               "Galinha",
+                               "Peixe",
+                               "Vaca",
+                               "Porco",
+                               "Girafa",
+                               "Rinoceronte"
+                               ],
+                "Invertebrado": [
+                                 "Formiga",
+                                 "Barata",
+                                 "Aranha",
+                                 "Louva-Deus",
+                                 "Borboleta",
+                                 "Lula",
+                                 "Polvo",
+                                 "Estrela do mar",
+                                 "Escorpião",
+                                 "Carangueijo"
+                                 ]
+            },
+            "Medio": {
+                "Vertebrado": [
+                               "Cachorro"
+                               ],
+                "Invertebrado": [
+                                 "Aranha"
+                                 ]
+            },
+            "Dificil":{
+                "Vertebrado": [
+                               "Lampreia"
+                               ],
+                "Invertebrado": [
+                                 "Borboleta"
+                                 ]
+            }
+        }
+    }
+}
