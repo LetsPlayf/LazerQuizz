@@ -93,10 +93,8 @@
 				ADCA90E01B4B00380062E589 /* View */,
 				ADCA90DF1B4B002C0062E589 /* Controller */,
 				ADCA90DE1B4B00160062E589 /* Model */,
-				ADCA90C01B4AED770062E589 /* Main.storyboard */,
 				A7412BA71B4B0D0700E7F946 /* lock.jpeg */,
 				ADCA90C31B4AED770062E589 /* Images.xcassets */,
-				ADCA90C51B4AED770062E589 /* LaunchScreen.xib */,
 				ADCA90BB1B4AED770062E589 /* LazerQuizz.xcdatamodeld */,
 				ADCA90B71B4AED770062E589 /* Supporting Files */,
 			);
@@ -140,6 +138,7 @@
 		ADCA90DF1B4B002C0062E589 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
 				A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */,
 				ADCA90BE1B4AED770062E589 /* ViewController.swift */,
 			);
@@ -149,7 +148,8 @@
 		ADCA90E01B4B00380062E589 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
+				ADCA90C51B4AED770062E589 /* LaunchScreen.xib */,
+				ADCA90C01B4AED770062E589 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
