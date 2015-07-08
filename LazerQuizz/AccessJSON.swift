@@ -78,9 +78,9 @@ class AccessJSON {
         
     }
     
-    static func accessTheAnswers(question : String, level : String, option1 : String, option2 : String) -> [Dictionary<String,Int>]{
+    static func accessTheAnswers(question : String, level : String, option1 : String, option2 : String) -> Dictionary<String,Int>{
     
-         var dictionaryOfAnswers = [Dictionary<String,Int>]()
+         var dictionaryOfAnswers = Dictionary<String,Int>()
         
         let filePath = NSBundle.mainBundle().pathForResource("Perguntas", ofType: "json")
         
@@ -90,8 +90,7 @@ class AccessJSON {
         
         let json = JSON(data:data!)
      
-     var vet: [Dictionary<String, Int>] = []
-  
+        var vet: [Dictionary<String, Int>] = []
         
         var dic : Dictionary<String,Int>
         
@@ -101,9 +100,9 @@ class AccessJSON {
             
             
             vet.append(dic)
-         
+         println(dic)
             
-        }
+           }
         
         for (var i = 0; i < json["Perguntas"][question][level][option2].count; i++){
             
@@ -116,16 +115,17 @@ class AccessJSON {
         
       
         
-        var indexOfTheQuestion = arc4random_uniform(UInt32(vet.count))
+        var indexOfTheQuestion : Int = Int(arc4random_uniform(UInt32(vet.count)))
         
         var i = 0
         
         while (i < 10){
-
-            dictionaryOfAnswers.append(vet[Int(indexOfTheQuestion)])
+            let key = vet[indexOfTheQuestion].keys
+            let value = (vet[indexOfTheQuestion][key.array[0]])
+            dictionaryOfAnswers[key.array[0]] = value
             vet.removeAtIndex(Int(indexOfTheQuestion))
             
-            indexOfTheQuestion = arc4random_uniform(UInt32(vet.count))
+            indexOfTheQuestion = Int(arc4random_uniform(UInt32(vet.count)))
             
             i++
             
