@@ -97,7 +97,7 @@ class AccessJSON {
         
         for (var i = 0; i < json["Perguntas"][question][level][option1].count; i++){
             
-            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option1][i]) : 1]
+            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option1][i]) : 0]
             
             
             vet.append(dic)
@@ -107,16 +107,32 @@ class AccessJSON {
         
         for (var i = 0; i < json["Perguntas"][question][level][option2].count; i++){
             
-            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option2][i]) : 2]
+            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option2][i]) : 1]
             
             
             vet.append(dic)
             
         }
         
-        println(vet)
+      
         
+        var indexOfTheQuestion = arc4random_uniform(UInt32(vet.count))
         
+        var i = 0
+        
+        while (i < 10){
+
+            dictionaryOfAnswers.append(vet[Int(indexOfTheQuestion)])
+            vet.removeAtIndex(Int(indexOfTheQuestion))
+            
+            indexOfTheQuestion = arc4random_uniform(UInt32(vet.count))
+            
+            i++
+            
+            
+            
+        }
+        println(dictionaryOfAnswers)
         
         return dictionaryOfAnswers
     }
