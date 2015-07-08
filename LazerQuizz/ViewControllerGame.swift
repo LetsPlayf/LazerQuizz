@@ -11,6 +11,7 @@ class ViewControllerGame: UIViewController {
     var timer : NSTimer?
     var leftBar : UIView?
     var rightBar : UIView?
+    var dictionaryOfAnswers = Dictionary<String,Int>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class ViewControllerGame: UIViewController {
         
         var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
         
-        var arrayOfAnswer = AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
+        self.dictionaryOfAnswers = AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         
         // Add the Views
         for i in 0..<self.maxViews {
@@ -39,7 +40,7 @@ class ViewControllerGame: UIViewController {
             //            var pointY = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.height))))
             
             var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth, labelHeight))
-            newView.text = arrayOfAnswer[i].keys.array[0]
+            newView.text = dictionaryOfAnswers.keys.array[i]
             newView.textAlignment = NSTextAlignment.Center
             self.view.addSubview(newView)
             
@@ -66,7 +67,7 @@ class ViewControllerGame: UIViewController {
             self.labels[self.nextLabel].userInteractionEnabled = false
             self.labels[nextLabel].removeGestureRecognizer(labels[nextLabel].panRecognizer!)
             nextLabel++
-            print(String(format: "Colidiu em %d com label %d da posicao %d\n", Int(laser!.center.y), nextLabel, labelTopPositions[nextLabel - 1]))
+            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %@\n", Int(laser!.center.y), nextLabel, labelTopPositions[nextLabel - 1], labels[nextLabel - 1].text!))
             return true
         }
         return false

@@ -15,8 +15,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
    // Do any additional setup after loading the view, typically from a nib.
    
-<<<<<<< HEAD
-<<<<<<< HEAD
      var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
         
     AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
@@ -34,14 +32,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         
-
-        
-        
-        
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
     }
     
     override func didReceiveMemoryWarning() {
