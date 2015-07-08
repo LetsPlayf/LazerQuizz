@@ -42,8 +42,7 @@ class ViewControllerGame: UIViewController {
             
         }
         
-        
-        
+        generateLaser()
         
     }
     
@@ -67,9 +66,12 @@ class ViewControllerGame: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        generateLaser()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("checkCollision"), userInfo: nil, repeats: true)
-
+        // wait for the user to read the question
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.animateLaser()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,26 +81,17 @@ class ViewControllerGame: UIViewController {
     
     func generateLaser () {
         
-        var laser = UILabel(frame: CGRectMake(0, 0, self.view.frame.width + self.view.bounds.width, 11))
+        var laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
         laser.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
-        laser.center = CGPointMake(160, 0)
-        laser.textAlignment = NSTextAlignment.Center
+//        laser.center = CGPointMake(160, 20)
         
         self.view.addSubview(laser)
         self.laser = laser
         self.laser?.superview?.bringSubviewToFront(self.laser!)
 
-        // wait user read the question
-        UIView.animateWithDuration(1.5, delay: 0, options: .CurveLinear, animations: { () -> Void in
-            self.animateLaser()
-            }) { (result) -> Void in
-        }
-
     }
     
     func animateLaser() {
-        
-        
         UIView.animateWithDuration(0.000004, delay: 0, options: .CurveLinear, animations: { () -> Void in
             self.laser!.center.y += 1
             }) { (result) -> Void in
