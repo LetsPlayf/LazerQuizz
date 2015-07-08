@@ -5,21 +5,29 @@ class ViewControllerGame: UIViewController {
     
     var labelTopPositions : [Int] = []
     var labels : [DraggableLabel] = []
-    var nextLabel : Int = 0 //index for "labelTopPositions" array
+    var nextLabel : Int = 0 // index for "labelTopPositions" array
     var laser : UIView?
     let maxViews = 10
     var timer : NSTimer?
+    var leftBar : UIView?
+    var rightBar : UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.leftBar = UIView(frame: CGRectMake(self.view.bounds.width / 3, -1, 5, self.view.bounds.height + self.view.frame.height))
+        self.leftBar?.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        self.view.addSubview(self.leftBar!)
+        
+        self.rightBar = UIView(frame: CGRectMake(2 * self.view.bounds.width / 3, -1, 5, self.view.bounds.height + self.view.frame.height))
+        self.rightBar?.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        self.view.addSubview(self.rightBar!)
 
-        let halfSizeOfView = 25.0
         let labelWidth : CGFloat = 120
         let labelHeight : CGFloat = 35
-        let pointX : CGFloat = view.frame.width / 2 - (labelWidth / 2)
+        let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth / 2)
         var pointY : CGFloat = 100
-        let insetSize = CGRectInset(self.view.bounds, CGFloat(Int(2 * halfSizeOfView)), CGFloat(Int(2 * halfSizeOfView))).size
         
         var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
         
@@ -46,11 +54,13 @@ class ViewControllerGame: UIViewController {
         
     }
     
+    
     func checkCollision () -> Bool {
         if (nextLabel >= self.maxViews) {
             return false
         }
         if (Int(laser!.center.y) > self.labelTopPositions[nextLabel]) {
+            self.labels[nextLabel].moveRight()
             UIView.animateWithDuration(3, animations: { () -> Void in
                 self.labels[self.nextLabel].backgroundColor = UIColor(red: 0.7, green: 0.4, blue: 0.2, alpha: 1)
             })

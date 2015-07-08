@@ -4,6 +4,14 @@ import UIKit
 class DraggableLabel: UILabel {
     var lastLocation:CGPoint = CGPointMake(0, 0)
     var panRecognizer : UIPanGestureRecognizer?
+    var currentPosition : Position = .Middle
+    let snapTime : NSTimeInterval = 0.25
+    
+    enum Position {
+        case Left
+        case Middle
+        case Right
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +29,7 @@ class DraggableLabel: UILabel {
         let redValue = CGFloat(Int(arc4random() % 55) + 140) / 255.0
         
         self.backgroundColor = UIColor(red:redValue, green: greenValue, blue: blueValue, alpha: 1.0)
-        self.text = "TestTestTest"
+        self.textAlignment = NSTextAlignment.Center
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -39,6 +47,26 @@ class DraggableLabel: UILabel {
         
         // Remember original location
         lastLocation = self.center
+    }
+    
+    func moveLeft() {
+        UIView.animateWithDuration(self.snapTime, delay: 0.0, options: nil, animations: { () -> Void in
+            self.frame.origin.x = 0
+            self.superview?.layoutIfNeeded()
+            self.currentPosition = .Left
+        }) { (result) -> Void in
+
+        }
+    }
+    
+    func moveRight() {
+        UIView.animateWithDuration(self.snapTime, delay: 0.0, options: nil, animations: { () -> Void in
+            self.frame.origin.x = self.superview!.bounds.width - self.bounds.width
+            self.superview?.layoutIfNeeded()
+            self.currentPosition = .Right
+            }) { (result) -> Void in
+                
+        }
     }
     
     /*
