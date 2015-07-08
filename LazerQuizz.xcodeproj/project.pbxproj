@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AD680C91B4D8BA800DD0C7E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */; };
+		9AD680CE1B4D97C500DD0C7E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680CD1B4D97C500DD0C7E /* Level.swift */; };
+		9AD680D11B4D983B00DD0C7E /* LevelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680D01B4D983B00DD0C7E /* LevelServices.swift */; };
+		9AD680D51B4D994300DD0C7E /* LevelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680D41B4D994300DD0C7E /* LevelDAO.swift */; };
 		9AF720931B4C7730002B3170 /* AccessJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF720921B4C7730002B3170 /* AccessJSON.swift */; };
 		9AF720951B4C773A002B3170 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF720941B4C773A002B3170 /* SwiftyJSON.swift */; };
 		9AF720971B4C797E002B3170 /* Perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF720961B4C797E002B3170 /* Perguntas.json */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		9AD680CD1B4D97C500DD0C7E /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = ../Level.swift; sourceTree = "<group>"; };
+		9AD680D01B4D983B00DD0C7E /* LevelServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelServices.swift; sourceTree = "<group>"; };
+		9AD680D41B4D994300DD0C7E /* LevelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDAO.swift; sourceTree = "<group>"; };
 		9AF720921B4C7730002B3170 /* AccessJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessJSON.swift; sourceTree = "<group>"; };
 		9AF720941B4C773A002B3170 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9AF720961B4C797E002B3170 /* Perguntas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Perguntas.json; sourceTree = "<group>"; };
@@ -74,6 +82,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AD680CC1B4D977000DD0C7E /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				9AD680CD1B4D97C500DD0C7E /* Level.swift */,
+			);
+			name = VO;
+			sourceTree = "<group>";
+		};
+		9AD680CF1B4D980000DD0C7E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9AD680D01B4D983B00DD0C7E /* LevelServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9AD680D21B4D98D600DD0C7E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */,
+				9AD680D31B4D98F000DD0C7E /* DAO */,
+				9AD680CC1B4D977000DD0C7E /* VO */,
+				9AD680CF1B4D980000DD0C7E /* Services */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
+		9AD680D31B4D98F000DD0C7E /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				9AD680D41B4D994300DD0C7E /* LevelDAO.swift */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		ADCA90AB1B4AED770062E589 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +178,7 @@
 		ADCA90DE1B4B00160062E589 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AD680D21B4D98D600DD0C7E /* Persistence */,
 				9AF720961B4C797E002B3170 /* Perguntas.json */,
 				ADCA90DC1B4AF40E0062E589 /* UnlockedCVCell.swift */,
 				ADCA90E11B4B00A30062E589 /* LockedCVCell.swift */,
@@ -266,9 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCA90BF1B4AED770062E589 /* ViewController.swift in Sources */,
+				9AD680CE1B4D97C500DD0C7E /* Level.swift in Sources */,
 				A7412BAC1B4C27FC00E7F946 /* ViewControllerGame.swift in Sources */,
+				9AD680D51B4D994300DD0C7E /* LevelDAO.swift in Sources */,
+				9AD680C91B4D8BA800DD0C7E /* DatabaseManager.swift in Sources */,
 				ADCA90BD1B4AED770062E589 /* LazerQuizz.xcdatamodeld in Sources */,
 				A7412BAA1B4C27A500E7F946 /* DraggableLabel.swift in Sources */,
+				9AD680D11B4D983B00DD0C7E /* LevelServices.swift in Sources */,
 				ADCA90E21B4B00A30062E589 /* LockedCVCell.swift in Sources */,
 				ADCA90DD1B4AF40E0062E589 /* UnlockedCVCell.swift in Sources */,
 				9AF720951B4C773A002B3170 /* SwiftyJSON.swift in Sources */,
