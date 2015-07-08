@@ -25,7 +25,7 @@ class DraggableLabel: UILabel {
         //        let greenValue = CGFloat(Int(arc4random() % 255)) / 255.0
         //        let redValue = CGFloat(Int(arc4random() % 255)) / 255.0
         let blueValue = CGFloat(Int(arc4random() % 55) + 140) / 255.0
-        let greenValue = CGFloat(240) / 255.0
+        let greenValue = CGFloat(190) / 255.0
         let redValue = CGFloat(Int(arc4random() % 55) + 140) / 255.0
         
         self.backgroundColor = UIColor(red:redValue, green: greenValue, blue: blueValue, alpha: 1.0)

@@ -60,7 +60,6 @@ class ViewControllerGame: UIViewController {
             return false
         }
         if (Int(laser!.center.y) > self.labelTopPositions[nextLabel]) {
-            self.labels[nextLabel].moveRight()
             UIView.animateWithDuration(3, animations: { () -> Void in
                 self.labels[self.nextLabel].backgroundColor = UIColor(red: 0.7, green: 0.4, blue: 0.2, alpha: 1)
             })
