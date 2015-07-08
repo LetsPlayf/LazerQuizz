@@ -13,8 +13,7 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         let halfSizeOfView = 25.0
         let labelWidth : CGFloat = 120
         let labelHeight : CGFloat = 35
@@ -22,20 +21,29 @@ class ViewControllerGame: UIViewController {
         var pointY : CGFloat = 100
         let insetSize = CGRectInset(self.view.bounds, CGFloat(Int(2 * halfSizeOfView)), CGFloat(Int(2 * halfSizeOfView))).size
         
+        var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
+        
+        var arrayOfAnswer = AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
+        
         // Add the Views
         for i in 0..<self.maxViews {
             //            var pointX = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.width))))
             //            var pointY = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.height))))
             
             var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth, labelHeight))
+            newView.text = arrayOfAnswer[i].keys.array[0]
+            newView.textAlignment = NSTextAlignment.Center
             self.view.addSubview(newView)
             
             self.labels.append(newView)
             self.labelTopPositions.append(Int(pointY))
-            
+    
             pointY += 50
             
         }
+        
+        
+        
         
     }
     
@@ -76,18 +84,22 @@ class ViewControllerGame: UIViewController {
         laser.center = CGPointMake(160, 0)
         laser.textAlignment = NSTextAlignment.Center
         
-        
-        
         self.view.addSubview(laser)
         self.laser = laser
         self.laser?.superview?.bringSubviewToFront(self.laser!)
 
-        
-        animateLaser()
+        // wait user read the question
+        UIView.animateWithDuration(1.5, delay: 0, options: .CurveLinear, animations: { () -> Void in
+            self.animateLaser()
+            }) { (result) -> Void in
+        }
+
     }
     
     func animateLaser() {
-        UIView.animateWithDuration(0.004, delay: 0, options: .CurveLinear, animations: { () -> Void in
+        
+        
+        UIView.animateWithDuration(0.000004, delay: 0, options: .CurveLinear, animations: { () -> Void in
             self.laser!.center.y += 1
             }) { (result) -> Void in
                 if (self.laser!.center.y <= self.view.bounds.height) {
