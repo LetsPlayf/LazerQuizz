@@ -3,13 +3,14 @@ import UIKit
 
 class DraggableLabel: UILabel {
     var lastLocation:CGPoint = CGPointMake(0, 0)
+    var panRecognizer : UIPanGestureRecognizer?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
         self.userInteractionEnabled = true
-        var panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
-        self.gestureRecognizers = [panRecognizer]
+        self.panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
+        self.addGestureRecognizer(self.panRecognizer!)
         
         //randomize view color
         //        let blueValue = CGFloat(Int(arc4random() % 255)) / 255.0

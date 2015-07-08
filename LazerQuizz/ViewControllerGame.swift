@@ -48,6 +48,7 @@ class ViewControllerGame: UIViewController {
                 self.labels[self.nextLabel].backgroundColor = UIColor(red: 0.7, green: 0.4, blue: 0.2, alpha: 1)
             })
             self.labels[self.nextLabel].userInteractionEnabled = false
+            self.labels[nextLabel].removeGestureRecognizer(labels[nextLabel].panRecognizer!)
             nextLabel++
             print(String(format: "Colidiu em %d com label %d da posicao %d\n", Int(laser!.center.y), nextLabel, labelTopPositions[nextLabel - 1]))
             return true
