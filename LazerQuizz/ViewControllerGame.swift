@@ -3,6 +3,8 @@ import UIKit
 
 class ViewControllerGame: UIViewController {
     
+    var labelWidth : CGFloat?
+    var labelHeight : CGFloat?
     var labelTopPositions : [Int] = []
     var labels : [DraggableLabel] = []
     var nextLabel : Int = 0 // index for "labelTopPositions" array
@@ -15,19 +17,20 @@ class ViewControllerGame: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.labelWidth = self.view.bounds.width/3
+        self.labelHeight = 35
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.leftBar = UIView(frame: CGRectMake(self.view.bounds.width / 3, -1, 5, self.view.bounds.height + self.view.frame.height))
+        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
         self.leftBar?.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         self.view.addSubview(self.leftBar!)
         
-        self.rightBar = UIView(frame: CGRectMake(2 * self.view.bounds.width / 3, -1, 5, self.view.bounds.height + self.view.frame.height))
+        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
         self.rightBar?.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         self.view.addSubview(self.rightBar!)
 
-        let labelWidth : CGFloat = 120
-        let labelHeight : CGFloat = 35
-        let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth / 2)
+
+        let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = 100
         
         var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
@@ -39,7 +42,7 @@ class ViewControllerGame: UIViewController {
             //            var pointX = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.width))))
             //            var pointY = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.height))))
             
-            var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth, labelHeight))
+            var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth!, labelHeight!))
             newView.text = dictionaryOfAnswers.keys.array[i]
             newView.textAlignment = NSTextAlignment.Center
             newView.gameView = self
