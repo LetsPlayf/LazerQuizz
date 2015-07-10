@@ -1,4 +1,3 @@
-
 import UIKit
 
 class DraggableLabel: UILabel {
@@ -6,6 +5,7 @@ class DraggableLabel: UILabel {
     var panRecognizer : UIPanGestureRecognizer?
     var currentPosition : Position = .Middle
     let snapTime : NSTimeInterval = 0.25
+    var gameView : ViewControllerGame?
     
     enum Position {
         case Left
@@ -39,6 +39,36 @@ class DraggableLabel: UILabel {
     func detectPan(recognizer:UIPanGestureRecognizer) {
         var translation  = recognizer.translationInView(self.superview!)
         self.center = CGPointMake(lastLocation.x + translation.x, lastLocation.y)
+        
+        
+        if (recognizer.state == UIGestureRecognizerState.Ended) {
+            switch (self.currentPosition) {
+            case .Middle:
+                if (self.frame.origin.x <= self.gameView?.leftBar!.frame.origin.x) {
+                    self.moveLeft()
+                } else if (self.frame.origin.x + self.frame.width >= self.gameView!.rightBar!.frame.origin.x + self.gameView!.rightBar!.frame.width) {
+                    self.moveRight()
+                }
+                break
+                
+            case .Left:
+                if (self.frame.origin.x + self.frame.width >= self.gameView!.leftBar!.frame.origin.x + self.gameView!.leftBar!.frame.width) {
+                    self.moveRight()
+                }
+                break
+                
+            case .Right:
+                if (self.frame.origin.x <= self.gameView!.rightBar!.frame.origin.x) {
+                    self.moveLeft()
+                }
+                break
+                
+            default:
+                print ("Error: Draggable Label has no set position.\n")
+                exit(0)
+                break
+            }
+        }
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -49,13 +79,14 @@ class DraggableLabel: UILabel {
         lastLocation = self.center
     }
     
+    
     func moveLeft() {
         UIView.animateWithDuration(self.snapTime, delay: 0.0, options: nil, animations: { () -> Void in
             self.frame.origin.x = 0
             self.superview?.layoutIfNeeded()
             self.currentPosition = .Left
-        }) { (result) -> Void in
-
+            }) { (result) -> Void in
+                
         }
     }
     

@@ -42,6 +42,8 @@ class ViewControllerGame: UIViewController {
             var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth, labelHeight))
             newView.text = dictionaryOfAnswers.keys.array[i]
             newView.textAlignment = NSTextAlignment.Center
+            newView.gameView = self
+            
             self.view.addSubview(newView)
             
             self.labels.append(newView)
@@ -115,8 +117,4 @@ class ViewControllerGame: UIViewController {
         }
     }
     
-    
-    
-    
 }
-
