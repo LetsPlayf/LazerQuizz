@@ -12,12 +12,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         
-        super.viewDidLoad()
-   // Do any additional setup after loading the view, typically from a nib.
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
    
-     var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
+    //var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
         
-    AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
+    //AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         
         
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
