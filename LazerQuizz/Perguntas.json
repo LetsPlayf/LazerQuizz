@@ -4,7 +4,7 @@
             "Facil": {
                 "Fiat": [
                          "Uno",
-                         "Pálio",
+                         "Palio",
                          "Punto",
                          "Bravo",
                          "Siena",
@@ -19,7 +19,7 @@
                               "Camaro",
                               "Cruze",
                               "Prisma",
-                              "Agille",
+                              "Agile",
                               "Captiva",
                               "Celta",
                               "Montana",
@@ -44,7 +44,7 @@
             "Dificil": {
                 "Fiat": [
                          "Uno",
-                         "Pálio"
+                         "Palio"
                          ],
                 "Chevrolet": [
                               "Onix",
@@ -54,7 +54,7 @@
             "Medio": {
                 "Fiat": [
                          "Uno",
-                         "Pálio"
+                         "Palio"
                          ],
                 "Chevrolet": [
                               "Onix",
@@ -86,7 +86,7 @@
                                  "Polvo",
                                  "Estrela do mar",
                                  "Escorpião",
-                                 "Carangueijo"
+                                 "Caranguejo"
                                  ]
             },
             "Medio": {
