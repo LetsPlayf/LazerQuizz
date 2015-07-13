@@ -11,7 +11,7 @@ import Foundation
 class AccessJSON {
     
     
-    static func  accessTheQuestion(type : String)-> String
+    func  accessTheQuestion(type : String)-> String
     {
         var question = [String]()
         
@@ -98,7 +98,7 @@ class AccessJSON {
             //for (var i = 0; i < json[arq][type][question][level][option1].count; i++){
             
             //dic = [String(stringInterpolationSegment: json[arq][question][level][option1][i]) : 0]
-            dic = [String(stringInterpolationSegment: json["Perguntas"][type][question][level][option1][i]) : 0]
+            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option1][i]) : 0]
             
             
             vet.append(dic)
@@ -110,7 +110,7 @@ class AccessJSON {
             //for (var i = 0; i < json[arq][type][question][level][option2].count; i++){
             
             //dic = [String(stringInterpolationSegment: json[arq][question][level][option2][i]) : 1]
-            dic = [String(stringInterpolationSegment: json["Perguntas"][type][question][level][option2][i]) : 1]
+            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option2][i]) : 1]
             
             vet.append(dic)
             
@@ -124,7 +124,6 @@ class AccessJSON {
         
         while (i < 10){
             let key = vet[indexOfTheQuestion].keys
-            println(key)
             let value = (vet[indexOfTheQuestion][key.array[0]])
             dictionaryOfAnswers[key.array[0]] = value
             vet.removeAtIndex(Int(indexOfTheQuestion))
