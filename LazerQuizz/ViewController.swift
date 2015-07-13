@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    
+    var arrayOfData = [Level]()
+    var level = Int()
+    var difficulty = String()
+    
     override func viewDidLoad() {
         
     super.viewDidLoad()
@@ -22,8 +27,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
-            LevelServices.createLevel(0, score: 0, type: "Carro", block: false)
-            
+            LevelServices.createLevel(0, score: 2, type: "Carro", block: false)
+            LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
+            LevelServices.createLevel(2, score: 0, type: "Carro", block: true)
             
             
             println("Is a first launch")
@@ -31,9 +37,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             NSUserDefaults.standardUserDefaults().synchronize();
         }
         
-     var vet = LevelDAO.returnAllValues()
+   
         
-        println(vet[0].level_block)
+        //println(arrayOfData[0].level_block)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        arrayOfData = LevelDAO.returnAllValues()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,13 +55,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     //MARK: Collection View Delegates and DataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var results = LevelDAO.returnAllValues()
-        return results.count
+        return  arrayOfData.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var results = LevelDAO.returnAllValues()
-        if(!results[indexPath.row].level_block){
+
+        if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
             unlockedCell.lblCell.text = "Label :"
             unlockedCell.imgCell.image = UIImage(named: "imagem")
@@ -61,8 +72,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        print("Cell \(indexPath.row) selected")
-        if(indexPath.row <= 5){
+//       print("Cell \(indexPath.row) selected")
+        if(!arrayOfData[indexPath.row].level_block){
+            self.level = indexPath.row
+            if(arrayOfData[indexPath.row].level_score == 0){
+                self.difficulty = "Facil";
+            }
+            else if(arrayOfData[indexPath.row].level_score == 1){
+                self.difficulty = "Medio"
+            }
+            else{
+                self.difficulty = "Dificil"
+            }
+            
             performSegueWithIdentifier("toGame", sender: nil)
         }
     }
@@ -74,6 +96,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         return CGSize(width: 130, height: 100)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController as! ViewControllerGame
+        destinationVC.level = self.level
+        destinationVC.difficulty = self.difficulty
+        destinationVC.arrayOfData = self.arrayOfData
     }
     
     

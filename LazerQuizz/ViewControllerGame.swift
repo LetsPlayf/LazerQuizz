@@ -9,11 +9,14 @@ class ViewControllerGame: UIViewController {
     var labels : [DraggableLabel] = []
     var nextLabel : Int = 0 // index for "labelTopPositions" array
     var laser : UIView?
-    let maxViews = 10
+    var maxViews = 0
     var timer : NSTimer?
     var leftBar : UIView?
     var rightBar : UIView?
     var dictionaryOfAnswers = Dictionary<String,Int>()
+    var arrayOfData = [Level]()
+    var level = Int()
+    var difficulty = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,9 +108,9 @@ class ViewControllerGame: UIViewController {
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = 100
         
-        var question = AccessJSON.accessTheQuestion("Carro")
+        var question = AccessJSON.accessTheQuestion(arrayOfData[level].level_type)
         
-        var arrayOfOptions = AccessJSON.accessTheOptions("Carro", question: question, level: "Facil")
+        var arrayOfOptions = AccessJSON.accessTheOptions(arrayOfData[level].level_type, question: question, level: self.difficulty)
         println(arrayOfOptions)
         
         var optionLeft = UILabel(frame: CGRectMake(0, 35, 100, 20))
@@ -120,7 +123,8 @@ class ViewControllerGame: UIViewController {
         optionRight.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
         self.view.addSubview(optionRight)
         
-        self.dictionaryOfAnswers = AccessJSON.accessTheAnswers("Carro", question: question, level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
+        self.dictionaryOfAnswers = AccessJSON.accessTheAnswers(arrayOfData[level].level_type, question: question, level:self.difficulty, option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
+        self.maxViews = dictionaryOfAnswers.count
         
         // Add the Views
         for i in 0..<self.maxViews {

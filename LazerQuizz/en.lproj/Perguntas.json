@@ -1,0 +1,114 @@
+{
+    "Perguntas": {
+        "Carro": {
+            "What`s the right brand?": {
+                "Facil": {
+                    "testeste": [
+                             "Uno",
+                             "Pálio",
+                             "Punto",
+                             "Bravo",
+                             "Siena",
+                             "Freemont",
+                             "Doblò",
+                             "Strada",
+                             "Marea",
+                             "Linea"
+                             ],
+                    "dfkjfkljflkf": [
+                                  "Onix",
+                                  "Camaro",
+                                  "Cruze",
+                                  "Prisma",
+                                  "Agille",
+                                  "Captiva",
+                                  "Celta",
+                                  "Montana",
+                                  "S10",
+                                  "Spin",
+                                  "Corsa",
+                                  "Astra"
+                                  ],
+                    "hihhkjh": [
+                             "KA",
+                             "Fiesta",
+                             "Focus",
+                             "Ecosport",
+                             "Fusion",
+                             "Edge",
+                             "Ranger",
+                             "Del Rey",
+                             "Mustang",
+                             "Corcel"
+                             ]
+                },
+                "Dificil": {
+                    "Fiat": [
+                             "Unojhvjhjh",
+                             "Páliojhvj"
+                             ],
+                    "Chevrolet": [
+                                  "Onixhjvjv",
+                                  "Camarojhvvj"
+                                  ]
+                },
+                "Medio": {
+                    "Fiat": [
+                             "Uno",
+                             "Pálio"
+                             ],
+                    "Chevrolet": [
+                                  "Onix",
+                                  "Camaro"
+                                  ]
+                }
+            }
+        },
+        "Biologia": {
+            "Vertebrado ou Invertebrado?": {
+                "Facil": {
+                    "Vertebrado": [
+                                   "Cachorro",
+                                   "Leão",
+                                   "Cobra",
+                                   "Rato",
+                                   "Galinha",
+                                   "Peixe",
+                                   "Vaca",
+                                   "Porco",
+                                   "Girafa",
+                                   "Rinoceronte"
+                                   ],
+                    "Invertebrado": [
+                                     "Formiga",
+                                     "Barata",
+                                     "Aranha",
+                                     "Louva-Deus",
+                                     "Borboleta",
+                                     "Lula",
+                                     "Polvo",
+                                     "Estrela do mar",
+                                     "Escorpião",
+                                     "Carangueijo"
+                                     ]
+                },
+                "Medio": {
+                    "Vertebrado": [
+                                   "Cachorro"
+                                   ],
+                    "Invertebrado": [
+                                     "Aranha"
+                                     ]
+                },
+                "Dificil": {
+                    "Vertebrado": [
+                                   "Lampreia"
+                                   ],
+                    "Invertebrado": [
+                                     "Borboleta"
+                                     ]
+                }
+            }
+        }
+    }
+}

@@ -13,7 +13,6 @@
 		9AD680D51B4D994300DD0C7E /* LevelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680D41B4D994300DD0C7E /* LevelDAO.swift */; };
 		9AF720931B4C7730002B3170 /* AccessJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF720921B4C7730002B3170 /* AccessJSON.swift */; };
 		9AF720951B4C773A002B3170 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF720941B4C773A002B3170 /* SwiftyJSON.swift */; };
-		9AF720971B4C797E002B3170 /* Perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF720961B4C797E002B3170 /* Perguntas.json */; };
 		A733CBC51B52DD9D0018838F /* laser.png in Resources */ = {isa = PBXBuildFile; fileRef = A733CBC41B52DD9D0018838F /* laser.png */; };
 		A733CBC71B5405980018838F /* screenshot135.png in Resources */ = {isa = PBXBuildFile; fileRef = A733CBC61B5405980018838F /* screenshot135.png */; };
 		A733CBC91B540C1C0018838F /* wooden-stage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A733CBC81B540C1C0018838F /* wooden-stage.jpg */; };
@@ -21,6 +20,7 @@
 		A7412BA81B4B0D0700E7F946 /* lock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7412BA71B4B0D0700E7F946 /* lock.jpeg */; };
 		A7412BAA1B4C27A500E7F946 /* DraggableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */; };
 		A7412BAC1B4C27FC00E7F946 /* ViewControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */; };
+		AD14A9791B54239800B67A8C /* Perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = AD14A97B1B54239800B67A8C /* Perguntas.json */; };
 		ADCA90BA1B4AED770062E589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90B91B4AED770062E589 /* AppDelegate.swift */; };
 		ADCA90BD1B4AED770062E589 /* LazerQuizz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90BB1B4AED770062E589 /* LazerQuizz.xcdatamodeld */; };
 		ADCA90BF1B4AED770062E589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90BE1B4AED770062E589 /* ViewController.swift */; };
@@ -49,7 +49,6 @@
 		9AD680D41B4D994300DD0C7E /* LevelDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDAO.swift; sourceTree = "<group>"; };
 		9AF720921B4C7730002B3170 /* AccessJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessJSON.swift; sourceTree = "<group>"; };
 		9AF720941B4C773A002B3170 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		9AF720961B4C797E002B3170 /* Perguntas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Perguntas.json; sourceTree = "<group>"; };
 		A733CBC41B52DD9D0018838F /* laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser.png; sourceTree = "<group>"; };
 		A733CBC61B5405980018838F /* screenshot135.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot135.png; sourceTree = "<group>"; };
 		A733CBC81B540C1C0018838F /* wooden-stage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-stage.jpg"; sourceTree = "<group>"; };
@@ -57,6 +56,9 @@
 		A7412BA71B4B0D0700E7F946 /* lock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lock.jpeg; sourceTree = "<group>"; };
 		A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableLabel.swift; sourceTree = "<group>"; };
 		A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGame.swift; sourceTree = "<group>"; };
+		AD14A97A1B54239800B67A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Perguntas.json; sourceTree = "<group>"; };
+		AD14A97C1B54239A00B67A8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Perguntas.json; sourceTree = "<group>"; };
+		AD14A97D1B5423B000B67A8C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/Perguntas.json; sourceTree = "<group>"; };
 		ADCA90B41B4AED770062E589 /* LazerQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazerQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCA90B81B4AED770062E589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADCA90B91B4AED770062E589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD680D21B4D98D600DD0C7E /* Persistence */,
-				9AF720961B4C797E002B3170 /* Perguntas.json */,
+				AD14A97B1B54239800B67A8C /* Perguntas.json */,
 				ADCA90DC1B4AF40E0062E589 /* UnlockedCVCell.swift */,
 				ADCA90E11B4B00A30062E589 /* LockedCVCell.swift */,
 				9AF720921B4C7730002B3170 /* AccessJSON.swift */,
@@ -282,6 +284,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pt,
 			);
 			mainGroup = ADCA90AB1B4AED770062E589;
 			productRefGroup = ADCA90B51B4AED770062E589 /* Products */;
@@ -304,7 +307,7 @@
 				A7412BA81B4B0D0700E7F946 /* lock.jpeg in Resources */,
 				ADCA90C41B4AED770062E589 /* Images.xcassets in Resources */,
 				A733CBC91B540C1C0018838F /* wooden-stage.jpg in Resources */,
-				9AF720971B4C797E002B3170 /* Perguntas.json in Resources */,
+				AD14A9791B54239800B67A8C /* Perguntas.json in Resources */,
 				A733CBCB1B540C570018838F /* wooden-stage2.jpg in Resources */,
 				A733CBC71B5405980018838F /* screenshot135.png in Resources */,
 				A733CBC51B52DD9D0018838F /* laser.png in Resources */,
@@ -360,6 +363,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AD14A97B1B54239800B67A8C /* Perguntas.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD14A97A1B54239800B67A8C /* Base */,
+				AD14A97C1B54239A00B67A8C /* en */,
+				AD14A97D1B5423B000B67A8C /* pt */,
+			);
+			name = Perguntas.json;
+			sourceTree = "<group>";
+		};
 		ADCA90C01B4AED770062E589 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -115,7 +115,7 @@ class AccessJSON {
             dic = [String(stringInterpolationSegment: json["Perguntas"][type][question][level][option2][i]) : 1]
             
             vet.append(dic)
-            
+            println(dic)
         }
         
         
@@ -123,17 +123,18 @@ class AccessJSON {
         var indexOfTheQuestion : Int = Int(arc4random_uniform(UInt32(vet.count)))
         
         var i = 0
-        
+        println(vet)
+        let max = vet.count/2
         //Getting all the keys and values of the auxiliary variables and putting in the Dictionary
-        while (i < 10){
+        for(var i = 0; i < max;i++){
+        //while (i < vet.count/2){
             let key = vet[indexOfTheQuestion].keys
             let value = (vet[indexOfTheQuestion][key.array[0]])
             dictionaryOfAnswers[key.array[0]] = value
             vet.removeAtIndex(Int(indexOfTheQuestion))
             
             indexOfTheQuestion = Int(arc4random_uniform(UInt32(vet.count)))
-            
-            i++
+            println(i)
             
             
             
