@@ -105,6 +105,30 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         destinationVC.arrayOfData = self.arrayOfData
     }
     
+    //This method counts the scores of each level to unlock the locked levels.
+    func unblockTheLevels(){
+        var stars = 0
+        for(var i = 0 ; i < arrayOfData.count ; i++){
+            stars += Int(arrayOfData[i].level_score)
+        }
+        println(stars)
+        if(stars > 3){
+            self.arrayOfData[2].level_block = false
+            
+        }
+        if(stars > 6){
+            self.arrayOfData[3].level_block = false
+        }
+        if(stars > 9){
+            self.arrayOfData[4].level_block = false
+        }
+        if(stars > 12){
+            self.arrayOfData[5].level_block = false
+        }
+        if(stars > 15){
+            self.arrayOfData[6].level_block = false
+        }
+    }
     
     
 }
