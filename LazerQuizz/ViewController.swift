@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewWillAppear(animated: Bool) {
         
         arrayOfData = LevelDAO.returnAllValues()
-        
+        self.unblockTheLevels()
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,7 +114,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         println(stars)
         if(stars > 3){
             self.arrayOfData[2].level_block = false
-            
+            println(self.arrayOfData[2].level_block)
         }
         if(stars > 6){
             self.arrayOfData[3].level_block = false
