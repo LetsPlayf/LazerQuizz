@@ -15,6 +15,9 @@
 		9AF720951B4C773A002B3170 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF720941B4C773A002B3170 /* SwiftyJSON.swift */; };
 		9AF720971B4C797E002B3170 /* Perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AF720961B4C797E002B3170 /* Perguntas.json */; };
 		A733CBC51B52DD9D0018838F /* laser.png in Resources */ = {isa = PBXBuildFile; fileRef = A733CBC41B52DD9D0018838F /* laser.png */; };
+		A733CBC71B5405980018838F /* screenshot135.png in Resources */ = {isa = PBXBuildFile; fileRef = A733CBC61B5405980018838F /* screenshot135.png */; };
+		A733CBC91B540C1C0018838F /* wooden-stage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A733CBC81B540C1C0018838F /* wooden-stage.jpg */; };
+		A733CBCB1B540C570018838F /* wooden-stage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A733CBCA1B540C570018838F /* wooden-stage2.jpg */; };
 		A7412BA81B4B0D0700E7F946 /* lock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A7412BA71B4B0D0700E7F946 /* lock.jpeg */; };
 		A7412BAA1B4C27A500E7F946 /* DraggableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */; };
 		A7412BAC1B4C27FC00E7F946 /* ViewControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */; };
@@ -48,6 +51,9 @@
 		9AF720941B4C773A002B3170 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9AF720961B4C797E002B3170 /* Perguntas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Perguntas.json; sourceTree = "<group>"; };
 		A733CBC41B52DD9D0018838F /* laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser.png; sourceTree = "<group>"; };
+		A733CBC61B5405980018838F /* screenshot135.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot135.png; sourceTree = "<group>"; };
+		A733CBC81B540C1C0018838F /* wooden-stage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-stage.jpg"; sourceTree = "<group>"; };
+		A733CBCA1B540C570018838F /* wooden-stage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-stage2.jpg"; sourceTree = "<group>"; };
 		A7412BA71B4B0D0700E7F946 /* lock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lock.jpeg; sourceTree = "<group>"; };
 		A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableLabel.swift; sourceTree = "<group>"; };
 		A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGame.swift; sourceTree = "<group>"; };
@@ -145,7 +151,10 @@
 				ADCA90DF1B4B002C0062E589 /* Controller */,
 				ADCA90DE1B4B00160062E589 /* Model */,
 				A7412BA71B4B0D0700E7F946 /* lock.jpeg */,
+				A733CBCA1B540C570018838F /* wooden-stage2.jpg */,
+				A733CBC81B540C1C0018838F /* wooden-stage.jpg */,
 				A733CBC41B52DD9D0018838F /* laser.png */,
+				A733CBC61B5405980018838F /* screenshot135.png */,
 				ADCA90C31B4AED770062E589 /* Images.xcassets */,
 				ADCA90BB1B4AED770062E589 /* LazerQuizz.xcdatamodeld */,
 				ADCA90B71B4AED770062E589 /* Supporting Files */,
@@ -294,7 +303,10 @@
 				ADCA90C71B4AED770062E589 /* LaunchScreen.xib in Resources */,
 				A7412BA81B4B0D0700E7F946 /* lock.jpeg in Resources */,
 				ADCA90C41B4AED770062E589 /* Images.xcassets in Resources */,
+				A733CBC91B540C1C0018838F /* wooden-stage.jpg in Resources */,
 				9AF720971B4C797E002B3170 /* Perguntas.json in Resources */,
+				A733CBCB1B540C570018838F /* wooden-stage2.jpg in Resources */,
+				A733CBC71B5405980018838F /* screenshot135.png in Resources */,
 				A733CBC51B52DD9D0018838F /* laser.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

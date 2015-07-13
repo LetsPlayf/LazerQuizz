@@ -103,7 +103,10 @@ class ViewControllerGame: UIViewController {
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = 100
         
-        var arrayOfOptions = AccessJSON.accessTheOptions("Qual a marca do carro?", level: "Facil")
+        var question = AccessJSON.accessTheQuestion("Carro")
+        
+        var arrayOfOptions = AccessJSON.accessTheOptions("Carro", question: question, level: "Facil")
+        println(arrayOfOptions)
         
         var optionLeft = UILabel(frame: CGRectMake(0, 35, 100, 20))
         optionLeft.text = arrayOfOptions[0]
@@ -115,7 +118,7 @@ class ViewControllerGame: UIViewController {
         optionRight.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
         self.view.addSubview(optionRight)
         
-        self.dictionaryOfAnswers = AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
+        self.dictionaryOfAnswers = AccessJSON.accessTheAnswers("Carro", question: question, level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         
         // Add the Views
         for i in 0..<self.maxViews {
@@ -125,6 +128,8 @@ class ViewControllerGame: UIViewController {
             var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth!, labelHeight!))
             newView.text = dictionaryOfAnswers.keys.array[i]
             newView.textAlignment = NSTextAlignment.Center
+            newView.layer.masksToBounds = true
+            newView.layer.cornerRadius = 3
             newView.gameView = self
             
             self.view.addSubview(newView)
