@@ -27,24 +27,25 @@ class ViewControllerGame: UIViewController {
         if (nextLabel >= self.maxViews) {
             return false
         }
+        
+        let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
+        let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
+        
+        
         if (Int(laser!.center.y) > self.labelTopPositions[nextLabel]) {
             if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Left) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
-                    self.labels[self.nextLabel].backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
-                }else {
-                    self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+                    self.labels[self.nextLabel].backgroundColor = correctAnswerColor
+                } else {
+                    self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
                 }
             } else if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Middle) {
-                if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
-                    self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-                }else {
-                    self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-                }
+                self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
             } else if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Right) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
-                    self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-                }else {
-                    self.labels[self.nextLabel].backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+                    self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
+                } else {
+                    self.labels[self.nextLabel].backgroundColor = correctAnswerColor
                 }
             }
             
@@ -78,13 +79,13 @@ class ViewControllerGame: UIViewController {
         
         var laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
         laser.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
-//        laser.center = CGPointMake(160, 20)
+        //        laser.center = CGPointMake(160, 20)
         
         self.view.addSubview(laser)
         //laser.backgroundColor = UIColor(patternImage: UIImage(named: "laser.png"))
         self.laser = laser
         self.laser?.superview?.bringSubviewToFront(self.laser!)
-
+        
     }
     
     func generateQuestion () {
