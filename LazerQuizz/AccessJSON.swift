@@ -10,8 +10,8 @@ import Foundation
 
 class AccessJSON {
     
-    /*
-    func  accessTheQuestion()-> String
+    
+    func  accessTheQuestion(areaQuestion : String)-> String
     {
         var question = [String]()
         
@@ -34,10 +34,10 @@ class AccessJSON {
         //Este é o correto!!!!!!@!@@!#!@#@!#@$#!!$#%!3
         //return question[Int(indexOfTheQuestion)]
     }
-*/
+
     
     
-    //This method access the options in of a level
+    //This method access the options in a level
    static func accessTheOptions(question : String, level : String) -> [String] {
         
         var answers = [String]()
@@ -78,29 +78,32 @@ class AccessJSON {
         
     }
     
+    //Method to get the answers. It returns a dictionary with a string and a int. 
     static func accessTheAnswers(question : String, level : String, option1 : String, option2 : String) -> Dictionary<String,Int>{
-    
+        
+         //The dictionary that is going to be returned
          var dictionaryOfAnswers = Dictionary<String,Int>()
         
+        //Connection with the JSON
         let filePath = NSBundle.mainBundle().pathForResource("Perguntas", ofType: "json")
-        
         var readError : NSError?
-        
         let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
-        
         let json = JSON(data:data!)
-     
-        var vet: [Dictionary<String, Int>] = []
+        //End of connection with JSON
         
+
+        //Auxiliary variables to create the Dictionary that is going to be returned.
+        var vet: [Dictionary<String, Int>] = []
         var dic : Dictionary<String,Int>
+        
         
         for (var i = 0; i < json["Perguntas"][question][level][option1].count; i++){
             
-            dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option1][i]) : 0]
+        dic = [String(stringInterpolationSegment: json["Perguntas"][question][level][option1][i]) : 0]
             
             
-            vet.append(dic)
-         println(dic)
+         vet.append(dic)
+         
             
            }
         
@@ -114,11 +117,12 @@ class AccessJSON {
         }
         
       
-        
+        //Variable to randomize the selected values to be used in the dictionary.
         var indexOfTheQuestion : Int = Int(arc4random_uniform(UInt32(vet.count)))
         
         var i = 0
         
+        //Getting all the keys and values of the auxiliary variables and putting in the Dictionary
         while (i < 10){
             let key = vet[indexOfTheQuestion].keys
             let value = (vet[indexOfTheQuestion][key.array[0]])

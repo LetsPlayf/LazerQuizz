@@ -31,7 +31,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             NSUserDefaults.standardUserDefaults().synchronize();
         }
         
+     var vet = LevelDAO.returnAllValues()
         
+        println(vet[0].level_block)
     }
     
     override func didReceiveMemoryWarning() {
