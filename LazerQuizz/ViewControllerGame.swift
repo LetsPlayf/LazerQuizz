@@ -28,19 +28,19 @@ class ViewControllerGame: UIViewController {
             return false
         }
         if (Int(laser!.center.y) > self.labelTopPositions[nextLabel]) {
-            if self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Left{
+            if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Left) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
                     self.labels[self.nextLabel].backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
                 }else {
                     self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
                 }
-            } else if self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Middle{
+            } else if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Middle) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
                     self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
                 }else {
                     self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
                 }
-            } else if self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Right{
+            } else if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Right) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
                     self.labels[self.nextLabel].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
                 }else {
@@ -50,8 +50,9 @@ class ViewControllerGame: UIViewController {
             
             self.labels[self.nextLabel].userInteractionEnabled = false
             self.labels[nextLabel].removeGestureRecognizer(labels[nextLabel].panRecognizer!)
+            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %d\n", Int(laser!.center.y), nextLabel + 1, labelTopPositions[nextLabel], dictionaryOfAnswers.values.array[nextLabel]))
+            
             nextLabel++
-            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %d\n", Int(laser!.center.y), nextLabel, labelTopPositions[nextLabel - 1], dictionaryOfAnswers.values.array[nextLabel - 1]))
             return true
         }
         return false
