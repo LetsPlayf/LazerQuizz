@@ -19,6 +19,9 @@ class ViewControllerGame: UIViewController {
     var difficulty = String()
     var score : Int = 0
     
+    let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
+    let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateQuestion()
@@ -32,26 +35,21 @@ class ViewControllerGame: UIViewController {
             return false
         }
         
-        let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
-        let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
-        
         
         if (Int(laser!.center.y) > self.labelTopPositions[nextLabel]) {
             if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Left) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
-                    self.labels[self.nextLabel].backgroundColor = correctAnswerColor
-                    ++score
+                    self.correctAnswer(self.labels[nextLabel])
                 } else {
-                    self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
+                    self.wrongAnswer(self.labels[nextLabel])
                 }
             } else if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Middle) {
-                self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
+                self.wrongAnswer(self.labels[nextLabel])
             } else if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Right) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
-                    self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
+                    self.wrongAnswer(self.labels[nextLabel])
                 } else {
-                    self.labels[self.nextLabel].backgroundColor = correctAnswerColor
-                    ++score
+                    self.correctAnswer(self.labels[nextLabel])
                 }
             }
             
@@ -65,6 +63,14 @@ class ViewControllerGame: UIViewController {
         return false
     }
     
+    func correctAnswer(label: DraggableLabel) {
+        self.labels[self.nextLabel].backgroundColor = self.correctAnswerColor
+        ++score
+    }
+    
+    func wrongAnswer(label: DraggableLabel) {
+        self.labels[self.nextLabel].backgroundColor = self.wrongAnswerColor
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
