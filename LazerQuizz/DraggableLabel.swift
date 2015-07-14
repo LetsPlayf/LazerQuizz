@@ -5,6 +5,7 @@ class DraggableLabel: UILabel {
     var panRecognizer : UIPanGestureRecognizer?
     var currentPosition : Position = .Middle
     let snapTime : NSTimeInterval = 0.25
+    let fastSnapTime: NSTimeInterval = 0.1
     var gameView : ViewControllerGame?
     
     enum Position {
@@ -54,12 +55,16 @@ class DraggableLabel: UILabel {
             case .Left:
                 if (self.frame.origin.x + self.frame.width >= self.gameView!.leftBar!.frame.origin.x + self.gameView!.leftBar!.frame.width) {
                     self.moveRight()
+                } else {
+                    self.fastSnapLeft()
                 }
                 break
                 
             case .Right:
                 if (self.frame.origin.x <= self.gameView!.rightBar!.frame.origin.x) {
                     self.moveLeft()
+                } else {
+                    self.fastSnapRight()
                 }
                 break
                 
@@ -77,6 +82,24 @@ class DraggableLabel: UILabel {
         
         // Remember original location
         lastLocation = self.center
+    }
+    
+    func fastSnapLeft() {
+        UIView.animateWithDuration(self.fastSnapTime, delay: 0.0, options: nil, animations: { () -> Void in
+            self.frame.origin.x = 0
+            self.superview?.layoutIfNeeded()
+            }) { (result) -> Void in
+                
+        }
+    }
+    
+    func fastSnapRight() {
+        UIView.animateWithDuration(self.fastSnapTime, delay: 0.0, options: nil, animations: { () -> Void in
+            self.frame.origin.x = self.superview!.bounds.width - self.bounds.width
+            self.superview?.layoutIfNeeded()
+            }) { (result) -> Void in
+                
+        }
     }
     
     
