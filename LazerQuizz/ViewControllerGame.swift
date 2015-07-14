@@ -17,6 +17,7 @@ class ViewControllerGame: UIViewController {
     var arrayOfData = [Level]()
     var level = Int()
     var difficulty = String()
+    var score : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class ViewControllerGame: UIViewController {
             if (self.labels[self.nextLabel].currentPosition == DraggableLabel.Position.Left) {
                 if (self.dictionaryOfAnswers.values.array[self.nextLabel] == 0){
                     self.labels[self.nextLabel].backgroundColor = correctAnswerColor
+                    ++score
                 } else {
                     self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
                 }
@@ -49,6 +51,7 @@ class ViewControllerGame: UIViewController {
                     self.labels[self.nextLabel].backgroundColor = wrongAnswerColor
                 } else {
                     self.labels[self.nextLabel].backgroundColor = correctAnswerColor
+                    ++score
                 }
             }
             
@@ -93,7 +96,9 @@ class ViewControllerGame: UIViewController {
     
     func generateQuestion () {
         
-        self.labelWidth = self.view.bounds.width/3
+        self.score = 0
+        
+        self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 35
         // Do any additional setup after loading the view, typically from a nib.
         
