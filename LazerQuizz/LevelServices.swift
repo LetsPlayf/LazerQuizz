@@ -27,6 +27,14 @@ class LevelServices {
         
     }
     
+
+    static func alterBlock(level : Level){
+        
+        level.level_block = false
+        LevelDAO.update()
+        
+    }
+    
     
     
 }

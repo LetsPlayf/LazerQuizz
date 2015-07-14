@@ -27,7 +27,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
-            LevelServices.createLevel(0, score: 2, type: "Carro", block: false)
+            LevelServices.createLevel(0, score: 4, type: "Carro", block: false)
             LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
             LevelServices.createLevel(2, score: 0, type: "Carro", block: true)
             
@@ -37,15 +37,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             NSUserDefaults.standardUserDefaults().synchronize();
         }
         
-   
+        arrayOfData = LevelDAO.returnAllValues()
+        println(arrayOfData[2].level_block)
+
         
         //println(arrayOfData[0].level_block)
     }
     
     override func viewWillAppear(animated: Bool) {
         
-        arrayOfData = LevelDAO.returnAllValues()
-        self.unblockTheLevels()
+        
+        self.unlockTheLevels()
     }
     
     override func didReceiveMemoryWarning() {
@@ -106,28 +108,31 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     //This method counts the scores of each level to unlock the locked levels.
-    func unblockTheLevels(){
+    func unlockTheLevels(){
         var stars = 0
         for(var i = 0 ; i < arrayOfData.count ; i++){
             stars += Int(arrayOfData[i].level_score)
         }
         println(stars)
-        if(stars > 3){
-            self.arrayOfData[2].level_block = false
-            println(self.arrayOfData[2].level_block)
+        if(stars > 3 && arrayOfData[2].level_block == true){
+            LevelServices.alterBlock(arrayOfData[2])
+            
         }
-        if(stars > 6){
-            self.arrayOfData[3].level_block = false
+        if(stars > 6 && arrayOfData[3].level_block == true){
+            LevelServices.alterBlock(arrayOfData[3])
         }
-        if(stars > 9){
-            self.arrayOfData[4].level_block = false
+        if(stars > 9 && arrayOfData[4].level_block == true){
+            LevelServices.alterBlock(arrayOfData[4])
         }
-        if(stars > 12){
-            self.arrayOfData[5].level_block = false
+        if(stars > 12 && arrayOfData[5].level_block == true){
+            LevelServices.alterBlock(arrayOfData[5])
         }
-        if(stars > 15){
-            self.arrayOfData[6].level_block = false
+        if(stars > 15 && arrayOfData[6].level_block == true){
+            LevelServices.alterBlock(arrayOfData[5])
         }
+
+        arrayOfData = LevelDAO.returnAllValues()
+    
     }
     
     
