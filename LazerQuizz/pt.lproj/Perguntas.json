@@ -65,6 +65,86 @@
             }
         },
         "Biologia": {
+            "Mamifero ou ave?": {
+                "Facil": {
+                    "Mamifero": [
+                                 "Gato",
+                                 "Porco",
+                                 "Vaca",
+                                 "Leão",
+                                 "Macaco",
+                                 "Cachorro",
+                                 "Elefante",
+                                 "Urso",
+                                 "Lobo",
+                                 "Tigre"
+                                 ],
+                    "Ave": [
+                            "Galinha",
+                            "Pomba",
+                            "Tucano",
+                            "Pelicano",
+                            "Sabiá",
+                            "Ema",
+                            "Ganso",
+                            "Cisne",
+                            "Gavião",
+                            "Águia"
+                            ]
+                },
+                "Medio" : {
+                    "Mamifero" : [
+                                  "Homem",
+                                  "Capivara",
+                                  "Chinchila",
+                                  "Esquilo",
+                                  "Foca",
+                                  "Gazela",
+                                  "Javali",
+                                  "Raposa",
+                                  "Tatu",
+                                  "Toupeira"
+                                  ],
+                    "Ave" : [
+                             "Quero-quero",
+                             "Tico-Tico",
+                             "Seriema",
+                             "Pica-pau",
+                             "Bem-te-vi",
+                             "Papagaio",
+                             "Pardal",
+                             "Urubu",
+                             "Garça",
+                             "Jacutinga"
+                             ]
+                },
+                "Dificil" : {
+                    "Mamifero" : [
+                                  "Golfinho",
+                                  "Hamster",
+                                  "Puma",
+                                  "Pantera",
+                                  "Búfalo",
+                                  "Alce",
+                                  "Chacal",
+                                  "Elande",
+                                  "Fuinha",
+                                  "Lince"
+                                  ],
+                    "Ave" : [
+                              "Cuco",
+                              "Curiango",
+                              "Albatroz",
+                              "Coruja",
+                              "Araçari",
+                              "Estalador",
+                              "Gralha",
+                              "Juriti",
+                              "Narceja",
+                              "Saracura"
+                              ]
+                }
+            },
             "Vertebrado ou Invertebrado?": {
                 "Facil": {
                     "Vertebrado": [
