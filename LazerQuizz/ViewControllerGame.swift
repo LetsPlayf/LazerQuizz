@@ -65,11 +65,13 @@ class ViewControllerGame: UIViewController {
     
     func correctAnswer(label: DraggableLabel) {
         self.labels[self.nextLabel].backgroundColor = self.correctAnswerColor
+        self.labels[self.nextLabel].playCorrectAnswer()
         ++score
     }
     
     func wrongAnswer(label: DraggableLabel) {
         self.labels[self.nextLabel].backgroundColor = self.wrongAnswerColor
+        self.labels[self.nextLabel].playWrongAnswer()
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)

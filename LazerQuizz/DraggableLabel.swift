@@ -37,6 +37,38 @@ class DraggableLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func playCorrectAnswer() {
+        var label : UILabel = UILabel(frame: CGRectMake(self.frame.width / 2 - 20, self.frame.height / 2 - 20, 40, 40))
+        label.text = "+1"
+        label.font = UIFont.systemFontOfSize(28)
+        label.textColor = UIColor.blueColor()
+        label.textAlignment = NSTextAlignment.Center
+        self.addSubview(label)
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            label.frame.origin.y -= 30
+            label.alpha = 0
+            self.layoutIfNeeded()
+            self.superview?.layoutIfNeeded()
+            }) { (result) -> Void in
+                
+        }
+    }
+    
+    func playWrongAnswer() {
+        var label : UILabel = UILabel(frame: CGRectMake(self.frame.width / 2 - 20, self.frame.height / 2 - 20, 40, 40))
+        label.text = "X"
+        label.font = UIFont.systemFontOfSize(36)
+        label.textColor = UIColor.grayColor()
+        label.textAlignment = NSTextAlignment.Center
+        self.addSubview(label)
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            label.alpha = 0.0
+            self.layoutIfNeeded()
+            self.superview?.layoutIfNeeded()
+            }) { (result) -> Void in
+        }
+    }
+    
     func detectPan(recognizer:UIPanGestureRecognizer) {
         var translation  = recognizer.translationInView(self.superview!)
         self.center = CGPointMake(lastLocation.x + translation.x, lastLocation.y)
