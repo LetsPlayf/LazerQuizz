@@ -275,5 +275,140 @@
                 }
             }
         }
+        "Geografia": {
+            "Pais ou Capital": {
+                "Facil":{
+                    "Capital": [
+                                "Luanda",
+                                "Brasília",
+                                "Argel",
+                                "Moroni",
+                                "Otawwa",
+                                "Washington",
+                                "Nassau",
+                                "São José",
+                                "São Salvador",
+                                "Havana",
+                                "Montevidéo",
+                                "Berlin",
+                                "Paris",
+                                "Atenas",
+                                "Madrid",
+                                "Roma"
+                                ],
+                    "Pais": [
+                             "Angola",
+                             "Brasil",
+                             "Cabo Verde",
+                             "Chade",
+                             "Maurícia",
+                             "Lesoto",
+                             "Madagáscar",
+                             "Tunísia",
+                             "Uganda",
+                             "Canadá",
+                             "México",
+                             "Bahamas",
+                             "Cuba",
+                             "Haiti",
+                             "Suriname",
+                             "Butão",
+                             "Camboja",
+                             "China",
+                             "Timor Leste",
+                             "Turquia",
+                             "Alemanha",
+                             "Grécia",
+                             "Croácia",
+                             "Bulgária",
+                             "Dinamarca",
+                             "República Theca",
+                             "Austrália",
+                             "ilhas Marshall"
+                             ]
+                },
+                "Medio":{
+                    "Capital": [
+                                "Gaborone",
+                                "Praia",
+                                "Moroni",
+                                "Conacri",
+                                "Wellington",
+                                "Apia",
+                                "Belgrado",
+                                "Moscou",
+                                "Oslo",
+                                "Islamabad",
+                                "Male",
+                                "Mascate",
+                                "Colombo",
+                                "Amã"
+                                ],
+                    "Pais": [
+                             "Benin",
+                             "Botswana",
+                             "Camarões",
+                             "Chade",
+                             "Lesoto",
+                             "Libéria",
+                             "Sudão",
+                             "Uganda",
+                             "Zimbabwe",
+                             "Bahamas",
+                             "Belize"
+                             ]
+                },
+                "Dificil":{
+                    "Capital": [
+                                "Berna",
+                                "Majuro",
+                                "Honiara",
+                                "Taraua",
+                                "Suva",
+                                "Kiev",
+                                "Ancara",
+                                "Shisinau",
+                                "Riga",
+                                "Dublin",
+                                "Baku",
+                                "Erevan",
+                                "Praga",
+                                "Zagreb",
+                                "Dili",
+                                "Katmandu",
+                                "Doha",
+                                "Cabul",
+                                "Cartum"
+                                ],
+                    "Pais": [
+                             "Maianmar",
+                             "Sri Lanka",
+                             "Laos",
+                             "Iêmen",
+                             "Barein",
+                             "Jordânia",
+                             "Omã",
+                             "Malawi",
+                             "Maurícia",
+                             "Burundi",
+                             "Botswana",
+                             "Mali",
+                             "Malawi",
+                             "Senegal",
+                             "Togo",
+                             "Seychelles",
+                             "Barbados",
+                             "Maldivas",
+                             "Sri Lanka",
+                             "Fiji",
+                             "Kiribati",
+                             "Nauru",
+                             "Palau",
+                             "Tonga"
+                             ]
+                }
+            }
+        }
+        
     }
 }
