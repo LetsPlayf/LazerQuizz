@@ -21,10 +21,6 @@ class DraggableLabel: UILabel {
         self.panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
         self.addGestureRecognizer(self.panRecognizer!)
         
-        //randomize view color
-        //        let blueValue = CGFloat(Int(arc4random() % 255)) / 255.0
-        //        let greenValue = CGFloat(Int(arc4random() % 255)) / 255.0
-        //        let redValue = CGFloat(Int(arc4random() % 255)) / 255.0
         let blueValue = CGFloat(Int(arc4random() % 55) + 140) / 255.0
         let greenValue = CGFloat(190) / 255.0
         let redValue = CGFloat(Int(arc4random() % 55) + 140) / 255.0
@@ -61,7 +57,6 @@ class DraggableLabel: UILabel {
         label.textColor = UIColor.grayColor()
         label.textAlignment = NSTextAlignment.Center
         self.addSubview(label)
-        //label.transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI_2))
         UIView.animateWithDuration(1, animations: { () -> Void in
             label.transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(-1 * M_PI))
             label.alpha = 0.0

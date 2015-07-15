@@ -93,10 +93,8 @@ class ViewControllerGame: UIViewController {
         
         var laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
         laser.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
-        //        laser.center = CGPointMake(160, 20)
         
         self.view.addSubview(laser)
-        //laser.backgroundColor = UIColor(patternImage: UIImage(named: "laser.png"))
         self.laser = laser
         self.laser?.superview?.bringSubviewToFront(self.laser!)
         
@@ -108,7 +106,6 @@ class ViewControllerGame: UIViewController {
         
         self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 35
-        // Do any additional setup after loading the view, typically from a nib.
         
         self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
         self.leftBar?.backgroundColor = UIColor.clearColor()
@@ -141,9 +138,6 @@ class ViewControllerGame: UIViewController {
         
         // Add the Views
         for i in 0..<self.maxViews {
-            //            var pointX = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.width))))
-            //            var pointY = CGFloat(UInt(arc4random() % UInt32(UInt(insetSize.height))))
-            
             var newView = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth!, labelHeight!))
             newView.text = dictionaryOfAnswers.keys.array[i]
             newView.textAlignment = NSTextAlignment.Center
@@ -157,7 +151,6 @@ class ViewControllerGame: UIViewController {
             self.labelTopPositions.append(Int(pointY))
             
             pointY += 50
-            
         }
         
     }
@@ -171,6 +164,7 @@ class ViewControllerGame: UIViewController {
                     self.view.layoutIfNeeded()
                 }
                 else {
+                    print(String(format:"Acertou %d de %d.\n", self.score, self.maxViews))
                     return
                 }
         }
