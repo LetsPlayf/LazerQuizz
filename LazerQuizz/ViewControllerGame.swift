@@ -18,6 +18,7 @@ class ViewControllerGame: UIViewController {
     var level = Int()
     var difficulty = String()
     var score : Int = 0
+    var scoreReport : UILabel?
     
     let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
     let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
@@ -26,9 +27,11 @@ class ViewControllerGame: UIViewController {
         super.viewDidLoad()
         generateQuestion()
         generateLaser()
-        
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+    }
     
     func checkCollision () -> Bool {
         if (nextLabel >= self.maxViews) {
@@ -55,7 +58,7 @@ class ViewControllerGame: UIViewController {
             
             self.labels[self.nextLabel].userInteractionEnabled = false
             self.labels[nextLabel].removeGestureRecognizer(labels[nextLabel].panRecognizer!)
-            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %d\n", Int(laser!.center.y), nextLabel + 1, labelTopPositions[nextLabel], dictionaryOfAnswers.values.array[nextLabel]))
+//            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %d\n", Int(laser!.center.y), nextLabel + 1, labelTopPositions[nextLabel], dictionaryOfAnswers.values.array[nextLabel]))
             
             nextLabel++
             return true
@@ -156,7 +159,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func animateLaser() {
-        UIView.animateWithDuration(0.000004, delay: 0, options: .CurveLinear, animations: { () -> Void in
+        UIView.animateWithDuration(0.0000004, delay: 0, options: .CurveLinear, animations: { () -> Void in
             self.laser!.center.y += 0.5
             }) { (result) -> Void in
                 if (self.laser!.center.y <= self.view.bounds.height) {
@@ -164,7 +167,23 @@ class ViewControllerGame: UIViewController {
                     self.view.layoutIfNeeded()
                 }
                 else {
-                    print(String(format:"Acertou %d de %d.\n", self.score, self.maxViews))
+                    print()
+                    self.scoreReport = UILabel(frame: CGRectMake(10, -2000, self.view.bounds.width - 20, 125))
+                    self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.5)
+                    self.scoreReport!.layer.masksToBounds = true
+                    self.scoreReport!.layer.cornerRadius = 3
+                    self.view.addSubview(self.scoreReport!)
+                    self.scoreReport!.text = String(format:"Você acertou\n%d de %d.", self.score, self.maxViews)
+                    self.scoreReport!.textAlignment = .Center
+                    self.scoreReport!.textColor = UIColor(red: 0.85, green: 0.65, blue: 0.2, alpha: 1)
+                    self.scoreReport!.font = UIFont.systemFontOfSize(45)
+                    self.scoreReport!.numberOfLines = 0
+                    self.scoreReport!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+                    UIView.animateWithDuration(1, animations: { () -> Void in
+                        self.scoreReport!.center.y = self.view.center.y
+                        }) { (result) -> Void in
+                            
+                    }
                     return
                 }
         }
