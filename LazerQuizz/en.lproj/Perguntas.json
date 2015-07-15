@@ -1,9 +1,9 @@
 {
     "Perguntas": {
         "Carro": {
-            "What`s the right brand?": {
+            "What's the right brand?": {
                 "Facil": {
-                    "testeste": [
+                    "Fiat": [
                              "Uno",
                              "Palio",
                              "Punto",
@@ -15,7 +15,7 @@
                              "Marea",
                              "Linea"
                              ],
-                    "dfkjfkljflkf": [
+                    "Chevrolet": [
                                   "Onix",
                                   "Camaro",
                                   "Cruze",
@@ -29,7 +29,7 @@
                                   "Corsa",
                                   "Astra"
                                   ],
-                    "hihhkjh": [
+                    "Ford": [
                              "KA",
                              "Fiesta",
                              "Focus",
