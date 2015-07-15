@@ -245,39 +245,39 @@
                                "Paul Klee"
                                ]
                 },
-                "Dificil" : {
-                    "Musico" : [
-                                "Pyotr Ilyich Tchaikovsky",
-                                "Johannes Brahms",
-                                "Frédéric Chopin",
-                                "George Frideric",
-                                "Steve Harris",
-                                "Neil Young",
-                                "Tony Iommi",
-                                "Ronnie James Dio",
-                                "Ritchie Blackmore",
-                                "Yngwie Malmsteen",
-                                "David Gilmour",
-                                "Neil Peart"
-                                ],
-                    "Pintor" : [
-                                "El Greco",
-                                "Carybé",
-                                "Thomas Cole",
-                                "Richard Hamilton",
-                                "Albert Gottschalk",
-                                "José de Guimarães",
-                                "Jasper Johns",
-                                "Antoine Watteau",
-                                "Paul Nash",
-                                "Bryan Organ"
-                                ]
+                "Dificil": {
+                    "Musico": [
+                               "Pyotr Ilyich Tchaikovsky",
+                               "Johannes Brahms",
+                               "Frédéric Chopin",
+                               "George Frideric",
+                               "Steve Harris",
+                               "Neil Young",
+                               "Tony Iommi",
+                               "Ronnie James Dio",
+                               "Ritchie Blackmore",
+                               "Yngwie Malmsteen",
+                               "David Gilmour",
+                               "Neil Peart"
+                               ],
+                    "Pintor": [
+                               "El Greco",
+                               "Carybé",
+                               "Thomas Cole",
+                               "Richard Hamilton",
+                               "Albert Gottschalk",
+                               "José de Guimarães",
+                               "Jasper Johns",
+                               "Antoine Watteau",
+                               "Paul Nash",
+                               "Bryan Organ"
+                               ]
                 }
             }
-        }
+        },
         "Geografia": {
             "Pais ou Capital": {
-                "Facil":{
+                "Facil": {
                     "Capital": [
                                 "Luanda",
                                 "Brasília",
@@ -327,7 +327,7 @@
                              "ilhas Marshall"
                              ]
                 },
-                "Medio":{
+                "Medio": {
                     "Capital": [
                                 "Gaborone",
                                 "Praia",
@@ -358,7 +358,7 @@
                              "Belize"
                              ]
                 },
-                "Dificil":{
+                "Dificil": {
                     "Capital": [
                                 "Berna",
                                 "Majuro",
@@ -409,6 +409,5 @@
                 }
             }
         }
-        
     }
 }

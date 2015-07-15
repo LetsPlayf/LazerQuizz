@@ -32,10 +32,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             //Put any code here and it will be executed only once.
             
             if(language.isEqualToString("pt")) {
-            LevelServices.createLevel(0, score: 4, type: "Carro", block: false)
-            LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
-            LevelServices.createLevel(2, score: 0, type: "Carro", block: true)
-            
+                LevelServices.createLevel(0, score: 0, type: "Carro", block: false)
+                LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
+                LevelServices.createLevel(2, score: 0, type: "Artes", block: true)
+                LevelServices.createLevel(3, score: 0, type: "Geografia", block: true)
             }
             println("Is a first launch")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
