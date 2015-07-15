@@ -24,14 +24,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     //AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         
+        let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
+        
+        println(language)
         
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
+            
+            if(language.isEqualToString("pt")) {
             LevelServices.createLevel(0, score: 4, type: "Carro", block: false)
             LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
             LevelServices.createLevel(2, score: 0, type: "Carro", block: true)
             
-            
+            }
             println("Is a first launch")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
             NSUserDefaults.standardUserDefaults().synchronize();
