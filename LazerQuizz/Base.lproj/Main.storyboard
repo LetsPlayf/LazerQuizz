@@ -124,6 +124,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="collection" destination="3GY-hF-jOl" id="iwX-8D-F54"/>
                         <segue destination="Nax-29-BTH" kind="show" identifier="toGame" id="Apc-P2-4sE"/>
                     </connections>
                 </viewController>

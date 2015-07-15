@@ -203,6 +203,9 @@ class ViewControllerGame: UIViewController {
                     self.view.layoutIfNeeded()
                 }
                 else {
+                    if(self.score == self.maxViews && self.arrayOfData[self.level].level_score < 3){
+                        LevelServices.updateScore(self.arrayOfData[self.level])
+                    }
                     self.view.bringSubviewToFront(self.scoreReport!)
                     self.view.bringSubviewToFront(self.buttonBar!)
                     self.scoreReport!.text = String(format:"Você acertou\n%d de %d.", self.score, self.maxViews)

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
+    @IBOutlet weak var collection: UICollectionView!
     var arrayOfData = [Level]()
     var level = Int()
     var difficulty = String()
@@ -119,25 +120,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             stars += Int(arrayOfData[i].level_score)
         }
         println(stars)
-        if(stars > 3 && arrayOfData[2].level_block == true){
+        if(stars > 2 && arrayOfData[2].level_block == true){
             LevelServices.updateBlock(arrayOfData[2])
             
         }
-        if(stars > 6 && arrayOfData[3].level_block == true){
+        if(stars > 5 && arrayOfData[3].level_block == true){
             LevelServices.updateBlock(arrayOfData[3])
         }
-        if(stars > 9 && arrayOfData[4].level_block == true){
+        if(stars > 8 && arrayOfData[4].level_block == true){
             LevelServices.updateBlock(arrayOfData[4])
         }
-        if(stars > 12 && arrayOfData[5].level_block == true){
+        if(stars > 11 && arrayOfData[5].level_block == true){
             LevelServices.updateBlock(arrayOfData[5])
         }
-        if(stars > 15 && arrayOfData[6].level_block == true){
+        if(stars > 14 && arrayOfData[6].level_block == true){
             LevelServices.updateBlock(arrayOfData[5])
         }
 
         arrayOfData = LevelDAO.returnAllValues()
-    
+        collection.reloadData()
     }
     
     

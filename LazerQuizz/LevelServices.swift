@@ -34,8 +34,8 @@ class LevelServices {
         
     }
     
-    static func updateScore(level : Level, newScore : Int){
-        level.level_score = Int16(newScore)
+    static func updateScore(level : Level){
+        level.level_score++
         LevelDAO.update()
         
     }
