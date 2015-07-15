@@ -92,57 +92,57 @@
                             "Águia"
                             ]
                 },
-                "Medio" : {
-                    "Mamifero" : [
-                                  "Homem",
-                                  "Capivara",
-                                  "Chinchila",
-                                  "Esquilo",
-                                  "Foca",
-                                  "Gazela",
-                                  "Javali",
-                                  "Raposa",
-                                  "Tatu",
-                                  "Toupeira"
-                                  ],
-                    "Ave" : [
-                             "Quero-quero",
-                             "Tico-Tico",
-                             "Seriema",
-                             "Pica-pau",
-                             "Bem-te-vi",
-                             "Papagaio",
-                             "Pardal",
-                             "Urubu",
-                             "Garça",
-                             "Jacutinga"
-                             ]
+                "Medio": {
+                    "Mamifero": [
+                                 "Homem",
+                                 "Capivara",
+                                 "Chinchila",
+                                 "Esquilo",
+                                 "Foca",
+                                 "Gazela",
+                                 "Javali",
+                                 "Raposa",
+                                 "Tatu",
+                                 "Toupeira"
+                                 ],
+                    "Ave": [
+                            "Quero-quero",
+                            "Tico-Tico",
+                            "Seriema",
+                            "Pica-pau",
+                            "Bem-te-vi",
+                            "Papagaio",
+                            "Pardal",
+                            "Urubu",
+                            "Garça",
+                            "Jacutinga"
+                            ]
                 },
-                "Dificil" : {
-                    "Mamifero" : [
-                                  "Golfinho",
-                                  "Hamster",
-                                  "Puma",
-                                  "Pantera",
-                                  "Búfalo",
-                                  "Alce",
-                                  "Chacal",
-                                  "Elande",
-                                  "Fuinha",
-                                  "Lince"
-                                  ],
-                    "Ave" : [
-                              "Cuco",
-                              "Curiango",
-                              "Albatroz",
-                              "Coruja",
-                              "Araçari",
-                              "Estalador",
-                              "Gralha",
-                              "Juriti",
-                              "Narceja",
-                              "Saracura"
-                              ]
+                "Dificil": {
+                    "Mamifero": [
+                                 "Golfinho",
+                                 "Hamster",
+                                 "Puma",
+                                 "Pantera",
+                                 "Búfalo",
+                                 "Alce",
+                                 "Chacal",
+                                 "Elande",
+                                 "Fuinha",
+                                 "Lince"
+                                 ],
+                    "Ave": [
+                            "Cuco",
+                            "Curiango",
+                            "Albatroz",
+                            "Coruja",
+                            "Araçari",
+                            "Estalador",
+                            "Gralha",
+                            "Juriti",
+                            "Narceja",
+                            "Saracura"
+                            ]
                 }
             },
             "Vertebrado ou Invertebrado?": {
@@ -187,6 +187,91 @@
                     "Invertebrado": [
                                      "Borboleta"
                                      ]
+                }
+            }
+        },
+        "Artes": {
+            "Musico ou pintor": {
+                "Facil": {
+                    "Musico": [
+                               "Paul McCartney",
+                               "John Lennon",
+                               "Wolfgang Amadeus Mozart",
+                               "Johann Sebastian Bach",
+                               "Eric Clapton",
+                               "Shakira",
+                               "Beyonce",
+                               "Rihanna",
+                               "Jennifer Lopez",
+                               "Robert Plant",
+                               "Bob Dylan"
+                               ],
+                    "Pintor": [
+                               "Pablo Picasso",
+                               "Vincent Van Gogh",
+                               "Leonardo da Vinci",
+                               "Salvador Dalí",
+                               "Candido Portinari",
+                               "Claude Monet",
+                               "Pierre-Auguste Renoir",
+                               "Michelangelo",
+                               "Rembrandt",
+                               "Tarcila do Amaral"
+                               ]
+                },
+                "Medio": {
+                    "Musico": [
+                               "George Harrison",
+                               "Ringo Starr",
+                               "Bruce Dickinson",
+                               "Ozzy Osbourne",
+                               "Taylor Swift",
+                               "James Brown",
+                               "Chico Buarque",
+                               "Luciano Pavarotti",
+                               "John Bonham",
+                               "Freddie Mercury"
+                               ],
+                    "Pintor": [
+                               "Paul Cézanne",
+                               "Francisco de Goya",
+                               "Cornelis Mondrian",
+                               "Renoir",
+                               "Andy Warhol",
+                               "Di Cavalcanti",
+                               "Edward Hooper",
+                               "Roy Lichtenstein",
+                               "Peter Paul Rubens",
+                               "Paul Klee"
+                               ]
+                },
+                "Dificil" : {
+                    "Musico" : [
+                                "Pyotr Ilyich Tchaikovsky",
+                                "Johannes Brahms",
+                                "Frédéric Chopin",
+                                "George Frideric",
+                                "Steve Harris",
+                                "Neil Young",
+                                "Tony Iommi",
+                                "Ronnie James Dio",
+                                "Ritchie Blackmore",
+                                "Yngwie Malmsteen",
+                                "David Gilmour",
+                                "Neil Peart"
+                                ],
+                    "Pintor" : [
+                                "El Greco",
+                                "Carybé",
+                                "Thomas Cole",
+                                "Richard Hamilton",
+                                "Albert Gottschalk",
+                                "José de Guimarães",
+                                "Jasper Johns",
+                                "Antoine Watteau",
+                                "Paul Nash",
+                                "Bryan Organ"
+                                ]
                 }
             }
         }
