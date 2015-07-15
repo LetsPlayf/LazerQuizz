@@ -11,5 +11,6 @@ import UIKit
 class UnlockedCVCell: UICollectionViewCell {
     
     @IBOutlet weak var imgCell: UIImageView!
+    @IBOutlet weak var imgType: UIImageView!
     @IBOutlet weak var lblCell: UILabel!
 }

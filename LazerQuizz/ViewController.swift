@@ -38,6 +38,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 LevelServices.createLevel(2, score: 0, type: "Artes", block: true)
                 LevelServices.createLevel(3, score: 0, type: "Geografia", block: true)
             //}
+
             println("Is a first launch")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
             NSUserDefaults.standardUserDefaults().synchronize();
@@ -70,8 +71,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
-            unlockedCell.lblCell.text = "Label :"
-            unlockedCell.imgCell.image = UIImage(named: "imagem")
+            unlockedCell.lblCell.text = self.arrayOfData[indexPath.row].level_type
+            
+            switch(indexPath.row)
+            {
+            case 0:
+                unlockedCell.imgType.image = UIImage(named: "carro.png")
+                break
+            case 1:
+                unlockedCell.imgType.image = UIImage(named: "dna.png")
+                break
+            default:
+                unlockedCell.imgType.image = UIImage(named: "carro.png")
+                break
+            }
+            
             return unlockedCell
         }
         else{
@@ -103,7 +117,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         
-        return CGSize(width: 130, height: 100)
+        return CGSize(width: 130, height: 135)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
