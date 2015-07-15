@@ -190,7 +190,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func animateLaser() {
-        UIView.animateWithDuration(0.000004, delay: 0, options: .CurveLinear, animations: { () -> Void in
+        UIView.animateWithDuration(0.0000034, delay: 0, options: .CurveLinear, animations: { () -> Void in
             self.laser!.center.y += 0.5
             }) { (result) -> Void in
                 if (self.laser!.center.y <= self.view.bounds.height) {
