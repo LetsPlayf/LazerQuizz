@@ -111,11 +111,11 @@ class ViewControllerGame: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
-        self.leftBar?.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        self.leftBar?.backgroundColor = UIColor.clearColor()
         self.view.addSubview(self.leftBar!)
         
         self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
-        self.rightBar?.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        self.rightBar?.backgroundColor = UIColor.clearColor()
         self.view.addSubview(self.rightBar!)
         
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
