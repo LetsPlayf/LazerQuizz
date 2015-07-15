@@ -21,7 +21,12 @@ class ViewControllerGame: UIViewController {
     var scoreReport : UILabel?
     var buttonBar : UIView?
     var backButton : UIButton?
-
+    
+    
+    let laserPeriod : Double = 0.0000018
+    let pointsPerLaserMovement : CGFloat = 0.75
+    let secondsToBegin : Float = 2.15
+    
     let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
     let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
     
@@ -106,7 +111,7 @@ class ViewControllerGame: UIViewController {
         
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("checkCollision"), userInfo: nil, repeats: true)
         // wait for the user to read the question
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC))
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.secondsToBegin * Float(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             self.animateLaser()
         }
@@ -190,8 +195,8 @@ class ViewControllerGame: UIViewController {
     }
     
     func animateLaser() {
-        UIView.animateWithDuration(0.0000034, delay: 0, options: .CurveLinear, animations: { () -> Void in
-            self.laser!.center.y += 0.5
+        UIView.animateWithDuration(self.laserPeriod, delay: 0, options: .CurveLinear, animations: { () -> Void in
+            self.laser!.center.y += self.pointsPerLaserMovement
             }) { (result) -> Void in
                 if (self.laser!.center.y <= self.view.bounds.height) {
                     self.animateLaser()
