@@ -209,6 +209,7 @@ class ViewControllerGame: UIViewController {
                     UIView.animateWithDuration(1, animations: { () -> Void in
                         self.scoreReport!.frame.origin.y = self.view.center.y - self.scoreReport!.bounds.height
                         self.buttonBar!.frame.origin.y = self.view.center.y  + self.buttonBar!.bounds.height
+                        self.laser!.alpha = 0
                         self.view.layoutIfNeeded()
                         }) { (result) -> Void in
                             
