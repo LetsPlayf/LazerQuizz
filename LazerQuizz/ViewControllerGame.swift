@@ -20,7 +20,8 @@ class ViewControllerGame: UIViewController {
     var score : Int = 0
     var scoreReport : UILabel?
     var buttonBar : UIView?
-    
+    var backButton : UIButton?
+
     let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
     let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
     
@@ -34,12 +35,20 @@ class ViewControllerGame: UIViewController {
         self.scoreReport!.layer.cornerRadius = 3
         self.view.addSubview(self.scoreReport!)
         
-        self.buttonBar = UIView(frame: CGRectMake(10, self.view.bounds.height + 65, self.view.bounds.width - 20, 65))
+        self.buttonBar = UIView(frame: CGRectMake(10, self.view.bounds.height + 65, self.view.bounds.width - 20, 55))
         self.buttonBar!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.5)
         self.buttonBar!.layer.masksToBounds = true
         self.buttonBar!.layer.cornerRadius = 3
         self.view.addSubview(self.buttonBar!)
         
+        self.backButton = UIButton(frame:CGRectMake(10, 0, 200, 30))
+        self.backButton!.setTitle("Voltar ao menu", forState: UIControlState.Normal)
+        self.backButton?.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        
+        self.backButton!.sizeToFit()
+        self.backButton!.center.y = self.buttonBar!.bounds.height / 2
+        self.backButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.buttonBar!.addSubview(self.backButton!)
         
         generateQuestion()
     }
@@ -106,6 +115,12 @@ class ViewControllerGame: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func backButtonAction() {
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
     }
     
     func generateLaser () {
@@ -194,6 +209,7 @@ class ViewControllerGame: UIViewController {
                     UIView.animateWithDuration(1, animations: { () -> Void in
                         self.scoreReport!.frame.origin.y = self.view.center.y - self.scoreReport!.bounds.height
                         self.buttonBar!.frame.origin.y = self.view.center.y  + self.buttonBar!.bounds.height
+                        self.view.layoutIfNeeded()
                         }) { (result) -> Void in
                             
                     }
