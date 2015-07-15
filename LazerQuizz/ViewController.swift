@@ -115,20 +115,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         println(stars)
         if(stars > 3 && arrayOfData[2].level_block == true){
-            LevelServices.alterBlock(arrayOfData[2])
+            LevelServices.updateBlock(arrayOfData[2])
             
         }
         if(stars > 6 && arrayOfData[3].level_block == true){
-            LevelServices.alterBlock(arrayOfData[3])
+            LevelServices.updateBlock(arrayOfData[3])
         }
         if(stars > 9 && arrayOfData[4].level_block == true){
-            LevelServices.alterBlock(arrayOfData[4])
+            LevelServices.updateBlock(arrayOfData[4])
         }
         if(stars > 12 && arrayOfData[5].level_block == true){
-            LevelServices.alterBlock(arrayOfData[5])
+            LevelServices.updateBlock(arrayOfData[5])
         }
         if(stars > 15 && arrayOfData[6].level_block == true){
-            LevelServices.alterBlock(arrayOfData[5])
+            LevelServices.updateBlock(arrayOfData[5])
         }
 
         arrayOfData = LevelDAO.returnAllValues()

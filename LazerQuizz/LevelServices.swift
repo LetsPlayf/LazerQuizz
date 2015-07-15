@@ -26,14 +26,21 @@ class LevelServices {
         
         
     }
-    
 
-    static func alterBlock(level : Level){
+    static func updateBlock(level : Level){
         
         level.level_block = false
         LevelDAO.update()
         
     }
+    
+    static func updateScore(level : Level, newScore : Int){
+        level.level_score = Int16(newScore)
+        LevelDAO.update()
+        
+    }
+    
+    
     
     
     
