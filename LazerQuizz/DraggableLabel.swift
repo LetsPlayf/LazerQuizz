@@ -55,13 +55,15 @@ class DraggableLabel: UILabel {
     }
     
     func playWrongAnswer() {
-        var label : UILabel = UILabel(frame: CGRectMake(self.frame.width / 2 - 20, self.frame.height / 2 - 20, 40, 40))
+        var label : UILabel = UILabel(frame: CGRectMake(self.frame.width / 2 - 25, self.frame.height / 2 - 25, 50, 50))
         label.text = "X"
-        label.font = UIFont.systemFontOfSize(36)
+        label.font = UIFont.systemFontOfSize(50)
         label.textColor = UIColor.grayColor()
         label.textAlignment = NSTextAlignment.Center
         self.addSubview(label)
+        //label.transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI_2))
         UIView.animateWithDuration(1, animations: { () -> Void in
+            label.transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(-1 * M_PI))
             label.alpha = 0.0
             self.layoutIfNeeded()
             self.superview?.layoutIfNeeded()

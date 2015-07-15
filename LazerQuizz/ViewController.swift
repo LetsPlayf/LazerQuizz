@@ -38,7 +38,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         arrayOfData = LevelDAO.returnAllValues()
-        //println(arrayOfData[2].level_block)
+        //println(arrayOfData[2].level_block) FIXME: Array index out of range
 
         
         //println(arrayOfData[0].level_block)
