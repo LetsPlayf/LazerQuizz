@@ -217,6 +217,7 @@ class ViewControllerGame: UIViewController {
         for view in self.removableViews {
             view.removeFromSuperview()
         }
+        self.removableViews.removeAll(keepCapacity: false)
         self.viewDidLoad()
         self.viewWillAppear(true)
         self.viewDidAppear(true)
