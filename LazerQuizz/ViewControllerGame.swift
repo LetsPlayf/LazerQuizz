@@ -21,6 +21,7 @@ class ViewControllerGame: UIViewController {
     var scoreReport : UILabel?
     var buttonBar : UIView?
     var backButton : UIButton?
+    var otherButton : UIButton?
     
     
     let laserPeriod : Double = 0.0000018
@@ -34,14 +35,16 @@ class ViewControllerGame: UIViewController {
         super.viewDidLoad()
         
         
+        self.score = 0
+        
         self.scoreReport = UILabel(frame: CGRectMake(10, -125, self.view.bounds.width - 20, 125))
-        self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.5)
+        self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.75)
         self.scoreReport!.layer.masksToBounds = true
         self.scoreReport!.layer.cornerRadius = 3
         self.view.addSubview(self.scoreReport!)
         
         self.buttonBar = UIView(frame: CGRectMake(10, self.view.bounds.height + 65, self.view.bounds.width - 20, 55))
-        self.buttonBar!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.5)
+        self.buttonBar!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.75)
         self.buttonBar!.layer.masksToBounds = true
         self.buttonBar!.layer.cornerRadius = 3
         self.view.addSubview(self.buttonBar!)
@@ -88,7 +91,7 @@ class ViewControllerGame: UIViewController {
             
             self.labels[self.nextLabel].userInteractionEnabled = false
             self.labels[nextLabel].removeGestureRecognizer(labels[nextLabel].panRecognizer!)
-//            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %d\n", Int(laser!.center.y), nextLabel + 1, labelTopPositions[nextLabel], dictionaryOfAnswers.values.array[nextLabel]))
+            //            print(String(format: "Colidiu em %d com label %d da posicao %d com resposta %d\n", Int(laser!.center.y), nextLabel + 1, labelTopPositions[nextLabel], dictionaryOfAnswers.values.array[nextLabel]))
             
             nextLabel++
             return true
@@ -201,27 +204,40 @@ class ViewControllerGame: UIViewController {
                 if (self.laser!.center.y <= self.view.bounds.height) {
                     self.animateLaser()
                     self.view.layoutIfNeeded()
-                }
-                else {
-                    if(self.score == self.maxViews && self.arrayOfData[self.level].level_score < 3){
+                } else {
+                    if (self.score == self.maxViews && self.arrayOfData[self.level].level_score < 3) {
                         LevelServices.updateScore(self.arrayOfData[self.level])
                     }
+                    
+                    self.otherButton = UIButton(frame:CGRectMake(self.buttonBar!.bounds.width - 10, 0, 200, 30))
+                    self.otherButton!.setTitle("Repetir nível", forState: UIControlState.Normal)
+                    self.otherButton!.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+                    
+                    self.otherButton!.sizeToFit()
+                    self.otherButton!.frame.origin.x -= self.otherButton!.bounds.width
+                    self.otherButton!.center.y = self.buttonBar!.bounds.height / 2
+                    self.otherButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+                    self.buttonBar!.addSubview(self.otherButton!)
+                    
                     self.view.bringSubviewToFront(self.scoreReport!)
                     self.view.bringSubviewToFront(self.buttonBar!)
+                    
                     self.scoreReport!.text = String(format:"Você acertou\n%d de %d.", self.score, self.maxViews)
                     self.scoreReport!.textAlignment = .Center
                     self.scoreReport!.textColor = UIColor(red: 0.85, green: 0.65, blue: 0.2, alpha: 1)
                     self.scoreReport!.font = UIFont.systemFontOfSize(45)
                     self.scoreReport!.numberOfLines = 0
                     self.scoreReport!.lineBreakMode = NSLineBreakMode.ByWordWrapping
-                    UIView.animateWithDuration(1, animations: { () -> Void in
-                        self.scoreReport!.frame.origin.y = self.view.center.y - self.scoreReport!.bounds.height
-                        self.buttonBar!.frame.origin.y = self.view.center.y  + self.buttonBar!.bounds.height
+                    
+                    UIView.animateWithDuration(1.95, delay: 0, usingSpringWithDamping: 7.1, initialSpringVelocity: 7, options: nil, animations: { () -> Void in
+                        self.scoreReport!.frame.origin.y = self.view.center.y - self.scoreReport!.bounds.height + 10
+                        self.buttonBar!.frame.origin.y = self.view.center.y  + self.buttonBar!.bounds.height - 10
                         self.laser!.alpha = 0
                         self.view.layoutIfNeeded()
-                        }) { (result) -> Void in
+                        }, completion: { (result) -> Void in
                             
-                    }
+                    })
+                    
                     return
                 }
         }
