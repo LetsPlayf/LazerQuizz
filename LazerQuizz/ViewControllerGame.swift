@@ -144,7 +144,7 @@ class ViewControllerGame: UIViewController {
     
     func generateLaser () {
         
-        self.laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
+        self.laser = UIView(frame: CGRectMake(0, 25, self.view.bounds.width, 11))
         self.laser!.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
         
         self.removableViews.append(self.laser!)

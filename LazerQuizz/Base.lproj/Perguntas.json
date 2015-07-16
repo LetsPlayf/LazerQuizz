@@ -1,6 +1,6 @@
 {
     "Perguntas": {
-        "Cars": {
+        "Carros": {
             "Qual a marca do carro?": {
                 "Facil": {
                     "Fiat": [
@@ -64,7 +64,7 @@
                 }
             }
         },
-        "Biology": {
+        "Biologia": {
             "Mamifero ou ave?": {
                 "Facil": {
                     "Mamifero": [
@@ -190,7 +190,7 @@
                 }
             }
         },
-        "Art": {
+        "Artes": {
             "Musico ou pintor": {
                 "Facil": {
                     "Musico": [
@@ -275,7 +275,7 @@
                 }
             }
         },
-        "Geography": {
+        "Geografia": {
             "Pais ou Capital": {
                 "Facil": {
                     "Capital": [
@@ -409,7 +409,7 @@
                 }
             }
         },
-        "History": {
+        "Historia": {
             "Grego ou Romano?": {
                 "Facil": {
                     "Grego": [
