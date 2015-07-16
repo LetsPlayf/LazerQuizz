@@ -418,23 +418,70 @@
                                "Afrodite",
                                "Ares",
                                "Hades",
-                               "Hera",
                                "Poseidon",
                                "Apolo",
                                "Hermes",
-                               "Artemis"
+                               "Uranus",
+                               "Helios",
                                ],
                     "Romano" : [
                                 "Jupiter",
+                                "Netuno",
+                                "Plutão",
+                                "Marte",
+                                "Vênus",
+                                "Saturno",
+                                "Minerva",
+                                "Sol",
+                                "Bona Dea",
+                                ]
+                }
+                "Medio" : {
+                    "Grego" : [
+                               "Hera",
+                               "Artemis",
+                               "Hyperion",
+                               "Aura",
+                               "Theia",
+                               "Phoebe"
+                               "Nyx",
+                               "Gaia"
+                               "Typhon",
+                               ],
+                    "Romano" : [
                                 "Juno",
                                 "Netuno",
                                 "Juno",
                                 "Vulcano",
-                                "Plutão",
-                                "Marte",
                                 "Febo",
                                 "Diana",
-                                "Vênus"]
+                                "Cupido",
+                                "Quirinus",
+                                "Janus",
+                                "Orcus",
+                                ]
+                }
+                "Dificil" : {
+                    "Grego" : [
+                               "Chronos",
+                               "Selene",
+                               "Pan",
+                               "Ceto",
+                               "Aeacus"
+                               "Dione",
+                               "Eos",
+                                ]
+                    "Romano" : [
+                                "Liber",
+                                "Libertas",
+                                "Fauna",
+                                "Flora",
+                                "Vesta",
+                                "Penates",
+                                "Lares",
+                                "Promona"
+                                "Proserpina",
+                                ]
                 }
             }
         }
