@@ -289,6 +289,10 @@
                             <constraint firstItem="yxT-sl-kT5" firstAttribute="top" secondItem="qMR-KJ-agb" secondAttribute="bottom" id="csb-kl-JQG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="qMR-KJ-agb" id="QSB-HH-n7f"/>
+                        <outlet property="mainView" destination="9TR-RM-9W4" id="qlA-Zh-YVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWc-c3-adp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

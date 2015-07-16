@@ -23,6 +23,10 @@ class ViewControllerGame: UIViewController {
     var backButton : UIButton?
     var otherButton : UIButton?
     
+    var removableViews : [UIView] = [UIView]()
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var mainView: UIView!
     
     let laserPeriod : Double = 0.0000018
     let pointsPerLaserMovement : CGFloat = 0.75
@@ -36,17 +40,21 @@ class ViewControllerGame: UIViewController {
         
         
         self.score = 0
+        self.labels.removeAll(keepCapacity: false)
+        self.nextLabel = 0
         
         self.scoreReport = UILabel(frame: CGRectMake(10, -125, self.view.bounds.width - 20, 125))
         self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.75)
         self.scoreReport!.layer.masksToBounds = true
         self.scoreReport!.layer.cornerRadius = 3
+        self.removableViews.append(self.scoreReport!)
         self.view.addSubview(self.scoreReport!)
         
         self.buttonBar = UIView(frame: CGRectMake(10, self.view.bounds.height + 65, self.view.bounds.width - 20, 55))
         self.buttonBar!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.75)
         self.buttonBar!.layer.masksToBounds = true
         self.buttonBar!.layer.cornerRadius = 3
+        self.removableViews.append(self.buttonBar!)
         self.view.addSubview(self.buttonBar!)
         
         self.backButton = UIButton(frame:CGRectMake(10, 0, 200, 30))
@@ -56,6 +64,7 @@ class ViewControllerGame: UIViewController {
         self.backButton!.sizeToFit()
         self.backButton!.center.y = self.buttonBar!.bounds.height / 2
         self.backButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+        self.removableViews.append(self.backButton!)
         self.buttonBar!.addSubview(self.backButton!)
         
         generateQuestion()
@@ -133,11 +142,11 @@ class ViewControllerGame: UIViewController {
     
     func generateLaser () {
         
-        var laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
-        laser.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
+        self.laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
+        self.laser!.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
         
-        self.view.addSubview(laser)
-        self.laser = laser
+        self.removableViews.append(self.laser!)
+        self.view.addSubview(self.laser!)
         self.laser?.superview?.bringSubviewToFront(self.laser!)
         
     }
@@ -151,10 +160,12 @@ class ViewControllerGame: UIViewController {
         
         self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
         self.leftBar?.backgroundColor = UIColor.clearColor()
+        self.removableViews.append(self.leftBar!)
         self.view.addSubview(self.leftBar!)
         
         self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
         self.rightBar?.backgroundColor = UIColor.clearColor()
+        self.removableViews.append(self.rightBar!)
         self.view.addSubview(self.rightBar!)
         
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
@@ -168,11 +179,13 @@ class ViewControllerGame: UIViewController {
         var optionLeft = UILabel(frame: CGRectMake(0, 35, 100, 20))
         optionLeft.text = arrayOfOptions[0]
         optionLeft.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
+        self.removableViews.append(optionLeft)
         self.view.addSubview(optionLeft)
         
         var optionRight = UILabel(frame: CGRectMake(300, 35, 100, 20))
         optionRight.text = arrayOfOptions[1]
         optionRight.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
+        self.removableViews.append(optionRight)
         self.view.addSubview(optionRight)
         
         self.dictionaryOfAnswers = AccessJSON.accessTheAnswers(arrayOfData[level].level_type, question: question, level:self.difficulty, option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
@@ -187,6 +200,7 @@ class ViewControllerGame: UIViewController {
             newView.layer.cornerRadius = 3
             newView.gameView = self
             
+            self.removableViews.append(newView)
             self.view.addSubview(newView)
             
             self.labels.append(newView)
@@ -199,6 +213,9 @@ class ViewControllerGame: UIViewController {
     
     func reloadViewController () {
         print("ViewControllerGame reloaded\n")
+        for view in self.removableViews {
+            view.removeFromSuperview()
+        }
         self.viewDidLoad()
         self.viewWillAppear(true)
         self.viewDidAppear(true)
@@ -212,6 +229,8 @@ class ViewControllerGame: UIViewController {
                     self.animateLaser()
                     self.view.layoutIfNeeded()
                 } else {
+                    self.timer!.invalidate()
+                    
                     if (self.score == self.maxViews && self.arrayOfData[self.level].level_score < 3) {
                         LevelServices.updateScore(self.arrayOfData[self.level])
                     }
@@ -231,6 +250,7 @@ class ViewControllerGame: UIViewController {
                     self.otherButton!.sizeToFit()
                     self.otherButton!.frame.origin.x -= self.otherButton!.bounds.width
                     self.otherButton!.center.y = self.buttonBar!.bounds.height / 2
+                    self.removableViews.append(self.otherButton!)
                     self.buttonBar!.addSubview(self.otherButton!)
                     
                     self.view.bringSubviewToFront(self.scoreReport!)
