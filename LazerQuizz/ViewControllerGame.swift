@@ -145,8 +145,52 @@ class ViewControllerGame: UIViewController {
     func generateLaser () {
         
         self.laser = UIView(frame: CGRectMake(0, 25, self.view.bounds.width, 11))
-        self.laser!.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
+        self.laser!.backgroundColor = UIColor.clearColor()
         
+        var stream = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 1, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.6, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 2, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.7, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 3, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.8, green: 0.3, blue: 0.3, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 4, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.9, green: 0.4, blue: 0.4, alpha: 0.80)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 5, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 0.85)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 6, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.9, green: 0.4, blue: 0.4, alpha: 0.80)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 7, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.8, green: 0.3, blue: 0.3, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 8, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.7, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 9, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.6, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 10, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+
         self.removableViews.append(self.laser!)
         self.view.addSubview(self.laser!)
         self.laser?.superview?.bringSubviewToFront(self.laser!)
@@ -158,12 +202,12 @@ class ViewControllerGame: UIViewController {
         self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 35
         
-        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
+        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height))
         self.leftBar?.backgroundColor = UIColor.clearColor()
         self.removableViews.append(self.leftBar!)
         self.view.addSubview(self.leftBar!)
         
-        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
+        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height))
         self.rightBar?.backgroundColor = UIColor.clearColor()
         self.removableViews.append(self.rightBar!)
         self.view.addSubview(self.rightBar!)
