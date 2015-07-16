@@ -197,6 +197,13 @@ class ViewControllerGame: UIViewController {
         
     }
     
+    func reloadViewController () {
+        print("ViewControllerGame reloaded\n")
+        self.viewDidLoad()
+        self.viewWillAppear(true)
+        self.viewDidAppear(true)
+    }
+    
     func animateLaser() {
         UIView.animateWithDuration(self.laserPeriod, delay: 0, options: .CurveLinear, animations: { () -> Void in
             self.laser!.center.y += self.pointsPerLaserMovement
@@ -216,7 +223,7 @@ class ViewControllerGame: UIViewController {
                         self.otherButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
                     } else {
                         self.otherButton!.setTitle("Repetir nível", forState: UIControlState.Normal)
-                        self.otherButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+                        self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     }
 
                     self.otherButton!.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)

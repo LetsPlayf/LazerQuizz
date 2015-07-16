@@ -409,79 +409,79 @@
                 }
             }
         },
-        "Historia" : {
-            "Grego ou Romano?" : {
-                "Facil" : {
-                    "Grego" : [
-                               "Zeus",
-                               "Atena",
-                               "Afrodite",
-                               "Ares",
-                               "Hades",
-                               "Poseidon",
-                               "Apolo",
-                               "Hermes",
-                               "Uranus",
-                               "Helios",
-                               ],
-                    "Romano" : [
-                                "Jupiter",
-                                "Netuno",
-                                "Plutão",
-                                "Marte",
-                                "Vênus",
-                                "Saturno",
-                                "Minerva",
-                                "Sol",
-                                "Bona Dea",
-                                ]
-                }
-                "Medio" : {
-                    "Grego" : [
-                               "Hera",
-                               "Artemis",
-                               "Hyperion",
-                               "Aura",
-                               "Theia",
-                               "Phoebe"
-                               "Nyx",
-                               "Gaia"
-                               "Typhon",
-                               ],
-                    "Romano" : [
-                                "Juno",
-                                "Netuno",
-                                "Juno",
-                                "Vulcano",
-                                "Febo",
-                                "Diana",
-                                "Cupido",
-                                "Quirinus",
-                                "Janus",
-                                "Orcus",
-                                ]
-                }
-                "Dificil" : {
-                    "Grego" : [
-                               "Chronos",
-                               "Selene",
-                               "Pan",
-                               "Ceto",
-                               "Aeacus"
-                               "Dione",
-                               "Eos",
-                                ]
-                    "Romano" : [
-                                "Liber",
-                                "Libertas",
-                                "Fauna",
-                                "Flora",
-                                "Vesta",
-                                "Penates",
-                                "Lares",
-                                "Promona"
-                                "Proserpina",
-                                ]
+        "Historia": {
+            "Grego ou Romano?": {
+                "Facil": {
+                    "Grego": [
+                              "Zeus",
+                              "Atena",
+                              "Afrodite",
+                              "Ares",
+                              "Hades",
+                              "Poseidon",
+                              "Apolo",
+                              "Hermes",
+                              "Uranus",
+                              "Helios"
+                              ],
+                    "Romano": [
+                               "Jupiter",
+                               "Netuno",
+                               "Plutão",
+                               "Marte",
+                               "Vênus",
+                               "Saturno",
+                               "Minerva",
+                               "Sol",
+                               "Bona Dea"
+                               ]
+                },
+                "Medio": {
+                    "Grego": [
+                              "Hera",
+                              "Artemis",
+                              "Hyperion",
+                              "Aura",
+                              "Theia",
+                              "Phoebe",
+                              "Nyx",
+                              "Gaia",
+                              "Typhon"
+                              ],
+                    "Romano": [
+                               "Juno",
+                               "Netuno",
+                               "Juno",
+                               "Vulcano",
+                               "Febo",
+                               "Diana",
+                               "Cupido",
+                               "Quirinus",
+                               "Janus",
+                               "Orcus"
+                               ]
+                },
+                "Dificil": {
+                    "Grego": [
+                              "Chronos",
+                              "Selene",
+                              "Pan",
+                              "Ceto",
+                              "Aeacus",
+                              "Dione",
+                              "Eos"
+                              ],
+                    "Romano": [
+                               "Liber",
+                               "Libertas",
+                               "Fauna",
+                               "Flora",
+                               "Vesta",
+                               "Penates",
+                               "Lares",
+                               "Promona",
+                               "Proserpina"
+                               ]
                 }
             }
         }
