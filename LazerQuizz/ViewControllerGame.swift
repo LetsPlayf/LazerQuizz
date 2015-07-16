@@ -37,8 +37,11 @@ class ViewControllerGame: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.levelSetup()
+    }
+    
+    
+    func levelSetup () {
         self.score = 0
         self.nextLabel = 0
         self.labels.removeAll(keepCapacity: false)
@@ -71,7 +74,6 @@ class ViewControllerGame: UIViewController {
         
         generateQuestion()
     }
-    
     
     override func viewWillAppear(animated: Bool) {
         generateLaser()
@@ -122,7 +124,10 @@ class ViewControllerGame: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.initializeTimer()
+    }
+    
+    func initializeTimer() {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("checkCollision"), userInfo: nil, repeats: true)
         // wait for the user to read the question
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.secondsToBegin * Float(NSEC_PER_SEC)))
@@ -262,9 +267,9 @@ class ViewControllerGame: UIViewController {
             view.removeFromSuperview()
         }
         self.removableViews.removeAll(keepCapacity: false)
-        self.viewDidLoad()
-        self.viewWillAppear(true)
-        self.viewDidAppear(true)
+        self.levelSetup()
+        self.generateLaser()
+        self.initializeTimer()
     }
     
     func animateLaser() {
