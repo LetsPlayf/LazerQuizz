@@ -40,8 +40,10 @@ class ViewControllerGame: UIViewController {
         
         
         self.score = 0
-        self.labels.removeAll(keepCapacity: false)
         self.nextLabel = 0
+        self.labels.removeAll(keepCapacity: false)
+        self.labelTopPositions.removeAll(keepCapacity: false)
+        self.dictionaryOfAnswers.removeAll(keepCapacity: true)
         
         self.scoreReport = UILabel(frame: CGRectMake(10, -125, self.view.bounds.width - 20, 125))
         self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.9)
@@ -152,9 +154,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func generateQuestion () {
-        
-        self.score = 0
-        
+                
         self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 35
         
@@ -170,6 +170,7 @@ class ViewControllerGame: UIViewController {
         
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = 100
+        println(arrayOfData[level].level_type)
         
         var question = AccessJSON.accessTheQuestion(arrayOfData[level].level_type)
         
