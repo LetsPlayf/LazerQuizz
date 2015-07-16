@@ -237,12 +237,15 @@ class ViewControllerGame: UIViewController {
                     }
                     
                     self.otherButton = UIButton(frame:CGRectMake(self.buttonBar!.bounds.width - 10, 0, 200, 30))
-                    
-                    if (self.score == self.maxViews) {
-                        self.otherButton!.setTitle("Próximo nível", forState: UIControlState.Normal)
-                        self.otherButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
-                    } else {
+                    if (self.level >= 3) {
                         self.otherButton!.setTitle("Repetir nível", forState: UIControlState.Normal)
+                        self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
+                    } else if (self.score == self.maxViews) {
+                        self.otherButton!.setTitle("Próximo nível", forState: UIControlState.Normal)
+                        self.level++
+                        self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
+                    } else {
+                        self.otherButton!.setTitle("Tentar novamente", forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     }
 
