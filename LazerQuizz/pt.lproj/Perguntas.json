@@ -408,6 +408,35 @@
                              ]
                 }
             }
+        },
+        "Historia" : {
+            "Grego ou Romano?" : {
+                "Facil" : {
+                    "Grego" : [
+                               "Zeus",
+                               "Atena",
+                               "Afrodite",
+                               "Ares",
+                               "Hades",
+                               "Hera",
+                               "Poseidon",
+                               "Apolo",
+                               "Hermes",
+                               "Artemis"
+                               ],
+                    "Romano" : [
+                                "Jupiter",
+                                "Juno",
+                                "Netuno",
+                                "Juno",
+                                "Vulcano",
+                                "Plutão",
+                                "Marte",
+                                "Febo",
+                                "Diana",
+                                "Vênus"]
+                }
+            }
         }
     }
 }
