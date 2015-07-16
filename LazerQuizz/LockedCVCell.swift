@@ -11,4 +11,6 @@ import UIKit
 class LockedCVCell: UICollectionViewCell {
     @IBOutlet weak var imgCell: UIImageView!
     @IBOutlet weak var lblCell: UILabel!
+    @IBOutlet weak var lblStar: UILabel!
+    @IBOutlet weak var lblRemaining: UILabel!
 }

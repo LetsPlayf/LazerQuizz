@@ -44,14 +44,14 @@ class ViewControllerGame: UIViewController {
         self.nextLabel = 0
         
         self.scoreReport = UILabel(frame: CGRectMake(10, -125, self.view.bounds.width - 20, 125))
-        self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.75)
+        self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.9)
         self.scoreReport!.layer.masksToBounds = true
         self.scoreReport!.layer.cornerRadius = 3
         self.removableViews.append(self.scoreReport!)
         self.view.addSubview(self.scoreReport!)
         
         self.buttonBar = UIView(frame: CGRectMake(10, self.view.bounds.height + 65, self.view.bounds.width - 20, 55))
-        self.buttonBar!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.75)
+        self.buttonBar!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.9)
         self.buttonBar!.layer.masksToBounds = true
         self.buttonBar!.layer.cornerRadius = 3
         self.removableViews.append(self.buttonBar!)
@@ -258,7 +258,7 @@ class ViewControllerGame: UIViewController {
                     
                     self.scoreReport!.text = String(format:"Você acertou\n%d de %d.", self.score, self.maxViews)
                     self.scoreReport!.textAlignment = .Center
-                    self.scoreReport!.textColor = UIColor(red: 0.85, green: 0.65, blue: 0.2, alpha: 1)
+                    self.scoreReport!.textColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
                     self.scoreReport!.font = UIFont.systemFontOfSize(45)
                     self.scoreReport!.numberOfLines = 0
                     self.scoreReport!.lineBreakMode = NSLineBreakMode.ByWordWrapping

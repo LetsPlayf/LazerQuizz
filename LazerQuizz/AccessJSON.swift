@@ -124,9 +124,8 @@ class AccessJSON {
         
         var i = 0
         println(vet)
-        let max = vet.count/2
         //Getting all the keys and values of the auxiliary variables and putting in the Dictionary
-        for(var i = 0; i < max;i++){
+        for(var i = 0; i < 10;i++){
         //while (i < vet.count/2){
             let key = vet[indexOfTheQuestion].keys
             let value = (vet[indexOfTheQuestion][key.array[0]])
