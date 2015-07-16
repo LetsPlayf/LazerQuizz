@@ -15,6 +15,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var arrayOfData = [Level]()
     var level = Int()
     var difficulty = String()
+    var stars = Int()
+    let starRemaining = [0,0,3,6,9,12,15,18,21,24]
     
     override func viewDidLoad() {
         
@@ -33,10 +35,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             //Put any code here and it will be executed only once.
             
             //if(language.isEqualToString("pt")) {
-                LevelServices.createLevel(0, score: 0, type: "Carro", block: false)
+                LevelServices.createLevel(0, score: 0, type: "Carros", block: false)
                 LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
                 LevelServices.createLevel(2, score: 0, type: "Artes", block: true)
                 LevelServices.createLevel(3, score: 0, type: "Geografia", block: true)
+                LevelServices.createLevel(4, score: 0, type: "Artes", block: true)
+                LevelServices.createLevel(5, score: 0, type: "Geografia", block: true)
+                LevelServices.createLevel(6, score: 0, type: "Artes", block: true)
+                LevelServices.createLevel(7, score: 0, type: "Geografia", block: true)
+                LevelServices.createLevel(8, score: 0, type: "Artes", block: true)
+                LevelServices.createLevel(9, score: 0, type: "Geografia", block: true)
             //}
 
             println("Is a first launch")
@@ -52,8 +60,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     override func viewWillAppear(animated: Bool) {
-        
-        
+        self.countStars()
         self.unlockTheLevels()
     }
     
@@ -68,6 +75,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+       
 
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
@@ -86,10 +95,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 break
             }
             
+            unlockedCell.star1.image = UIImage(named: "star_empty.png")
+            unlockedCell.star2.image = UIImage(named: "star_empty.png")
+            unlockedCell.star3.image = UIImage(named: "star_empty.png")
+            switch(arrayOfData[indexPath.row].level_score)
+            {
+            case 3:
+                unlockedCell.star3.image = UIImage(named: "star.png")
+                fallthrough
+            case 2:
+                unlockedCell.star2.image = UIImage(named: "star.png")
+                fallthrough
+            case 1:
+                unlockedCell.star1.image = UIImage(named: "star.png")
+                fallthrough
+            default:
+                break
+            }
+            
             return unlockedCell
         }
         else{
             let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
+            if( starRemaining[indexPath.row] - self.stars < 2){
+                lockedCell.lblRemaining.text = "Falta"
+                lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrela"
+            }
+            else{
+                lockedCell.lblRemaining.text = "Faltam"
+                lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrelas"
+            }
+            
             return lockedCell
         }
     }
@@ -117,7 +153,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         
-        return CGSize(width: 130, height: 135)
+        return CGSize(width: 127, height: 134)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -127,28 +163,39 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         destinationVC.arrayOfData = self.arrayOfData
     }
     
-    //This method counts the scores of each level to unlock the locked levels.
-    func unlockTheLevels(){
-        var stars = 0
+    func countStars(){
+        self.stars = 0
         for(var i = 0 ; i < arrayOfData.count ; i++){
             stars += Int(arrayOfData[i].level_score)
         }
-        println(stars)
+    }
+    
+    //This method counts the scores of each level to unlock the locked levels.
+    func unlockTheLevels(){
+        println(self.stars)
         if(stars > 2 && arrayOfData[2].level_block == true){
             LevelServices.updateBlock(arrayOfData[2])
-            
         }
-        if(stars > 5 && arrayOfData[3].level_block == true){
+        if(self.stars > 5 && arrayOfData[3].level_block == true){
             LevelServices.updateBlock(arrayOfData[3])
         }
-        if(stars > 8 && arrayOfData[4].level_block == true){
+        if(self.stars > 8 && arrayOfData[4].level_block == true){
             LevelServices.updateBlock(arrayOfData[4])
         }
-        if(stars > 11 && arrayOfData[5].level_block == true){
+        if(self.stars > 11 && arrayOfData[5].level_block == true){
             LevelServices.updateBlock(arrayOfData[5])
         }
-        if(stars > 14 && arrayOfData[6].level_block == true){
-            LevelServices.updateBlock(arrayOfData[5])
+        if(self.stars > 14 && arrayOfData[6].level_block == true){
+            LevelServices.updateBlock(arrayOfData[6])
+        }
+        if(self.stars > 17 && arrayOfData[7].level_block == true){
+            LevelServices.updateBlock(arrayOfData[7])
+        }
+        if(self.stars > 20 && arrayOfData[8].level_block == true){
+            LevelServices.updateBlock(arrayOfData[8])
+        }
+        if(self.stars > 23 && arrayOfData[9].level_block == true){
+            LevelServices.updateBlock(arrayOfData[9])
         }
 
         arrayOfData = LevelDAO.returnAllValues()
