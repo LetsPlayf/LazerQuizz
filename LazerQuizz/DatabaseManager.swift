@@ -86,31 +86,29 @@ class DatabaseManager
         // save context
         var error:NSErrorPointer = nil
         DatabaseManager.sharedInstance.managedObjectContext?.save(error)
-        if (error != nil)
-        {
+        if (error != nil) {
             // log error
             print(error)
         }
     }
     
-    static func delete(objectToBeDeleted:NSManagedObject)
-    {
+    static func delete(objectToBeDeleted:NSManagedObject) {
+        
         // remove object from context
         var error:NSErrorPointer = nil
         DatabaseManager.sharedInstance.managedObjectContext?.deleteObject(objectToBeDeleted)
         DatabaseManager.sharedInstance.managedObjectContext?.save(error)
         
         // log error
-        if (error != nil)
-        {
+        if (error != nil) {
             // log error
             print(error)
         }
     }
     
-    static func update(){
-        DatabaseManager.sharedInstance.managedObjectContext?.save(nil)
+    static func update() {
         
+        DatabaseManager.sharedInstance.managedObjectContext?.save(nil)
     }
     
     

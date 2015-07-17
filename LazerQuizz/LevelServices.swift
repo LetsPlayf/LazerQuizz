@@ -11,7 +11,6 @@ import Foundation
 
 class LevelServices {
     
-    
     static func createLevel (number : Int, score : Int, type : String, block : Bool){
         
         var level : Level = Level()
@@ -23,25 +22,18 @@ class LevelServices {
         
         
         LevelDAO.insert(level)
-        
-        
     }
 
-    static func updateBlock(level : Level){
+    static func updateBlock(level : Level) {
         
         level.level_block = false
         LevelDAO.update()
-        
     }
     
-    static func updateScore(level : Level){
+    static func updateScore(level : Level) {
+        
         level.level_score++
         LevelDAO.update()
-        
     }
-    
-    
-    
-    
     
 }

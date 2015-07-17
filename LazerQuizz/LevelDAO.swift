@@ -9,10 +9,10 @@
 import Foundation
 import CoreData
 
-class LevelDAO : DatabaseManager
-{
+class LevelDAO : DatabaseManager {
     
     static func returnAllValues() -> [Level] {
+        
         // creating fetch request
         let request = NSFetchRequest(entityName: "Level")
         
@@ -20,13 +20,7 @@ class LevelDAO : DatabaseManager
         var error:NSErrorPointer = nil
         let results:[Level] = DatabaseManager.sharedInstance.managedObjectContext?.executeFetchRequest(request, error: error) as! [Level]
         
-        
-        
         return results
     }
-
-    
-    
-    
     
 }

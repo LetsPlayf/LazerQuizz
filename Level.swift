@@ -30,7 +30,4 @@ class Level: NSManagedObject {
         self.init(entity: entityDescription!, insertIntoManagedObjectContext: context)
     }
 
-    
-    
-
 }
