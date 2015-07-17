@@ -65,6 +65,7 @@ public struct JSON {
     :returns: The created JSON
     */
     public init(data:NSData, options opt: NSJSONReadingOptions = .AllowFragments, error: NSErrorPointer = nil) {
+        
         if let object: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: opt, error: error) {
             self.init(object)
         } else {
@@ -80,6 +81,7 @@ public struct JSON {
     :returns: The created JSON
     */
     public init(_ object: AnyObject) {
+        
         self.object = object
     }
 
@@ -91,6 +93,7 @@ public struct JSON {
     :returns: The created JSON
     */
     public init(_ jsonArray:[JSON]) {
+        
         self.init(jsonArray.map { $0.object })
     }
 

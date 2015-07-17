@@ -10,10 +10,8 @@ import Foundation
 
 class AccessJSON {
     
-    
     //This method returns the question that is going to be used. It receives a string that is the area of the question.
-    static func  accessTheQuestion(type : String)-> String
-    {
+    static func  accessTheQuestion(type : String)-> String {
         //The string to be returned.
         var question = [String]()
         
@@ -52,10 +50,8 @@ class AccessJSON {
         let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
         let json = JSON(data:data!)
         
-        for (key : String, quest: JSON ) in json["Perguntas"][type][question][level]{
-
+        for (key : String, quest: JSON ) in json["Perguntas"][type][question][level] {
             answers.append(key)
-            
         }
         
         //Sorting the two options.
@@ -64,7 +60,7 @@ class AccessJSON {
         var indexOfTheAnswer2 = UInt32()
         do {
             indexOfTheAnswer2 = arc4random_uniform(UInt32(answers.count))
-        } while(indexOfTheAnswer2 == indexOfTheAnswer)
+        } while (indexOfTheAnswer2 == indexOfTheAnswer)
         
         
         arrayOfOptions.append(answers[Int(indexOfTheAnswer2)])
@@ -74,7 +70,6 @@ class AccessJSON {
         
         
         return arrayOfOptions
-        
     }
     
     
@@ -96,7 +91,7 @@ class AccessJSON {
         var dic : Dictionary<String,Int>
         
         
-        for (var i = 0; i < json["Perguntas"][type][question][level][option1].count; i++){
+        for (var i = 0; i < json["Perguntas"][type][question][level][option1].count; i++) {
             //for (var i = 0; i < json[arq][type][question][level][option1].count; i++){
             
             //dic = [String(stringInterpolationSegment: json[arq][question][level][option1][i]) : 0]
@@ -108,7 +103,7 @@ class AccessJSON {
             
         }
         
-        for (var i = 0; i < json["Perguntas"][type][question][level][option2].count; i++){
+        for (var i = 0; i < json["Perguntas"][type][question][level][option2].count; i++) {
             //for (var i = 0; i < json[arq][type][question][level][option2].count; i++){
             
             //dic = [String(stringInterpolationSegment: json[arq][question][level][option2][i]) : 1]
@@ -125,7 +120,7 @@ class AccessJSON {
         var i = 0
         println(vet)
         //Getting all the keys and values of the auxiliary variables and putting in the Dictionary
-        for(var i = 0; i < 10;i++){
+        for (var i = 0; i < 10; i++) {
         //while (i < vet.count/2){
             let key = vet[indexOfTheQuestion].keys
             let value = (vet[indexOfTheQuestion][key.array[0]])
@@ -134,16 +129,12 @@ class AccessJSON {
             
             indexOfTheQuestion = Int(arc4random_uniform(UInt32(vet.count)))
             println(i)
-            
-            
-            
         }
         println(dictionaryOfAnswers)
         
         return dictionaryOfAnswers
     }
-    
-    
+
 }
 
 
