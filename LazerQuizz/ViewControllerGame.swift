@@ -288,7 +288,7 @@ class ViewControllerGame: UIViewController {
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     } else if (self.score == self.maxViews) {
                         self.otherButton!.setTitle("Próximo nível", forState: UIControlState.Normal)
-                        self.level++
+                        ++self.arrayOfData[self.level].level_score
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     } else {
                         self.otherButton!.setTitle("Tentar novamente", forState: UIControlState.Normal)
@@ -313,7 +313,7 @@ class ViewControllerGame: UIViewController {
                     self.scoreReport!.numberOfLines = 0
                     self.scoreReport!.lineBreakMode = NSLineBreakMode.ByWordWrapping
                     
-                    UIView.animateWithDuration(1.4, delay: 0, usingSpringWithDamping: 7.1, initialSpringVelocity: 7, options: nil, animations: { () -> Void in
+                    UIView.animateWithDuration(1.2, delay: 0, usingSpringWithDamping: 7.1, initialSpringVelocity: 7, options: nil, animations: { () -> Void in
                         self.scoreReport!.frame.origin.y = self.view.center.y - self.scoreReport!.bounds.height + 10
                         self.buttonBar!.frame.origin.y = self.view.center.y  + self.buttonBar!.bounds.height - 10
                         self.laser!.alpha = 0
