@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-class DatabaseManager
-{
+class DatabaseManager {
+    
     // Database manager singleton
     static let sharedInstance = DatabaseManager()
 
