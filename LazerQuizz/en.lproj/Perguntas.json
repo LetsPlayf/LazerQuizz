@@ -67,162 +67,151 @@
         "Biologia": {
             "Mamifero ou ave?": {
                 "Facil": {
-                    "Mamifero": [
-                                 "Gato",
-                                 "Porco",
-                                 "Vaca",
-                                 "Leão",
-                                 "Macaco",
-                                 "Cachorro",
-                                 "Elefante",
-                                 "Urso",
-                                 "Lobo",
-                                 "Tigre"
-                                 ],
-                    "Ave": [
-                            "Galinha",
-                            "Pomba",
-                            "Tucano",
-                            "Pelicano",
-                            "Sabiá",
-                            "Ema",
-                            "Ganso",
-                            "Cisne",
-                            "Gavião",
-                            "Águia"
-                            ]
+                    "Mammal": [
+                               "Cat",
+                               "Pig",
+                               "Cow",
+                               "Lion",
+                               "Monkey",
+                               "Dog",
+                               "Elephant",
+                               "Bear",
+                               "Wolf",
+                               "Tiger"
+                               ],
+                    "Bird": [
+                             "Chicken",
+                             "Dove",
+                             "Toucan",
+                             "Pelican",
+                             "Sparrow",
+                             "Emu",
+                             "Goose",
+                             "Swan",
+                             "Hawk",
+                             "Eagle"
+                             ]
                 },
                 "Medio": {
-                    "Mamifero": [
-                                 "Homem",
-                                 "Capivara",
-                                 "Chinchila",
-                                 "Esquilo",
-                                 "Foca",
-                                 "Gazela",
-                                 "Javali",
-                                 "Raposa",
-                                 "Tatu",
-                                 "Toupeira"
-                                 ],
-                    "Ave": [
-                            "Quero-quero",
-                            "Tico-Tico",
-                            "Seriema",
-                            "Pica-pau",
-                            "Bem-te-vi",
-                            "Papagaio",
-                            "Pardal",
-                            "Urubu",
-                            "Garça",
-                            "Jacutinga"
-                            ]
+                    "Mammal": [
+                               "Man",
+                               "Capybara",
+                               "Chinchilla",
+                               "Squirrel",
+                               "Seal",
+                               "Gazelle",
+                               "Boar",
+                               "Fox",
+                               "Armadillo",
+                               "Mole"
+                               ],
+                    "Bird": [
+                             "Southern Lapwing",
+                             "Seriema",
+                             "Woodpecker",
+                             "Parrot",
+                             "Sparrow",
+                             "Vulture",
+                             "Egret"
+                             ]
                 },
                 "Dificil": {
-                    "Mamifero": [
-                                 "Golfinho",
-                                 "Hamster",
-                                 "Puma",
-                                 "Pantera",
-                                 "Búfalo",
-                                 "Alce",
-                                 "Chacal",
-                                 "Elande",
-                                 "Fuinha",
-                                 "Lince"
-                                 ],
-                    "Ave": [
-                            "Cuco",
-                            "Curiango",
-                            "Albatroz",
-                            "Coruja",
-                            "Araçari",
-                            "Estalador",
-                            "Gralha",
-                            "Juriti",
-                            "Narceja",
-                            "Saracura"
-                            ]
+                    "Mammal": [
+                               "Dolphin",
+                               "Hamster",
+                               "Puma",
+                               "Panther",
+                               "Buffalo",
+                               "Moose",
+                               "Jackal",
+                               "Eland",
+                               "Weasel",
+                               "Lynx"
+                               ],
+                    "Bird": [
+                             "Cuckoo",
+                             "Nightjar",
+                             "Albatross",
+                             "Owl",
+                             "Grackle",
+                             "Jackdaw",
+                             "Snipe"
+                             ]
                 }
             },
             "Vertebrado ou Invertebrado?": {
                 "Facil": {
-                    "Vertebrado": [
-                                   "Cachorro",
-                                   "Leão",
-                                   "Cobra",
-                                   "Rato",
-                                   "Galinha",
-                                   "Peixe",
-                                   "Vaca",
-                                   "Porco",
-                                   "Girafa",
-                                   "Rinoceronte"
+                    "Vertebrate": [
+                                   "Dog",
+                                   "Lion",
+                                   "Snake",
+                                   "Mouse",
+                                   "Chicken",
+                                   "Fish",
+                                   "Cow",
+                                   "Pig",
+                                   "Giraffe",
+                                   "Rhino"
                                    ],
-                    "Invertebrado": [
-                                     "Formiga",
-                                     "Barata",
-                                     "Aranha",
-                                     "Louva-Deus",
-                                     "Borboleta",
-                                     "Lula",
-                                     "Polvo",
-                                     "Estrela do mar",
-                                     "Escorpião",
-                                     "Caranguejo"
+                    "Invertebrate": [
+                                     "Ant",
+                                     "Cockroach",
+                                     "Spider",
+                                     "Mantises",
+                                     "Butterfly",
+                                     "Squid",
+                                     "Octopus",
+                                     "Sea Star",
+                                     "Scorpion",
+                                     "Crab"
                                      ]
                 },
                 "Medio": {
-                    "Vertebrado": [
+                    "Vertebrate": [
                                    "Boto",
                                    "Prea",
                                    "Paca",
-                                   "Lebre",
-                                   "Anchova",
-                                   "Churimbatá",
-                                   "Moréia",
+                                   "Hare",
+                                   "Bluefish",
+                                   "Moray",
                                    "Surucuri",
-                                   "Enguia",
-                                   "Harpia",
-                                   "Siriema"
+                                   "Eel",
+                                   "Harpy"
                                    ],
-                    "Invertebrado": [
+                    "Invertebrate": [
                                      "Esquitossoma",
-                                     "Lesma",
+                                     "Slug",
                                      "Gafonhoto",
                                      "Anêmono",
-                                     "Tênia",
-                                     "Lagosta",
-                                     "Sanguessuca",
+                                     "Tapeworm",
+                                     "Lapster",
+                                     "Leech",
                                      "Coral",
-                                     "Camarão",
-                                     "Tarântula"
+                                     "Shrimp",
+                                     "Tarantula"
                                      ]
                 },
                 "Dificil": {
-                    "Vertebrado": [
-                                   "Lampreia",
-                                   "Seriema",
+                    "Vertebrate": [
+                                   "Lamprey",
                                    "Matum",
-                                   "Tritão",
-                                   "Potreu",
-                                   "Ostracodermes",
-                                   "Mixinas",
-                                   "Teiú",
-                                   "Moréia",
-                                   "Ouriço"
+                                   "Triton",
+                                   "Ostracoderms",
+                                   "Hagfishes",
+                                   "Teiu",
+                                   "Moray",
+                                   "Urchin"
                                    ],
-                    "Invertebrado": [
-                                     "Tarântula",
+                    "Invertebrate": [
+                                     "Tarantula",
                                      "Ostra",
-                                     "Craca",
+                                     "Barnacle",
                                      "Annelida",
-                                     "Anfioxo",
+                                     "Amphioxus",
                                      "Loricifera",
                                      "Sipuncula",
                                      "Tunicata",
-                                     "Echiura",
-                                     "Tamarutaca"
+                                     "Echiura"
                                      ]
                 }
             }
