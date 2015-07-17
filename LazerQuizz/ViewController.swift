@@ -129,6 +129,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         else{
             let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
+            let localizedImageName = NSLocalizedString("", comment:"name of the flag image on xcassets")
             if( starRemaining[indexPath.row] - self.stars < 2){
                 lockedCell.lblRemaining.text = "Falta"
                 lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrela"
