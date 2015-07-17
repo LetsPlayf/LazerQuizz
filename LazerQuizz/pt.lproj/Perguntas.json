@@ -43,24 +43,60 @@
                              ]
                 },
                 "Dificil": {
-                    "Fiat": [
-                             "Uno",
-                             "Palio"
-                             ],
+                    "Porsche": [
+                                "Boxter",
+                                "Cayman",
+                                "911",
+                                "918 Spyder",
+                                "Panamera",
+                                "Macan",
+                                "Cayenne"
+                                ],
                     "Chevrolet": [
                                   "Onix",
                                   "Camaro"
                                   ]
                 },
                 "Medio": {
-                    "Fiat": [
-                             "Uno",
-                             "Palio"
-                             ],
-                    "Chevrolet": [
-                                  "Onix",
-                                  "Camaro"
-                                  ]
+                    "Renault": [
+                                "Duster",
+                                "Stepway",
+                                "Fluence",
+                                "Sandero",
+                                "Logo",
+                                "Cangoo"
+                                ],
+                    "Toyota": [
+                               "Avalon",
+                               "Aurion",
+                               "Bandeirante",
+                               "Corolla",
+                               "Hilux",
+                               "Supra",
+                               "Sequoia",
+                               "Land Cruiser",
+                               "Aygo",
+                               "Tundra",
+                               "Wish",
+                               "Paseo",
+                               "MR2",
+                               "Sienna"
+                               ],
+                    "Lamborghini": [
+                                    "Diablo",
+                                    "Gallardo",
+                                    "Aventador",
+                                    "Huracán",
+                                    "Miura"
+                                    ],
+                    "Honda": [
+                              "Accord",
+                              "Civic",
+                              "City",
+                              "HR-V",
+                              "CR-V",
+                              "Fit"
+                              ]
                 }
             }
         },

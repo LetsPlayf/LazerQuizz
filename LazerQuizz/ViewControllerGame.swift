@@ -40,8 +40,11 @@ class ViewControllerGame: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.levelSetup()
+    }
+    
+    
+    func levelSetup () {
         self.score = 0
         self.nextLabel = 0
         self.labels.removeAll(keepCapacity: false)
@@ -74,7 +77,6 @@ class ViewControllerGame: UIViewController {
         
         generateQuestion()
     }
-    
     
     override func viewWillAppear(animated: Bool) {
         generateLaser()
@@ -125,7 +127,10 @@ class ViewControllerGame: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.initializeTimer()
+    }
+    
+    func initializeTimer() {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("checkCollision"), userInfo: nil, repeats: true)
         // wait for the user to read the question
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.secondsToBegin * Float(NSEC_PER_SEC)))
@@ -161,12 +166,12 @@ class ViewControllerGame: UIViewController {
         self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 40
         
-        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
+        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height))
         self.leftBar?.backgroundColor = UIColor.clearColor()
         self.removableViews.append(self.leftBar!)
         self.view.addSubview(self.leftBar!)
         
-        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
+        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height))
         self.rightBar?.backgroundColor = UIColor.clearColor()
         self.removableViews.append(self.rightBar!)
         self.view.addSubview(self.rightBar!)
@@ -223,9 +228,10 @@ class ViewControllerGame: UIViewController {
         for view in self.removableViews {
             view.removeFromSuperview()
         }
-        self.viewDidLoad()
-        self.viewWillAppear(true)
-        self.viewDidAppear(true)
+        self.removableViews.removeAll(keepCapacity: false)
+        self.levelSetup()
+        self.generateLaser()
+        self.initializeTimer()
     }
     
     func animateLaser() {

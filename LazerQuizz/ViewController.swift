@@ -34,18 +34,30 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
             
-            //if(language.isEqualToString("pt")) {
+//            if(language.isEqualToString("pt")) {
                 LevelServices.createLevel(0, score: 0, type: "Carros", block: false)
                 LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
                 LevelServices.createLevel(2, score: 0, type: "Artes", block: true)
                 LevelServices.createLevel(3, score: 0, type: "Geografia", block: true)
-                LevelServices.createLevel(4, score: 0, type: "Artes", block: true)
-                LevelServices.createLevel(5, score: 0, type: "Geografia", block: true)
-                LevelServices.createLevel(6, score: 0, type: "Artes", block: true)
-                LevelServices.createLevel(7, score: 0, type: "Geografia", block: true)
-                LevelServices.createLevel(8, score: 0, type: "Artes", block: true)
-                LevelServices.createLevel(9, score: 0, type: "Geografia", block: true)
-            //}
+                LevelServices.createLevel(4, score: 0, type: "Historia", block: true)
+                LevelServices.createLevel(5, score: 0, type: "Esporte", block: true)
+                LevelServices.createLevel(6, score: 0, type: "Series", block: true)
+                LevelServices.createLevel(7, score: 0, type: "Quimica", block: true)
+//
+//            } else {
+//                //In English
+//                LevelServices.createLevel(0, score: 0, type: "Cars", block: false)
+//                LevelServices.createLevel(1, score: 0, type: "Biology", block: false)
+//                LevelServices.createLevel(2, score: 0, type: "Art", block: true)
+//                LevelServices.createLevel(3, score: 0, type: "Geography", block: true)
+//                LevelServices.createLevel(4, score: 0, type: "History", block: true)
+//                LevelServices.createLevel(5, score: 0, type: "Sport", block: true)
+//                LevelServices.createLevel(6, score: 0, type: "Series", block: true)
+//                LevelServices.createLevel(7, score: 0, type: "Chemistry", block: true)
+//
+//            
+//            
+//            }
 
             println("Is a first launch")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
