@@ -67,125 +67,156 @@
         "Biologia": {
             "Mamifero ou ave?": {
                 "Facil": {
-                    "Mamifero": [
-                                 "Gato",
-                                 "Porco",
-                                 "Vaca",
-                                 "Leão",
-                                 "Macaco",
-                                 "Cachorro",
-                                 "Elefante",
-                                 "Urso",
-                                 "Lobo",
-                                 "Tigre"
-                                 ],
-                    "Ave": [
-                            "Galinha",
-                            "Pomba",
-                            "Tucano",
-                            "Pelicano",
-                            "Sabiá",
-                            "Ema",
-                            "Ganso",
-                            "Cisne",
-                            "Gavião",
-                            "Águia"
-                            ]
+                    "Mammal": [
+                               "Cat",
+                               "Pig",
+                               "Cow",
+                               "Lion",
+                               "Monkey",
+                               "Dog",
+                               "Elephant",
+                               "Bear",
+                               "Wolf",
+                               "Tiger"
+                               ],
+                    "Bird": [
+                             "Chicken",
+                             "Dove",
+                             "Toucan",
+                             "Pelican",
+                             "Sparrow",
+                             "Emu",
+                             "Goose",
+                             "Swan",
+                             "Hawk",
+                             "Eagle"
+                             ]
                 },
                 "Medio": {
-                    "Mamifero": [
-                                 "Homem",
-                                 "Capivara",
-                                 "Chinchila",
-                                 "Esquilo",
-                                 "Foca",
-                                 "Gazela",
-                                 "Javali",
-                                 "Raposa",
-                                 "Tatu",
-                                 "Toupeira"
-                                 ],
-                    "Ave": [
-                            "Quero-quero",
-                            "Tico-Tico",
-                            "Seriema",
-                            "Pica-pau",
-                            "Bem-te-vi",
-                            "Papagaio",
-                            "Pardal",
-                            "Urubu",
-                            "Garça",
-                            "Jacutinga"
-                            ]
+                    "Mammal": [
+                               "Man",
+                               "Capybara",
+                               "Chinchilla",
+                               "Squirrel",
+                               "Seal",
+                               "Gazelle",
+                               "Boar",
+                               "Fox",
+                               "Armadillo",
+                               "Mole"
+                               ],
+                    "Bird": [
+                             "Southern Lapwing",
+                             "Seriema",
+                             "Woodpecker",
+                             "Parrot",
+                             "Sparrow",
+                             "Vulture",
+                             "Egret"
+                             ]
                 },
                 "Dificil": {
-                    "Mamifero": [
-                                 "Golfinho",
-                                 "Hamster",
-                                 "Puma",
-                                 "Pantera",
-                                 "Búfalo",
-                                 "Alce",
-                                 "Chacal",
-                                 "Elande",
-                                 "Fuinha",
-                                 "Lince"
-                                 ],
-                    "Ave": [
-                            "Cuco",
-                            "Curiango",
-                            "Albatroz",
-                            "Coruja",
-                            "Araçari",
-                            "Estalador",
-                            "Gralha",
-                            "Juriti",
-                            "Narceja",
-                            "Saracura"
-                            ]
+                    "Mammal": [
+                               "Dolphin",
+                               "Hamster",
+                               "Puma",
+                               "Panther",
+                               "Buffalo",
+                               "Moose",
+                               "Jackal",
+                               "Eland",
+                               "Weasel",
+                               "Lynx"
+                               ],
+                    "Bird": [
+                             "Cuckoo",
+                             "Nightjar",
+                             "Albatross",
+                             "Owl",
+                             "Grackle",
+                             "Jackdaw",
+                             "Snipe"
+                             ]
                 }
             },
             "Vertebrado ou Invertebrado?": {
                 "Facil": {
-                    "Vertebrado": [
-                                   "Cachorro",
-                                   "Leão",
-                                   "Cobra",
-                                   "Rato",
-                                   "Galinha",
-                                   "Peixe",
-                                   "Vaca",
-                                   "Porco",
-                                   "Girafa",
-                                   "Rinoceronte"
+                    "Vertebrate": [
+                                   "Dog",
+                                   "Lion",
+                                   "Snake",
+                                   "Mouse",
+                                   "Chicken",
+                                   "Fish",
+                                   "Cow",
+                                   "Pig",
+                                   "Giraffe",
+                                   "Rhino"
                                    ],
-                    "Invertebrado": [
-                                     "Formiga",
-                                     "Barata",
-                                     "Aranha",
-                                     "Louva-Deus",
-                                     "Borboleta",
-                                     "Lula",
-                                     "Polvo",
-                                     "Estrela do mar",
-                                     "Escorpião",
-                                     "Caranguejo"
+                    "Invertebrate": [
+                                     "Ant",
+                                     "Cockroach",
+                                     "Spider",
+                                     "Mantises",
+                                     "Butterfly",
+                                     "Squid",
+                                     "Octopus",
+                                     "Sea Star",
+                                     "Scorpion",
+                                     "Crab"
                                      ]
                 },
                 "Medio": {
                     "Vertebrado": [
-                                   "Cachorro"
+                                   "Boto",
+                                   "Prea",
+                                   "Paca",
+                                   "Lebre",
+                                   "Anchova",
+                                   "Churimbatá",
+                                   "Moréia",
+                                   "Surucuri",
+                                   "Enguia",
+                                   "Harpia",
+                                   "Siriema"
                                    ],
                     "Invertebrado": [
-                                     "Aranha"
+                                     "Esquitossoma",
+                                     "Lesma",
+                                     "Gafonhoto",
+                                     "Anêmono",
+                                     "Tênia",
+                                     "Lapster",
+                                     "Leech",
+                                     "Coral",
+                                     "Camarão",
+                                     "Tarântula"
                                      ]
                 },
                 "Dificil": {
                     "Vertebrado": [
-                                   "Lampreia"
+                                   "Lampreia",
+                                   "Seriema",
+                                   "Matum",
+                                   "Tritão",
+                                   "Potreu",
+                                   "Ostracodermes",
+                                   "Mixinas",
+                                   "Teiú",
+                                   "Moréia",
+                                   "Ouriço"
                                    ],
                     "Invertebrado": [
-                                     "Borboleta"
+                                     "Tarântula",
+                                     "Ostra",
+                                     "Craca",
+                                     "Annelida",
+                                     "Anfioxo",
+                                     "Loricifera",
+                                     "Sipuncula",
+                                     "Tunicata",
+                                     "Echiura",
+                                     "Tamarutaca"
                                      ]
                 }
             }
@@ -275,137 +306,132 @@
                 }
             }
         },
-        "Geografia": {
-            "Pais ou Capital": {
+        "Geography": {
+            "Country or Capital?": {
                 "Facil": {
                     "Capital": [
                                 "Luanda",
-                                "Brasília",
-                                "Argel",
+                                "Brasilia",
+                                "Algiers",
                                 "Moroni",
                                 "Otawwa",
                                 "Washington",
                                 "Nassau",
-                                "São José",
-                                "São Salvador",
+                                "San Jose",
+                                "San Salvador",
                                 "Havana",
-                                "Montevidéo",
+                                "Montevideo",
                                 "Berlin",
                                 "Paris",
-                                "Atenas",
+                                "Athens",
                                 "Madrid",
                                 "Roma"
                                 ],
-                    "Pais": [
-                             "Angola",
-                             "Brasil",
-                             "Cabo Verde",
-                             "Chade",
-                             "Maurícia",
-                             "Lesoto",
-                             "Madagáscar",
-                             "Tunísia",
-                             "Uganda",
-                             "Canadá",
-                             "México",
-                             "Bahamas",
-                             "Cuba",
-                             "Haiti",
-                             "Suriname",
-                             "Butão",
-                             "Camboja",
-                             "China",
-                             "Timor Leste",
-                             "Turquia",
-                             "Alemanha",
-                             "Grécia",
-                             "Croácia",
-                             "Bulgária",
-                             "Dinamarca",
-                             "República Theca",
-                             "Austrália",
-                             "ilhas Marshall"
-                             ]
+                    "Country": [
+                                "Angola",
+                                "Brazil",
+                                "Cape Verde",
+                                "Chad",
+                                "Mauritius",
+                                "Lesotho",
+                                "Madagascar",
+                                "Tunisia",
+                                "Uganda",
+                                "Canada",
+                                "Mexico",
+                                "Bahamas",
+                                "Cuba",
+                                "Haiti",
+                                "Suriname",
+                                "Bhutan",
+                                "Cambodia",
+                                "China",
+                                "East Timor",
+                                "Turkey",
+                                "Germany",
+                                "Greece",
+                                "Croatia",
+                                "Bulgaria",
+                                "Denmark",
+                                "Republic Theca",
+                                "Australia",
+                                "Marshall Islands"
+                                ]
                 },
                 "Medio": {
                     "Capital": [
                                 "Gaborone",
-                                "Praia",
+                                "Beach",
                                 "Moroni",
-                                "Conacri",
+                                "Conakry",
                                 "Wellington",
-                                "Apia",
-                                "Belgrado",
-                                "Moscou",
+                                "Belgrade",
+                                "Moscow",
                                 "Oslo",
                                 "Islamabad",
                                 "Male",
-                                "Mascate",
+                                "Muscat",
                                 "Colombo",
-                                "Amã"
+                                "Amman"
                                 ],
-                    "Pais": [
-                             "Benin",
-                             "Botswana",
-                             "Camarões",
-                             "Chade",
-                             "Lesoto",
-                             "Libéria",
-                             "Sudão",
-                             "Uganda",
-                             "Zimbabwe",
-                             "Bahamas",
-                             "Belize"
-                             ]
+                    "Country": [
+                                "Benin",
+                                "Botswana",
+                                "Cameroon",
+                                "Chad",
+                                "Lesotho",
+                                "Liberia",
+                                "Sudan",
+                                "Uganda",
+                                "Zimbabwe",
+                                "Bahamas",
+                                "Belize"
+                                ]
                 },
                 "Dificil": {
                     "Capital": [
-                                "Berna",
+                                "Bern",
                                 "Majuro",
                                 "Honiara",
                                 "Taraua",
                                 "Suva",
                                 "Kiev",
-                                "Ancara",
+                                "Ankara",
                                 "Shisinau",
                                 "Riga",
                                 "Dublin",
                                 "Baku",
-                                "Erevan",
-                                "Praga",
+                                "Yerevan",
+                                "Prague",
                                 "Zagreb",
                                 "Dili",
                                 "Katmandu",
                                 "Doha",
-                                "Cabul",
-                                "Cartum"
+                                "Kabul",
+                                "Khartoum"
                                 ],
-                    "Pais": [
-                             "Maianmar",
-                             "Sri Lanka",
-                             "Laos",
-                             "Iêmen",
-                             "Barein",
-                             "Jordânia",
-                             "Omã",
-                             "Malawi",
-                             "Maurícia",
-                             "Burundi",
-                             "Botswana",
-                             "Mali",
-                             "Malawi",
-                             "Senegal",
-                             "Togo",
-                             "Seychelles",
-                             "Barbados",
-                             "Maldivas",
-                             "Sri Lanka",
-                             "Fiji",
-                             "Kiribati",
-                             "Nauru",
-                             "Palau",
-                             "Tonga"
-                             ]
+                    "Country": [
+                                "Sri Lanka",
+                                "Lao",
+                                "Yemen",
+                                "Jordan",
+                                "Oman",
+                                "Malawi",
+                                "Mauritius",
+                                "Burundi",
+                                "Botswana",
+                                "Mali",
+                                "Senegal",
+                                "Togo",
+                                "Seychelles",
+                                "Barbados",
+                                "Maldives",
+                                "Fiji",
+                                "Kiribati",
+                                "Nauru",
+                                "Palau",
+                                "Tonga"
+                                ]
                 }
             }
         },
@@ -451,6 +477,7 @@
                     "Romano": [
                                "Juno",
                                "Netuno",
+                               "Juno",
                                "Vulcano",
                                "Febo",
                                "Diana",
