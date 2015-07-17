@@ -37,9 +37,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //            if(language.isEqualToString("pt")) {
                 LevelServices.createLevel(0, score: 0, type: "Carros", block: false)
                 LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
-                LevelServices.createLevel(2, score: 0, type: "Artes", block: true)
-                LevelServices.createLevel(3, score: 0, type: "Geografia", block: true)
-                LevelServices.createLevel(4, score: 0, type: "Historia", block: true)
+                LevelServices.createLevel(2, score: 0, type: "Geografia", block: true)
+                LevelServices.createLevel(3, score: 0, type: "Historia", block: true)
+                LevelServices.createLevel(4, score: 0, type: "Artes", block: true)
                 LevelServices.createLevel(5, score: 0, type: "Esporte", block: true)
                 LevelServices.createLevel(6, score: 0, type: "Series", block: true)
                 LevelServices.createLevel(7, score: 0, type: "Quimica", block: true)
@@ -129,6 +129,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         else{
             let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
+            let localizedImageName = NSLocalizedString("", comment:"name of the flag image on xcassets")
             if( starRemaining[indexPath.row] - self.stars < 2){
                 lockedCell.lblRemaining.text = "Falta"
                 lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrela"
