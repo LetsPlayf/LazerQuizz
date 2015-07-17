@@ -287,7 +287,7 @@ class ViewControllerGame: UIViewController {
                         self.otherButton!.setTitle(NSLocalizedString("REPETIR", comment:"name of label blocked"), forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     } else if (self.score == self.maxViews) {self.otherButton!.setTitle(NSLocalizedString("PROXIMO", comment:"next level"), forState: UIControlState.Normal)
-                        //++self.arrayOfData[self.level].level_score
+                        LevelServices.updateScore(self.arrayOfData[self.level])
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     } else {
                         self.otherButton!.setTitle(NSLocalizedString("TENTAR", comment:"try again"), forState: UIControlState.Normal)
