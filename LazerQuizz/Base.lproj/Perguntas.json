@@ -167,56 +167,51 @@
                                      ]
                 },
                 "Medio": {
-                    "Vertebrado": [
+                    "Vertebrate": [
                                    "Boto",
                                    "Prea",
                                    "Paca",
-                                   "Lebre",
-                                   "Anchova",
-                                   "Churimbatá",
-                                   "Moréia",
+                                   "Hare",
+                                   "Bluefish",
+                                   "Moray",
                                    "Surucuri",
-                                   "Enguia",
-                                   "Harpia",
-                                   "Siriema"
+                                   "Eel",
+                                   "Harpy"
                                    ],
-                    "Invertebrado": [
+                    "Invertebrate": [
                                      "Esquitossoma",
-                                     "Lesma",
+                                     "Slug",
                                      "Gafonhoto",
                                      "Anêmono",
-                                     "Tênia",
+                                     "Tapeworm",
                                      "Lapster",
                                      "Leech",
                                      "Coral",
-                                     "Camarão",
-                                     "Tarântula"
+                                     "Shrimp",
+                                     "Tarantula"
                                      ]
                 },
                 "Dificil": {
-                    "Vertebrado": [
-                                   "Lampreia",
-                                   "Seriema",
+                    "Vertebrate": [
+                                   "Lamprey",
                                    "Matum",
-                                   "Tritão",
-                                   "Potreu",
-                                   "Ostracodermes",
-                                   "Mixinas",
-                                   "Teiú",
-                                   "Moréia",
-                                   "Ouriço"
+                                   "Triton",
+                                   "Ostracoderms",
+                                   "Hagfishes",
+                                   "Teiu",
+                                   "Moray",
+                                   "Urchin"
                                    ],
-                    "Invertebrado": [
-                                     "Tarântula",
+                    "Invertebrate": [
+                                     "Tarantula",
                                      "Ostra",
-                                     "Craca",
+                                     "Barnacle",
                                      "Annelida",
-                                     "Anfioxo",
+                                     "Amphioxus",
                                      "Loricifera",
                                      "Sipuncula",
                                      "Tunicata",
-                                     "Echiura",
-                                     "Tamarutaca"
+                                     "Echiura"
                                      ]
                 }
             }

@@ -88,7 +88,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-       
+        let localizedImageStar = NSLocalizedString("nameStar", comment:"name of the star in singular")
+        let localizedImageStars = NSLocalizedString("nameStars", comment:"name of the star in plural")
+        let localizedImageRemaining = NSLocalizedString("nameRemaining", comment:"name of the remain in singular")
+        let localizedImagesRemaning = NSLocalizedString("namesRemaining", comment:"name of the remain in plural")
 
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
@@ -129,7 +132,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         else{
             let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
-            let localizedImageName = NSLocalizedString("", comment:"name of the flag image on xcassets")
+            
             if( starRemaining[indexPath.row] - self.stars < 2){
                 lockedCell.lblRemaining.text = "Falta"
                 lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrela"
