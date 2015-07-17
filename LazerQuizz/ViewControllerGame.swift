@@ -153,23 +153,23 @@ class ViewControllerGame: UIViewController {
         self.laser!.backgroundColor = UIColor.clearColor()
         
         var stream = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.55, green: 0.25, blue: 0.25, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 1, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.6, green: 0.2, blue: 0.2, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.65, green: 0.25, blue: 0.25, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 2, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.7, green: 0.2, blue: 0.2, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.75, green: 0.25, blue: 0.25, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 3, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.8, green: 0.3, blue: 0.3, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.85, green: 0.35, blue: 0.35, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 4, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.9, green: 0.4, blue: 0.4, alpha: 0.80)
+        stream.backgroundColor = UIColor(red: 0.95, green: 0.45, blue: 0.45, alpha: 0.80)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 5, self.view.bounds.width, 1))
@@ -177,23 +177,23 @@ class ViewControllerGame: UIViewController {
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 6, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.9, green: 0.4, blue: 0.4, alpha: 0.80)
+        stream.backgroundColor = UIColor(red: 0.95, green: 0.45, blue: 0.45, alpha: 0.80)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 7, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.8, green: 0.3, blue: 0.3, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.85, green: 0.35, blue: 0.35, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 8, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.7, green: 0.2, blue: 0.2, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.75, green: 0.25, blue: 0.25, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 9, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.6, green: 0.2, blue: 0.2, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.65, green: 0.25, blue: 0.25, alpha: 0.75)
         self.laser!.addSubview(stream)
         
         stream = UIView(frame: CGRectMake(0, 10, self.view.bounds.width, 1))
-        stream.backgroundColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 0.75)
+        stream.backgroundColor = UIColor(red: 0.55, green: 0.25, blue: 0.25, alpha: 0.75)
         self.laser!.addSubview(stream)
 
         self.removableViews.append(self.laser!)
