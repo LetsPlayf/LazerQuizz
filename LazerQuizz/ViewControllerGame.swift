@@ -152,9 +152,53 @@ class ViewControllerGame: UIViewController {
     
     func generateLaser () {
         
-        self.laser = UIView(frame: CGRectMake(0, 50, self.view.frame.width + self.view.bounds.width, 11))
-        self.laser!.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
-         
+        self.laser = UIView(frame: CGRectMake(0, 25, self.view.bounds.width, 11))
+        self.laser!.backgroundColor = UIColor.clearColor()
+        
+        var stream = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 1, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.6, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 2, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.7, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 3, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.8, green: 0.3, blue: 0.3, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 4, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.9, green: 0.4, blue: 0.4, alpha: 0.80)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 5, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 1.0, green: 0.6, blue: 0.6, alpha: 0.85)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 6, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.9, green: 0.4, blue: 0.4, alpha: 0.80)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 7, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.8, green: 0.3, blue: 0.3, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 8, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.7, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 9, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.6, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+        
+        stream = UIView(frame: CGRectMake(0, 10, self.view.bounds.width, 1))
+        stream.backgroundColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 0.75)
+        self.laser!.addSubview(stream)
+
         self.removableViews.append(self.laser!)
         self.view.addSubview(self.laser!)
         self.laser?.superview?.bringSubviewToFront(self.laser!)
@@ -249,12 +293,15 @@ class ViewControllerGame: UIViewController {
                     }
                     
                     self.otherButton = UIButton(frame:CGRectMake(self.buttonBar!.bounds.width - 10, 0, 200, 30))
-                    
-                    if (self.score == self.maxViews) {
-                        self.otherButton!.setTitle("Próximo Nível", forState: UIControlState.Normal)
-                        self.otherButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
+                    if (self.level >= 3) {
+                        self.otherButton!.setTitle("Repetir nível", forState: UIControlState.Normal)
+                        self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
+                    } else if (self.score == self.maxViews) {
+                        self.otherButton!.setTitle("Próximo nível", forState: UIControlState.Normal)
+                        self.level++
+                        self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     } else {
-                        self.otherButton!.setTitle("Tentar Novamente", forState: UIControlState.Normal)
+                        self.otherButton!.setTitle("Tentar novamente", forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     }
 
