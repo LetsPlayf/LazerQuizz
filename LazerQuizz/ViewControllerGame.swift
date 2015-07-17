@@ -229,19 +229,9 @@ class ViewControllerGame: UIViewController {
         var arrayOfOptions = AccessJSON.accessTheOptions(arrayOfData[level].level_type, question: question, level: self.difficulty)
         println(arrayOfOptions)
         
-        //var optionLeft = UILabel(frame: CGRectMake(0, 35, 100, 20))
         self.label_left_option.text = arrayOfOptions[0]
-        //optionLeft.text = arrayOfOptions[0]
-        //optionLeft.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
-        self.removableViews.append(self.label_left_option)
-        self.view.addSubview(self.label_left_option)
         
-        //var optionRight = UILabel(frame: CGRectMake(300, 35, 100, 20))
         self.label_right_option.text = arrayOfOptions[1]
-        //optionRight.text = arrayOfOptions[1]
-        //optionRight.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
-        self.removableViews.append(self.label_right_option)
-        self.view.addSubview(self.label_right_option)
         
         self.dictionaryOfAnswers = AccessJSON.accessTheAnswers(arrayOfData[level].level_type, question: question, level:self.difficulty, option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         self.maxViews = dictionaryOfAnswers.count
@@ -323,7 +313,7 @@ class ViewControllerGame: UIViewController {
                     self.scoreReport!.numberOfLines = 0
                     self.scoreReport!.lineBreakMode = NSLineBreakMode.ByWordWrapping
                     
-                    UIView.animateWithDuration(1.95, delay: 0, usingSpringWithDamping: 7.1, initialSpringVelocity: 7, options: nil, animations: { () -> Void in
+                    UIView.animateWithDuration(1.4, delay: 0, usingSpringWithDamping: 7.1, initialSpringVelocity: 7, options: nil, animations: { () -> Void in
                         self.scoreReport!.frame.origin.y = self.view.center.y - self.scoreReport!.bounds.height + 10
                         self.buttonBar!.frame.origin.y = self.view.center.y  + self.buttonBar!.bounds.height - 10
                         self.laser!.alpha = 0
