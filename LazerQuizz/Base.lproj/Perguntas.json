@@ -79,18 +79,18 @@
                                "Wolf",
                                "Tiger"
                                ],
-                    "Bird": [
-                             "Chicken",
-                             "Dove",
-                             "Toucan",
-                             "Pelican",
-                             "Sparrow",
-                             "Emu",
-                             "Goose",
-                             "Swan",
-                             "Hawk",
-                             "Eagle"
-                             ]
+                    "Avian": [
+                              "Chicken",
+                              "Dove",
+                              "Toucan",
+                              "Pelican",
+                              "Sparrow",
+                              "Emu",
+                              "Goose",
+                              "Swan",
+                              "Hawk",
+                              "Eagle"
+                              ]
                 },
                 "Medio": {
                     "Mammal": [
@@ -105,15 +105,15 @@
                                "Armadillo",
                                "Mole"
                                ],
-                    "Bird": [
-                             "Southern Lapwing",
-                             "Seriema",
-                             "Woodpecker",
-                             "Parrot",
-                             "Sparrow",
-                             "Vulture",
-                             "Egret"
-                             ]
+                    "Avian": [
+                              "Southern Lapwing",
+                              "Seriema",
+                              "Woodpecker",
+                              "Parrot",
+                              "Sparrow",
+                              "Vulture",
+                              "Egret"
+                              ]
                 },
                 "Dificil": {
                     "Mammal": [
@@ -128,15 +128,15 @@
                                "Weasel",
                                "Lynx"
                                ],
-                    "Bird": [
-                             "Cuckoo",
-                             "Nightjar",
-                             "Albatross",
-                             "Owl",
-                             "Grackle",
-                             "Jackdaw",
-                             "Snipe"
-                             ]
+                    "Avian": [
+                              "Cuckoo",
+                              "Nightjar",
+                              "Albatross",
+                              "Owl",
+                              "Grackle",
+                              "Jackdaw",
+                              "Snipe"
+                              ]
                 }
             },
             "Vertebrado ou Invertebrado?": {
@@ -157,7 +157,7 @@
                                      "Ant",
                                      "Cockroach",
                                      "Spider",
-                                     "Mantises",
+                                     "Mantis",
                                      "Butterfly",
                                      "Squid",
                                      "Octopus",
@@ -168,21 +168,19 @@
                 },
                 "Medio": {
                     "Vertebrate": [
-                                   "Boto",
-                                   "Prea",
-                                   "Paca",
+                                   "Guinea pig",
                                    "Hare",
-                                   "Bluefish",
+                                   "Blue jay",
                                    "Moray",
-                                   "Surucuri",
+                                   "Sand boa",
                                    "Eel",
                                    "Harpy"
                                    ],
                     "Invertebrate": [
-                                     "Esquitossoma",
+                                     "Nightcrawler",
                                      "Slug",
-                                     "Gafonhoto",
-                                     "Anêmono",
+                                     "Grasshopper",
+                                     "Ant",
                                      "Tapeworm",
                                      "Lapster",
                                      "Leech",
@@ -193,18 +191,16 @@
                 },
                 "Dificil": {
                     "Vertebrate": [
+                                   "Boto",
                                    "Lamprey",
                                    "Matum",
                                    "Triton",
                                    "Ostracoderms",
                                    "Hagfishes",
-                                   "Teiu",
                                    "Moray",
                                    "Urchin"
                                    ],
                     "Invertebrate": [
-                                     "Tarantula",
-                                     "Ostra",
                                      "Barnacle",
                                      "Annelida",
                                      "Amphioxus",
@@ -220,29 +216,23 @@
             "Musico ou pintor": {
                 "Facil": {
                     "Musico": [
-                               "Paul McCartney",
-                               "John Lennon",
-                               "Wolfgang Amadeus Mozart",
-                               "Johann Sebastian Bach",
-                               "Eric Clapton",
+                               "Mozart",
+                               "Bach",
                                "Shakira",
                                "Beyonce",
                                "Rihanna",
-                               "Jennifer Lopez",
-                               "Robert Plant",
                                "Bob Dylan"
                                ],
                     "Pintor": [
-                               "Pablo Picasso",
-                               "Vincent Van Gogh",
-                               "Leonardo da Vinci",
-                               "Salvador Dalí",
-                               "Candido Portinari",
-                               "Claude Monet",
-                               "Pierre-Auguste Renoir",
+                               "Picasso",
+                               "Van Gogh",
+                               "da Vinci",
+                               "Dalí",
+                               "Portinari",
+                               "Monet",
+                               "Renoir",
                                "Michelangelo",
-                               "Rembrandt",
-                               "Tarcila do Amaral"
+                               "Rembrandt"
                                ]
                 },
                 "Medio": {
@@ -253,10 +243,10 @@
                                "Ozzy Osbourne",
                                "Taylor Swift",
                                "James Brown",
-                               "Chico Buarque",
-                               "Luciano Pavarotti",
+                               "Vivaldi",
+                               "Pavarotti",
                                "John Bonham",
-                               "Freddie Mercury"
+                               "Handel"
                                ],
                     "Pintor": [
                                "Paul Cézanne",
@@ -273,9 +263,9 @@
                 },
                 "Dificil": {
                     "Musico": [
-                               "Pyotr Ilyich Tchaikovsky",
-                               "Johannes Brahms",
-                               "Frédéric Chopin",
+                               "Tchaikovsky",
+                               "Brahms",
+                               "Chopin",
                                "George Frideric",
                                "Steve Harris",
                                "Neil Young",
@@ -435,22 +425,22 @@
                 "Facil": {
                     "Grego": [
                               "Zeus",
-                              "Atena",
-                              "Afrodite",
+                              "Athena",
+                              "Aphrodite",
                               "Ares",
                               "Hades",
                               "Poseidon",
-                              "Apolo",
+                              "Apollo",
                               "Hermes",
                               "Uranus",
                               "Helios"
                               ],
                     "Romano": [
                                "Jupiter",
-                               "Netuno",
-                               "Plutão",
-                               "Marte",
-                               "Vênus",
+                               "Neptune",
+                               "Pluto",
+                               "Mars",
+                               "Venus",
                                "Saturno",
                                "Minerva",
                                "Sol",
@@ -471,10 +461,9 @@
                               ],
                     "Romano": [
                                "Juno",
-                               "Netuno",
+                               "Neptune",
                                "Juno",
-                               "Vulcano",
-                               "Febo",
+                               "Vulcan",
                                "Diana",
                                "Cupido",
                                "Quirinus",
