@@ -90,11 +90,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
 
-        let localizedImageStar = NSLocalizedString("nameStar", comment:"name of the star in singular")
-        let localizedImageStars = NSLocalizedString("nameStars", comment:"name of the star in plural")
-        let localizedImageRemaining = NSLocalizedString("nameRemaining", comment:"name of the remain in singular")
-        let localizedImagesRemaning = NSLocalizedString("namesRemaining", comment:"name of the remain in plural")
-
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
             unlockedCell.lblCell.text = self.arrayOfData[indexPath.row].level_type
@@ -132,22 +127,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             return unlockedCell
         } else {
-            let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
-
             
-            if( starRemaining[indexPath.row] - self.stars < 2){
 
-                let localizedImageName = NSLocalizedString("", comment:"name of the flag image on xcassets")
-                if (starRemaining[indexPath.row] - self.stars < 2){
+            let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
+             lockedCell.lblCell.text = NSLocalizedString("BLOQUEADO", comment:"name of label blocked")
 
-                    lockedCell.lblRemaining.text = "Falta"
-                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrela"
-                } else {
-                    lockedCell.lblRemaining.text = "Faltam"
-                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " estrelas"
+            if (starRemaining[indexPath.row] - self.stars < 2){
+                    lockedCell.lblRemaining.text = NSLocalizedString("FALTA", comment:"name of the remain in singular")
+                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELA", comment:"name of the star in singular")
+            } else {
+                    lockedCell.lblRemaining.text = NSLocalizedString("FALTAM", comment:"name of the remain in plural")
+                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELAS", comment:"name of the star in plural")
                 }
-            }
-                return lockedCell
+            
+            return lockedCell
             
         }
     
@@ -211,10 +204,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if (self.stars > 17 && arrayOfData[7].level_block == true) {
             LevelServices.updateBlock(arrayOfData[7])
         }
-        if(self.stars > 20 && arrayOfData[8].level_block == true){
+        if (self.stars > 20 && arrayOfData[8].level_block == true) {
             LevelServices.updateBlock(arrayOfData[8])
         }
-        if(self.stars > 23 && arrayOfData[9].level_block == true){
+        if (self.stars > 23 && arrayOfData[9].level_block == true) {
             LevelServices.updateBlock(arrayOfData[9])
         }
         

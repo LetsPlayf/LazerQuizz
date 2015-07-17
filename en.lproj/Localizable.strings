@@ -1,0 +1,18 @@
+/*
+ Localizable.strings
+ LazerQuizz
+ 
+ Created by Lucas Gabriel Silvério de Freitas on 17/07/15.
+ Copyright (c) 2015 LetsPlay. All rights reserved.
+ */
+FALTAM = "You need";
+FALTA = "You need";
+ESTRELA = "more star";
+ESTRELAS = "more stars";
+BLOQUEADO = "Blocked";
+VOLTAR = "Back to menu";
+TENTAR = "Try again";
+PROXIMO = "Next level";
+ACERTOU = "You got";
+DE = "out of";
+

@@ -66,7 +66,7 @@ class ViewControllerGame: UIViewController {
         self.view.addSubview(self.buttonBar!)
         
         self.backButton = UIButton(frame:CGRectMake(10, 0, 200, 30))
-        self.backButton!.setTitle("Voltar ao Menu", forState: UIControlState.Normal)
+        self.backButton!.setTitle(NSLocalizedString("VOLTAR", comment:"back to menu"), forState: UIControlState.Normal)
         self.backButton?.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         
         self.backButton!.sizeToFit()
@@ -284,14 +284,13 @@ class ViewControllerGame: UIViewController {
                     
                     self.otherButton = UIButton(frame:CGRectMake(self.buttonBar!.bounds.width - 10, 0, 200, 30))
                     if (self.level >= 3) {
-                        self.otherButton!.setTitle("Repetir nível", forState: UIControlState.Normal)
+                        self.otherButton!.setTitle(NSLocalizedString("REPETIR", comment:"name of label blocked"), forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
-                    } else if (self.score == self.maxViews) {
-                        self.otherButton!.setTitle("Próximo nível", forState: UIControlState.Normal)
-                        ++self.arrayOfData[self.level].level_score
+                    } else if (self.score == self.maxViews) {self.otherButton!.setTitle(NSLocalizedString("PROXIMO", comment:"next level"), forState: UIControlState.Normal)
+                        //++self.arrayOfData[self.level].level_score
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     } else {
-                        self.otherButton!.setTitle("Tentar novamente", forState: UIControlState.Normal)
+                        self.otherButton!.setTitle(NSLocalizedString("TENTAR", comment:"try again"), forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     }
 
@@ -306,7 +305,7 @@ class ViewControllerGame: UIViewController {
                     self.view.bringSubviewToFront(self.scoreReport!)
                     self.view.bringSubviewToFront(self.buttonBar!)
                     
-                    self.scoreReport!.text = String(format:"Você acertou\n%d de %d", self.score, self.maxViews)
+                    self.scoreReport!.text = String(format:NSLocalizedString("ACERTOU", comment:"name of label blocked")+"\n%d "+NSLocalizedString("DE", comment:"name of label blocked")+" %d", self.score, self.maxViews)
                     self.scoreReport!.textAlignment = .Center
                     self.scoreReport!.textColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
                     self.scoreReport!.font = UIFont.systemFontOfSize(45)
