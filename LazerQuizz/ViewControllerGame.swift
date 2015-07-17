@@ -27,6 +27,9 @@ class ViewControllerGame: UIViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var mainView: UIView!
+
+    @IBOutlet weak var label_left_option: UILabel!
+    @IBOutlet weak var label_right_option: UILabel!
     
     let laserPeriod : Double = 0.0000018
     let pointsPerLaserMovement : CGFloat = 0.75
@@ -60,7 +63,7 @@ class ViewControllerGame: UIViewController {
         self.view.addSubview(self.buttonBar!)
         
         self.backButton = UIButton(frame:CGRectMake(10, 0, 200, 30))
-        self.backButton!.setTitle("Voltar ao menu", forState: UIControlState.Normal)
+        self.backButton!.setTitle("Voltar ao Menu", forState: UIControlState.Normal)
         self.backButton?.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         
         self.backButton!.sizeToFit()
@@ -144,9 +147,9 @@ class ViewControllerGame: UIViewController {
     
     func generateLaser () {
         
-        self.laser = UIView(frame: CGRectMake(0, 25, self.view.frame.width + self.view.bounds.width, 11))
+        self.laser = UIView(frame: CGRectMake(0, 50, self.view.frame.width + self.view.bounds.width, 11))
         self.laser!.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.2, alpha: 0.8)
-        
+         
         self.removableViews.append(self.laser!)
         self.view.addSubview(self.laser!)
         self.laser?.superview?.bringSubviewToFront(self.laser!)
@@ -156,7 +159,7 @@ class ViewControllerGame: UIViewController {
     func generateQuestion () {
                 
         self.labelWidth = self.view.bounds.width / 3
-        self.labelHeight = 35
+        self.labelHeight = 40
         
         self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height + self.view.frame.height))
         self.leftBar?.backgroundColor = UIColor.clearColor()
@@ -177,17 +180,19 @@ class ViewControllerGame: UIViewController {
         var arrayOfOptions = AccessJSON.accessTheOptions(arrayOfData[level].level_type, question: question, level: self.difficulty)
         println(arrayOfOptions)
         
-        var optionLeft = UILabel(frame: CGRectMake(0, 35, 100, 20))
-        optionLeft.text = arrayOfOptions[0]
-        optionLeft.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
-        self.removableViews.append(optionLeft)
-        self.view.addSubview(optionLeft)
+        //var optionLeft = UILabel(frame: CGRectMake(0, 35, 100, 20))
+        self.label_left_option.text = arrayOfOptions[0]
+        //optionLeft.text = arrayOfOptions[0]
+        //optionLeft.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
+        self.removableViews.append(self.label_left_option)
+        self.view.addSubview(self.label_left_option)
         
-        var optionRight = UILabel(frame: CGRectMake(300, 35, 100, 20))
-        optionRight.text = arrayOfOptions[1]
-        optionRight.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
-        self.removableViews.append(optionRight)
-        self.view.addSubview(optionRight)
+        //var optionRight = UILabel(frame: CGRectMake(300, 35, 100, 20))
+        self.label_right_option.text = arrayOfOptions[1]
+        //optionRight.text = arrayOfOptions[1]
+        //optionRight.backgroundColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.8)
+        self.removableViews.append(self.label_right_option)
+        self.view.addSubview(self.label_right_option)
         
         self.dictionaryOfAnswers = AccessJSON.accessTheAnswers(arrayOfData[level].level_type, question: question, level:self.difficulty, option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         self.maxViews = dictionaryOfAnswers.count
@@ -198,8 +203,9 @@ class ViewControllerGame: UIViewController {
             newView.text = dictionaryOfAnswers.keys.array[i]
             newView.textAlignment = NSTextAlignment.Center
             newView.layer.masksToBounds = true
-            newView.layer.cornerRadius = 3
+            newView.layer.cornerRadius = 4
             newView.gameView = self
+            newView.backgroundColor = UIColor.whiteColor()
             
             self.removableViews.append(newView)
             self.view.addSubview(newView)
@@ -239,10 +245,10 @@ class ViewControllerGame: UIViewController {
                     self.otherButton = UIButton(frame:CGRectMake(self.buttonBar!.bounds.width - 10, 0, 200, 30))
                     
                     if (self.score == self.maxViews) {
-                        self.otherButton!.setTitle("Próximo nível", forState: UIControlState.Normal)
+                        self.otherButton!.setTitle("Próximo Nível", forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "backButtonAction", forControlEvents: UIControlEvents.TouchUpInside)
                     } else {
-                        self.otherButton!.setTitle("Repetir nível", forState: UIControlState.Normal)
+                        self.otherButton!.setTitle("Tentar Novamente", forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     }
 
@@ -257,7 +263,7 @@ class ViewControllerGame: UIViewController {
                     self.view.bringSubviewToFront(self.scoreReport!)
                     self.view.bringSubviewToFront(self.buttonBar!)
                     
-                    self.scoreReport!.text = String(format:"Você acertou\n%d de %d.", self.score, self.maxViews)
+                    self.scoreReport!.text = String(format:"Você acertou\n%d de %d", self.score, self.maxViews)
                     self.scoreReport!.textAlignment = .Center
                     self.scoreReport!.textColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
                     self.scoreReport!.font = UIFont.systemFontOfSize(45)

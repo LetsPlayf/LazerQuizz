@@ -32,6 +32,7 @@
 		A7412BAC1B4C27FC00E7F946 /* ViewControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */; };
 		A74E62E51B5742A600488243 /* lock3.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E62E41B5742A600488243 /* lock3.png */; };
 		A74E62E71B57430300488243 /* lock2.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E62E61B57430300488243 /* lock2.png */; };
+		A74E62E91B58538400488243 /* laserlabel.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E62E81B58538400488243 /* laserlabel.png */; };
 		AD14A9791B54239800B67A8C /* Perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = AD14A97B1B54239800B67A8C /* Perguntas.json */; };
 		ADCA90BA1B4AED770062E589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90B91B4AED770062E589 /* AppDelegate.swift */; };
 		ADCA90BD1B4AED770062E589 /* LazerQuizz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90BB1B4AED770062E589 /* LazerQuizz.xcdatamodeld */; };
@@ -80,6 +81,7 @@
 		A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGame.swift; sourceTree = "<group>"; };
 		A74E62E41B5742A600488243 /* lock3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock3.png; sourceTree = "<group>"; };
 		A74E62E61B57430300488243 /* lock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock2.png; sourceTree = "<group>"; };
+		A74E62E81B58538400488243 /* laserlabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserlabel.png; sourceTree = "<group>"; };
 		AD14A97A1B54239800B67A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Perguntas.json; sourceTree = "<group>"; };
 		AD14A97C1B54239A00B67A8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Perguntas.json; sourceTree = "<group>"; };
 		AD14A97D1B5423B000B67A8C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/Perguntas.json; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				A733CBF41B56D92B0018838F /* Marcas.png */,
 				A74E62E61B57430300488243 /* lock2.png */,
 				A74E62E41B5742A600488243 /* lock3.png */,
+				A74E62E81B58538400488243 /* laserlabel.png */,
 				A733CBF11B56D2010018838F /* star.png */,
 				A733CBC41B52DD9D0018838F /* laser.png */,
 				A733CBC61B5405980018838F /* screenshot135.png */,
@@ -348,6 +351,7 @@
 				A74E62E71B57430300488243 /* lock2.png in Resources */,
 				ADCA90C41B4AED770062E589 /* Images.xcassets in Resources */,
 				A733CBEF1B56CFBA0018838F /* locked.png in Resources */,
+				A74E62E91B58538400488243 /* laserlabel.png in Resources */,
 				A733CBC91B540C1C0018838F /* wooden-stage.jpg in Resources */,
 				AD14A9791B54239800B67A8C /* Perguntas.json in Resources */,
 				A733CBE91B56CAC30018838F /* danger_road.jpg in Resources */,
