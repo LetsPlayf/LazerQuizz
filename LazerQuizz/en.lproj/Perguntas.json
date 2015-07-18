@@ -54,7 +54,17 @@
                                 ],
                     "Chevrolet": [
                                   "Onix",
-                                  "Camaro"
+                                  "Camaro",
+                                  "Cruze",
+                                  "Prisma",
+                                  "Agile",
+                                  "Captiva",
+                                  "Celta",
+                                  "Montana",
+                                  "S10",
+                                  "Spin",
+                                  "Corsa",
+                                  "Astra"
                                   ]
                 },
                 "Medio": {
@@ -75,12 +85,8 @@
                                "Supra",
                                "Sequoia",
                                "Land Cruiser",
-                               "Aygo",
                                "Tundra",
-                               "Wish",
                                "Paseo",
-                               "MR2",
-                               "Sienna"
                                ],
                     "Lamborghini": [
                                     "Diablo",
@@ -327,7 +333,7 @@
                 }
             }
         },
-        "Geography": {
+        "Geografia": {
             "Country or Capital?": {
                 "Facil": {
                     "Capital": [

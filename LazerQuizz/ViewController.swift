@@ -102,6 +102,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             case 1:
                 unlockedCell.imgType.image = UIImage(named: "dna.png")
                 break
+            case 2:
+                unlockedCell.imgType.image = UIImage(named: "two_globes.png")
+                break
             default:
                 unlockedCell.imgType.image = UIImage(named: "carro.png")
                 break
