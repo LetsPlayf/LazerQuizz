@@ -135,12 +135,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let lockedCell: LockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("locked", forIndexPath: indexPath) as! LockedCVCell
              lockedCell.lblCell.text = NSLocalizedString("BLOQUEADO", comment:"name of label blocked")
 
-            if (starRemaining[indexPath.row] - self.stars < 2){
-                    lockedCell.lblRemaining.text = NSLocalizedString("FALTA", comment:"name of the remain in singular")
-                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELA", comment:"name of the star in singular")
+            if (starRemaining[indexPath.row] - self.stars == 1) {
+                    lockedCell.lblRemaining.text = NSLocalizedString("FALTA", comment:"")
+                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELA", comment:"")
             } else {
-                    lockedCell.lblRemaining.text = NSLocalizedString("FALTAM", comment:"name of the remain in plural")
-                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELAS", comment:"name of the star in plural")
+                    lockedCell.lblRemaining.text = NSLocalizedString("FALTAM", comment:"")
+                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELAS", comment:"")
                 }
             
             return lockedCell
