@@ -136,11 +136,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
              lockedCell.lblCell.text = NSLocalizedString("BLOQUEADO", comment:"name of label blocked")
 
             if (starRemaining[indexPath.row] - self.stars == 1) {
-                    lockedCell.lblRemaining.text = NSLocalizedString("FALTA", comment:"")
-                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELA", comment:"")
+                    lockedCell.lblRemaining.text = NSLocalizedString("FALTA", comment:"Falta")
+                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELA", comment:"estrela")
             } else {
-                    lockedCell.lblRemaining.text = NSLocalizedString("FALTAM", comment:"")
-                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELAS", comment:"")
+                    lockedCell.lblRemaining.text = NSLocalizedString("FALTAM", comment:"Faltam")
+                    lockedCell.lblStar.text = String(starRemaining[indexPath.row] - self.stars) + " " + NSLocalizedString("ESTRELAS", comment:"estrelas")
                 }
             
             return lockedCell
