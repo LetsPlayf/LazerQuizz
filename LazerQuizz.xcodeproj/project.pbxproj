@@ -238,9 +238,9 @@
 		ADCA90DF1B4B002C0062E589 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
-				A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */,
 				ADCA90BE1B4AED770062E589 /* ViewController.swift */,
+				A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */,
+				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
