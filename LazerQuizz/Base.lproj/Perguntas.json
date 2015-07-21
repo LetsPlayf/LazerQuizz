@@ -474,18 +474,17 @@
                               "Poseidon",
                               "Apollo",
                               "Hermes",
-                              "Uranus",
                               "Helios"
                               ],
                     "Romano": [
                                "Jupiter",
+                               "Uranus",
                                "Neptune",
                                "Pluto",
                                "Mars",
                                "Venus",
                                "Saturno",
                                "Minerva",
-                               "Sol",
                                "Bona Dea"
                                ]
                 },
@@ -503,7 +502,7 @@
                               ],
                     "Romano": [
                                "Juno",
-                               "Neptune",
+                               "Sol",
                                "Juno",
                                "Vulcan",
                                "Diana",

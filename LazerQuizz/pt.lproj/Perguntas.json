@@ -463,7 +463,6 @@
                               "Poseidon",
                               "Apolo",
                               "Hermes",
-                              "Uranus",
                               "Helios"
                               ],
                     "Romano": [
@@ -471,6 +470,7 @@
                                "Netuno",
                                "Plutão",
                                "Marte",
+                               "Urano",
                                "Vênus",
                                "Saturno",
                                "Minerva",
@@ -491,8 +491,6 @@
                               "Typhon"
                               ],
                     "Romano": [
-                               "Juno",
-                               "Netuno",
                                "Juno",
                                "Vulcano",
                                "Diana",
