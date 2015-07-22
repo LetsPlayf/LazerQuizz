@@ -152,7 +152,7 @@ class ViewControllerGame: UIViewController {
     
     func generateLaser () {
         
-        self.laser = UIView(frame: CGRectMake(0, 25, self.view.bounds.width, 11))
+        self.laser = UIView(frame: CGRectMake(0, 57, self.view.bounds.width, 11))
         self.laser!.backgroundColor = UIColor.clearColor()
         
         var stream = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 1))
@@ -221,7 +221,7 @@ class ViewControllerGame: UIViewController {
         self.view.addSubview(self.rightBar!)
         
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
-        var pointY : CGFloat = 100
+        var pointY : CGFloat = 120
         println(arrayOfData[level].level_type)
         
         var question = AccessJSON.accessTheQuestion(arrayOfData[level].level_type)

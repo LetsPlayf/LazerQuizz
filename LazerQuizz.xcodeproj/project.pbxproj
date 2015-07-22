@@ -303,7 +303,7 @@
 				TargetAttributes = {
 					ADCA90B31B4AED770062E589 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 6428H223PT;
+						DevelopmentTeam = CTL8LK9F2D;
 					};
 					ADCA90CB1B4AED770062E589 = {
 						CreatedOnToolsVersion = 6.4;
@@ -530,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LazerQuizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LazerQuizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
