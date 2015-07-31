@@ -76,7 +76,6 @@
 		A74E62E81B58538400488243 /* laserlabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserlabel.png; sourceTree = "<group>"; };
 		A779FD8D1B5A8B2800AA01D8 /* two_globes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two_globes.png; sourceTree = "<group>"; };
 		AD14A97A1B54239800B67A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Perguntas.json; sourceTree = "<group>"; };
-		AD14A97C1B54239A00B67A8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Perguntas.json; sourceTree = "<group>"; };
 		AD14A97D1B5423B000B67A8C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/Perguntas.json; sourceTree = "<group>"; };
 		AD6EFFB71B598FAD0067E5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD6EFFB91B598FB00067E5DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -425,7 +424,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD14A97A1B54239800B67A8C /* Base */,
-				AD14A97C1B54239A00B67A8C /* en */,
 				AD14A97D1B5423B000B67A8C /* pt */,
 			);
 			name = Perguntas.json;

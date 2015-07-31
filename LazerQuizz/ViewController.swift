@@ -27,37 +27,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         //AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         
-        let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
+
         
-        println(language)
+
         
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
             
-            //            if(language.isEqualToString("pt")) {
-            LevelServices.createLevel(0, score: 0, type: "Carros", block: false)
-            LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
-            LevelServices.createLevel(2, score: 0, type: "Geografia", block: true)
-            LevelServices.createLevel(3, score: 0, type: "Historia", block: true)
-            LevelServices.createLevel(4, score: 0, type: "Artes", block: true)
-            LevelServices.createLevel(5, score: 0, type: "Esporte", block: true)
+            
+            LevelServices.createLevel(0, score: 0, type: "Cars", block: false)
+            LevelServices.createLevel(1, score: 0, type: "Biology", block: false)
+            LevelServices.createLevel(2, score: 0, type: "Geography", block: true)
+            LevelServices.createLevel(3, score: 0, type: "History", block: true)
+            LevelServices.createLevel(4, score: 0, type: "Arts", block: true)
+            LevelServices.createLevel(5, score: 0, type: "Sports", block: true)
             LevelServices.createLevel(6, score: 0, type: "Series", block: true)
-            LevelServices.createLevel(7, score: 0, type: "Quimica", block: true)
-            //
-            //            } else {
-            //                //In English
-            //                LevelServices.createLevel(0, score: 0, type: "Cars", block: false)
-            //                LevelServices.createLevel(1, score: 0, type: "Biology", block: false)
-            //                LevelServices.createLevel(2, score: 0, type: "Art", block: true)
-            //                LevelServices.createLevel(3, score: 0, type: "Geography", block: true)
-            //                LevelServices.createLevel(4, score: 0, type: "History", block: true)
-            //                LevelServices.createLevel(5, score: 0, type: "Sport", block: true)
-            //                LevelServices.createLevel(6, score: 0, type: "Series", block: true)
-            //                LevelServices.createLevel(7, score: 0, type: "Chemistry", block: true)
-            //
-            //
-            //
-            //            }
+            LevelServices.createLevel(7, score: 0, type: "Chemestry", block: true)
+        
             
             println("Is a first launch")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
@@ -65,10 +51,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         arrayOfData = LevelDAO.returnAllValues()
-        //println(arrayOfData[2].level_block) FIXME: Array index out of range
+        
+  
+
         
         
-        //println(arrayOfData[0].level_block)
+      
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -89,10 +77,55 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
+        let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
+        println(language)
+        
+        if(language.isEqualToString("pt")){
+            for (var i = 0 ; i<arrayOfData.count; i++){
+                var auxName = arrayOfData[i].level_type
+                
+                switch (auxName){
+                    
+                case "Cars" :
+                    arrayOfData[i].level_type = "Carros"
+                    
+                case "Biology" :
+                    arrayOfData[i].level_type = "Biologia"
+                    
+                case "Geografia" :
+                    arrayOfData[i].level_type = "Geografia"
+                    
+                case "History" :
+                    arrayOfData[i].level_type = "História"
+                    
+                case "Arts" :
+                    arrayOfData[i].level_type = "Artes"
+                    
+                case "Sports" :
+                    arrayOfData[i].level_type = "Esportes"
+                    
+                case "Series" :
+                    arrayOfData[i].level_type = "Séries"
+                    
+                case "Chemestry" :
+                    arrayOfData[i].level_type = "Química"
+                    
+                    
+                    
+                default :
+                    break
+                }
+                
+            }
+        }
+        
 
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
             unlockedCell.lblCell.text = self.arrayOfData[indexPath.row].level_type
+            
+            let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
+            
             
             switch(indexPath.row)
             {
