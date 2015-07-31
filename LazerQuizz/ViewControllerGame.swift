@@ -321,13 +321,10 @@ class ViewControllerGame: UIViewController {
             
             pointY += 50
             
-            if(modelName == "iPhone 4S"){
-                
+            if (modelName == "iPhone 4S") {
                 pointY += 38
-            }else if(modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5"){
-                
+            } else if (modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5") {
                 pointY += 47
-                
             }
         }
         

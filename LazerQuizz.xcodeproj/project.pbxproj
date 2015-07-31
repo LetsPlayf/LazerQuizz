@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AC89F7E1B6BE14600FC1524 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */; };
+		9AC89F801B6BE3B100FC1524 /* CreditLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */; };
 		9AD680C91B4D8BA800DD0C7E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */; };
 		9AD680CE1B4D97C500DD0C7E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680CD1B4D97C500DD0C7E /* Level.swift */; };
 		9AD680D11B4D983B00DD0C7E /* LevelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680D01B4D983B00DD0C7E /* LevelServices.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditLabel.swift; sourceTree = "<group>"; };
 		9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9AD680CD1B4D97C500DD0C7E /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = ../Level.swift; sourceTree = "<group>"; };
 		9AD680D01B4D983B00DD0C7E /* LevelServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelServices.swift; sourceTree = "<group>"; };
@@ -239,8 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				ADCA90BE1B4AED770062E589 /* ViewController.swift */,
+				9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */,
 				A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */,
 				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
+				9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -370,6 +376,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCA90BF1B4AED770062E589 /* ViewController.swift in Sources */,
+				9AC89F7E1B6BE14600FC1524 /* CreditsViewController.swift in Sources */,
+				9AC89F801B6BE3B100FC1524 /* CreditLabel.swift in Sources */,
 				9AD680CE1B4D97C500DD0C7E /* Level.swift in Sources */,
 				A7412BAC1B4C27FC00E7F946 /* ViewControllerGame.swift in Sources */,
 				9AD680D51B4D994300DD0C7E /* LevelDAO.swift in Sources */,

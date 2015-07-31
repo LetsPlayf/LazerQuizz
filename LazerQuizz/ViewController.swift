@@ -173,11 +173,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+        if(segue.identifier == "toGame"){
         let destinationVC = segue.destinationViewController as! ViewControllerGame
         destinationVC.level = self.level
         destinationVC.difficulty = self.difficulty
         destinationVC.arrayOfData = self.arrayOfData
-    }
+        }
+        }
     
     func countStars() {
         self.stars = 0
@@ -218,6 +221,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collection.reloadData()
     }
     
+    @IBAction func toCredits(sender: AnyObject) {
+  
+        performSegueWithIdentifier("toCredits", sender: self)
+    
+    
+    }
     
 }
 
