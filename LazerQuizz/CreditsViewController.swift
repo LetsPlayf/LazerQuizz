@@ -10,6 +10,7 @@ import UIKit
 
 class CreditsViewController: UIViewController {
     
+    @IBOutlet weak var labelDeveloped: UILabel!
     var labelWidth : CGFloat?
     var labelHeight : CGFloat?
 

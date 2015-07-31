@@ -1,17 +1,33 @@
-/* 
-  Localizable.strings
-  LazerQuizz
+/* Você acertou */
+"ACERTOU" = "Você acertou";
 
-  Created by Lucas Gabriel Silvério de Freitas on 17/07/15.
-  Copyright (c) 2015 LetsPlay. All rights reserved.
-*/
-FALTAM = "Faltam";
-FALTA = "Falta";
-ESTRELA = "estrela";
-ESTRELAS = "estrelas";
-BLOQUEADO = "Bloqueado";
-VOLTAR = "Voltar ao menu";
-TENTAR = "Tentar novamente";
-PROXIMO = "Próximo nível";
-ACERTOU = "Você acertou";
-DE = "de";
+/* name of label blocked */
+"BLOQUEADO" = "Bloqueado";
+
+/* de */
+"DE" = "de";
+
+/* estrela */
+"ESTRELA" = "estrela";
+
+/* estrelas */
+"ESTRELAS" = "estrelas";
+
+/* Falta */
+"FALTA" = "Falta";
+
+/* Faltam */
+"FALTAM" = "Faltam";
+
+/* Próximo nível */
+"PROXIMO" = "Próximo nível";
+
+/* Repetir nível */
+"REPETIR" = "";
+
+/* Tentar novamente */
+"TENTAR" = "Tentar novamente";
+
+/* Voltar ao menu */
+"VOLTAR" = "Voltar ao menu";
+

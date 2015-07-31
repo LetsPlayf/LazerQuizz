@@ -52,6 +52,9 @@
                             <constraint firstItem="F8R-PA-iGD" firstAttribute="top" secondItem="gau-DO-VFN" secondAttribute="bottom" id="rZm-hY-fxG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDeveloped" destination="B8m-ox-mjs" id="7oq-Gi-NFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evO-11-EDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,15 +261,15 @@
                                 <rect key="frame" x="56" y="60" width="488" height="61"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eww-Id-xvR">
-                                <rect key="frame" x="41" y="20" width="85" height="30"/>
-                                <state key="normal" title="Como Jogar">
+                                <rect key="frame" x="44" y="20" width="82" height="30"/>
+                                <state key="normal" title="How to play">
                                     <color key="titleColor" red="0.99215686274509807" green="0.74509803921568629" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHt-go-qcz">
-                                <rect key="frame" x="500" y="20" width="59" height="30"/>
-                                <state key="normal" title="Créditos">
+                                <rect key="frame" x="500" y="20" width="50" height="30"/>
+                                <state key="normal" title="Credits">
                                     <color key="titleColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
