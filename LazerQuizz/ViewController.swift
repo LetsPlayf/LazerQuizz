@@ -77,55 +77,50 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
-        println(language)
         
-        if(language.isEqualToString("pt")){
-            for (var i = 0 ; i<arrayOfData.count; i++){
-                var auxName = arrayOfData[i].level_type
-                
-                switch (auxName){
-                    
-                case "Cars" :
-                    arrayOfData[i].level_type = "Carros"
-                    
-                case "Biology" :
-                    arrayOfData[i].level_type = "Biologia"
-                    
-                case "Geografia" :
-                    arrayOfData[i].level_type = "Geografia"
-                    
-                case "History" :
-                    arrayOfData[i].level_type = "História"
-                    
-                case "Arts" :
-                    arrayOfData[i].level_type = "Artes"
-                    
-                case "Sports" :
-                    arrayOfData[i].level_type = "Esportes"
-                    
-                case "Series" :
-                    arrayOfData[i].level_type = "Séries"
-                    
-                case "Chemestry" :
-                    arrayOfData[i].level_type = "Química"
-                    
-                    
-                    
-                default :
-                    break
-                }
-                
-            }
-        }
         
 
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
+            
+            
             unlockedCell.lblCell.text = self.arrayOfData[indexPath.row].level_type
             
             let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
             
+            if(language.isEqualToString("pt")){
+                
+                var auxName = arrayOfData[indexPath.row].level_type
+                    
+                switch (auxName){
+                    case "Cars" :
+                        unlockedCell.lblCell.text = "Carros"
+                        
+                    case "Biology" :
+                        unlockedCell.lblCell.text = "Biologia"
+                        
+                    case "Geografia" :
+                        unlockedCell.lblCell.text = "Geografia"
+                        
+                    case "History" :
+                        unlockedCell.lblCell.text = "História"
+                        
+                    case "Arts" :
+                        unlockedCell.lblCell.text = "Artes"
+                        
+                    case "Sports" :
+                        unlockedCell.lblCell.text = "Esportes"
+                        
+                    case "Series" :
+                        unlockedCell.lblCell.text = "Séries"
+                        
+                    case "Chemestry" :
+                        unlockedCell.lblCell.text = "Química"
+                    
+                    default :
+                        break
+                }
+            }
             
             switch(indexPath.row)
             {
