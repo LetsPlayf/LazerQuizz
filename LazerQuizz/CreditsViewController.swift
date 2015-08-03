@@ -23,19 +23,7 @@ class CreditsViewController: UIViewController {
         let pointX : CGFloat = view.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = view.bounds.height / 2 - 2 * self.labelHeight!
 
-        let modelName = UIDevice.currentDevice().modelName
         
-        if(modelName == "iPhone 4S"){
-            
-            pointY = 90
-            
-            self.labelHeight = 33
-            
-        }else if(modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5"){
-            
-            pointY = 100
-            
-        }
         
         for i in 0..<4 {
             var newView = CreditLabel(frame: CGRectMake(pointX, pointY, labelWidth!, labelHeight!))
@@ -60,11 +48,6 @@ class CreditsViewController: UIViewController {
                         
             pointY += 60
             
-            if (modelName == "iPhone 4S") {
-                pointY += 38
-            } else if (modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5") {
-                pointY += 47
-            }
         }
         // Do any additional setup after loading the view.
     }

@@ -274,6 +274,7 @@ class ViewControllerGame: UIViewController {
         var pointY : CGFloat = 120
         
         let modelName = UIDevice.currentDevice().modelName
+        println(modelName)
         
         if(modelName == "iPhone 4S"){
             
@@ -319,12 +320,14 @@ class ViewControllerGame: UIViewController {
             self.labels.append(newView)
             self.labelTopPositions.append(Int(pointY))
             
-            pointY += 50
+           
             
             if (modelName == "iPhone 4S") {
                 pointY += 38
             } else if (modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5") {
                 pointY += 47
+            }else{
+                 pointY += 50
             }
         }
         
