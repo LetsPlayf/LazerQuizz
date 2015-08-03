@@ -74,33 +74,39 @@ class ViewControllerGame: UIViewController {
     var otherButton : UIButton?
     
     var removableViews : [UIView] = [UIView]()
+    var swipeGesture : UISwipeGestureRecognizer = UISwipeGestureRecognizer()
+    var swiped : Bool = false
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var mainView: UIView!
-
+    
     @IBOutlet weak var label_left_option: UILabel!
     @IBOutlet weak var label_right_option: UILabel!
     
     let laserPeriod : Double = 0.0000018
-    let pointsPerLaserMovement : CGFloat = 0.75
+    var pointsPerLaserMovement : CGFloat = 0.75
     let secondsToBegin : Float = 2.15
     
     let wrongAnswerColor : UIColor = UIColor(red: 0.9, green: 0.15, blue: 0.15, alpha: 0.95)
     let correctAnswerColor : UIColor = UIColor(red: 0.15, green: 0.9, blue: 0.15, alpha: 0.95)
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.levelSetup()
     }
     
-    
-    func levelSetup () {
+    func levelSetup() {
+        
         self.score = 0
         self.nextLabel = 0
+        self.swiped = false
         self.labels.removeAll(keepCapacity: false)
         self.labelTopPositions.removeAll(keepCapacity: false)
         self.dictionaryOfAnswers.removeAll(keepCapacity: true)
         
+        self.pointsPerLaserMovement = 0.75
+                
         self.scoreReport = UILabel(frame: CGRectMake(10, -125, self.view.bounds.width - 20, 125))
         self.scoreReport!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.9)
         self.scoreReport!.layer.masksToBounds = true
@@ -125,14 +131,37 @@ class ViewControllerGame: UIViewController {
         self.removableViews.append(self.backButton!)
         self.buttonBar!.addSubview(self.backButton!)
         
+        self.swipeGesture = UISwipeGestureRecognizer(target:self, action:"detectSwipe:")
+        self.swipeGesture.direction = .Down
+        self.backgroundImage.addGestureRecognizer(self.swipeGesture)
+
+        
         generateQuestion()
     }
     
+    func detectSwipe(sender: UISwipeGestureRecognizer) {
+        
+        if (sender.direction == UISwipeGestureRecognizerDirection.Down && swiped == false) {
+            swiped = true
+            for i in self.nextLabel..<self.maxViews {
+                if (self.labels[i].currentPosition == DraggableLabel.Position.Middle) {
+                    swiped = false
+                }
+            }
+            if (swiped == true) {
+                self.backgroundImage.removeGestureRecognizer(self.swipeGesture)
+                pointsPerLaserMovement *= 6
+            }
+        }
+    }
+    
     override func viewWillAppear(animated: Bool) {
+        
         generateLaser()
     }
     
     func checkCollision () -> Bool {
+        
         if (nextLabel >= self.maxViews) {
             return false
         }
@@ -162,25 +191,31 @@ class ViewControllerGame: UIViewController {
             nextLabel++
             return true
         }
+        
         return false
     }
     
     func correctAnswer(label: DraggableLabel) {
+        
         self.labels[self.nextLabel].backgroundColor = self.correctAnswerColor
         self.labels[self.nextLabel].playCorrectAnswer()
         ++score
     }
     
     func wrongAnswer(label: DraggableLabel) {
+        
         self.labels[self.nextLabel].backgroundColor = self.wrongAnswerColor
         self.labels[self.nextLabel].playWrongAnswer()
     }
+    
     override func viewDidAppear(animated: Bool) {
+        
         super.viewDidAppear(animated)
         self.initializeTimer()
     }
     
     func initializeTimer() {
+        
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("checkCollision"), userInfo: nil, repeats: true)
         // wait for the user to read the question
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.secondsToBegin * Float(NSEC_PER_SEC)))
@@ -190,17 +225,19 @@ class ViewControllerGame: UIViewController {
     }
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func backButtonAction() {
+        
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
             
         })
     }
     
-    func generateLaser () {
+    func generateLaser() {
         
         self.laser = UIView(frame: CGRectMake(0, 57, self.view.bounds.width, 11))
         self.laser!.backgroundColor = UIColor.clearColor()
@@ -248,7 +285,7 @@ class ViewControllerGame: UIViewController {
         stream = UIView(frame: CGRectMake(0, 10, self.view.bounds.width, 1))
         stream.backgroundColor = UIColor(red: 0.90, green: 0.15, blue: 0.15, alpha: 0.7)
         self.laser!.addSubview(stream)
-
+        
         self.removableViews.append(self.laser!)
         self.view.addSubview(self.laser!)
         self.laser?.superview?.bringSubviewToFront(self.laser!)
@@ -256,7 +293,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func generateQuestion () {
-                
+        
         self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 40
         
@@ -276,19 +313,12 @@ class ViewControllerGame: UIViewController {
         let modelName = UIDevice.currentDevice().modelName
         println(modelName)
         
-        if(modelName == "iPhone 4S"){
-            
+        if (modelName == "iPhone 4S") {
             pointY = 90
-            
             self.labelHeight = 33
-            
-        }else if(modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5"){
-            
+        } else if (modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5") {
             pointY = 100
-            
         }
-        
-        
         
         println(arrayOfData[level].level_type)
         
@@ -320,23 +350,22 @@ class ViewControllerGame: UIViewController {
             self.labels.append(newView)
             self.labelTopPositions.append(Int(pointY))
             
-           
+            
             
             if (modelName == "iPhone 4S") {
                 pointY += 38
             } else if (modelName == "iPhone 5S" || modelName == "iPhone 5C" || modelName == "iPhone 5") {
                 pointY += 47
-            }else{
-                 pointY += 50
+            } else {
+                pointY += 50
             }
         }
         
-        
-        
     }
     
-    func reloadViewController () {
-        print("ViewControllerGame reloaded\n")
+    func reloadViewController() {
+        
+        self.backgroundImage.removeGestureRecognizer(self.swipeGesture)
         for view in self.removableViews {
             view.removeFromSuperview()
         }
@@ -347,6 +376,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func animateLaser() {
+        
         UIView.animateWithDuration(self.laserPeriod, delay: 0, options: .CurveLinear, animations: { () -> Void in
             self.laser!.center.y += self.pointsPerLaserMovement
             }) { (result) -> Void in
@@ -371,7 +401,7 @@ class ViewControllerGame: UIViewController {
                         self.otherButton!.setTitle(NSLocalizedString("TENTAR", comment:"Tentar novamente"), forState: UIControlState.Normal)
                         self.otherButton!.addTarget(self, action: "reloadViewController", forControlEvents: UIControlEvents.TouchUpInside)
                     }
-
+                    
                     self.otherButton!.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
                     
                     self.otherButton!.sizeToFit()

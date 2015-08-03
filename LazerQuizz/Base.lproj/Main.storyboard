@@ -340,7 +340,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameScreen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qMR-KJ-agb">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameScreen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qMR-KJ-agb">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="580" id="Knt-GJ-znA"/>

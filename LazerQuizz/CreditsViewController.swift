@@ -13,7 +13,7 @@ class CreditsViewController: UIViewController {
     @IBOutlet weak var labelDeveloped: UILabel!
     var labelWidth : CGFloat?
     var labelHeight : CGFloat?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +22,7 @@ class CreditsViewController: UIViewController {
         
         let pointX : CGFloat = view.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = view.bounds.height / 2 - 2 * self.labelHeight!
-
+        
         
         
         for i in 0..<4 {
@@ -45,32 +45,31 @@ class CreditsViewController: UIViewController {
             newView.backgroundColor = UIColor.whiteColor()
             
             self.view.addSubview(newView)
-                        
-            pointY += 60
             
+            pointY += 60
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func goBack(sender: AnyObject) {
-    
-            self.dismissViewControllerAnimated(true, completion: nil)
-    
+    @IBAction func goBack(sender:AnyObject){
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
