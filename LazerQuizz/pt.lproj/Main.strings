@@ -1,4 +1,3 @@
-
 /* Class = "UILabel"; text = "Faltam"; ObjectID = "0xH-he-NRc"; */
 "0xH-he-NRc.text" = "Faltam";
 
@@ -8,6 +7,18 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "8fx-7r-pvQ"; */
 "8fx-7r-pvQ.text" = "Label";
 
+/* Class = "UILabel"; text = "Developed by"; ObjectID = "B8m-ox-mjs"; */
+"B8m-ox-mjs.text" = "Desenvolvido por";
+
+/* Class = "UIButton"; normalTitle = "Credits"; ObjectID = "JHt-go-qcz"; */
+"JHt-go-qcz.normalTitle" = "Créditos";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "aLa-n8-HJj"; */
+"aLa-n8-HJj.normalTitle" = "Voltar";
+
+/* Class = "UIButton"; normalTitle = "How to play"; ObjectID = "eww-Id-xvR"; */
+"eww-Id-xvR.normalTitle" = "Como jogar";
+
 /* Class = "UILabel"; text = "3 estrelas"; ObjectID = "g7T-li-P0B"; */
 "g7T-li-P0B.text" = "3 estrelas";
 
@@ -16,3 +27,4 @@
 
 /* Class = "UILabel"; text = "Label 1"; ObjectID = "xwd-7V-it4"; */
 "xwd-7V-it4.text" = "Label 1";
+

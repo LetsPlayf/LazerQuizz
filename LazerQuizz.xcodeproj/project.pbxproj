@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AC89F7E1B6BE14600FC1524 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */; };
+		9AC89F801B6BE3B100FC1524 /* CreditLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */; };
 		9AD680C91B4D8BA800DD0C7E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */; };
 		9AD680CE1B4D97C500DD0C7E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680CD1B4D97C500DD0C7E /* Level.swift */; };
 		9AD680D11B4D983B00DD0C7E /* LevelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD680D01B4D983B00DD0C7E /* LevelServices.swift */; };
@@ -33,10 +35,11 @@
 		ADCA90BF1B4AED770062E589 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90BE1B4AED770062E589 /* ViewController.swift */; };
 		ADCA90C21B4AED770062E589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCA90C01B4AED770062E589 /* Main.storyboard */; };
 		ADCA90C41B4AED770062E589 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCA90C31B4AED770062E589 /* Images.xcassets */; };
-		ADCA90C71B4AED770062E589 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCA90C51B4AED770062E589 /* LaunchScreen.xib */; };
 		ADCA90D31B4AED770062E589 /* LazerQuizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90D21B4AED770062E589 /* LazerQuizzTests.swift */; };
 		ADCA90DD1B4AF40E0062E589 /* UnlockedCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90DC1B4AF40E0062E589 /* UnlockedCVCell.swift */; };
 		ADCA90E21B4B00A30062E589 /* LockedCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA90E11B4B00A30062E589 /* LockedCVCell.swift */; };
+		ADEB8E951B6BF94D004860D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADEB8E971B6BF94D004860D8 /* InfoPlist.strings */; };
+		ADEB8E9B1B6BF94E004860D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADEB8E9D1B6BF94E004860D8 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditLabel.swift; sourceTree = "<group>"; };
 		9AD680C81B4D8BA800DD0C7E /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9AD680CD1B4D97C500DD0C7E /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = ../Level.swift; sourceTree = "<group>"; };
 		9AD680D01B4D983B00DD0C7E /* LevelServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelServices.swift; sourceTree = "<group>"; };
@@ -70,12 +75,9 @@
 		A74E62E81B58538400488243 /* laserlabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laserlabel.png; sourceTree = "<group>"; };
 		A779FD8D1B5A8B2800AA01D8 /* two_globes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two_globes.png; sourceTree = "<group>"; };
 		AD14A97A1B54239800B67A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Perguntas.json; sourceTree = "<group>"; };
-		AD14A97C1B54239A00B67A8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Perguntas.json; sourceTree = "<group>"; };
 		AD14A97D1B5423B000B67A8C /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/Perguntas.json; sourceTree = "<group>"; };
 		AD6EFFB71B598FAD0067E5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AD6EFFB91B598FB00067E5DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD6EFFBA1B598FB10067E5DB /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AD6EFFBC1B5991320067E5DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		AD6EFFBE1B5991340067E5DB /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		ADCA90B41B4AED770062E589 /* LazerQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazerQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCA90B81B4AED770062E589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,12 +86,13 @@
 		ADCA90BE1B4AED770062E589 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADCA90C11B4AED770062E589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADCA90C31B4AED770062E589 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ADCA90C61B4AED770062E589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ADCA90CC1B4AED770062E589 /* LazerQuizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazerQuizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCA90D11B4AED770062E589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADCA90D21B4AED770062E589 /* LazerQuizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazerQuizzTests.swift; sourceTree = "<group>"; };
 		ADCA90DC1B4AF40E0062E589 /* UnlockedCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlockedCVCell.swift; sourceTree = "<group>"; };
 		ADCA90E11B4B00A30062E589 /* LockedCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockedCVCell.swift; sourceTree = "<group>"; };
+		ADEB8E961B6BF94D004860D8 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADEB8E9C1B6BF94E004860D8 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A6894EB1B6FBFB00051C496 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ADCA90DC1B4AF40E0062E589 /* UnlockedCVCell.swift */,
+				ADCA90E11B4B00A30062E589 /* LockedCVCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9A6894EC1B6FBFBE0051C496 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
+				9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
 		9AD680CC1B4D977000DD0C7E /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +221,7 @@
 		ADCA90B71B4AED770062E589 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ADEB8E9D1B6BF94E004860D8 /* InfoPlist.strings */,
 				ADCA90B81B4AED770062E589 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -217,6 +239,7 @@
 		ADCA90D01B4AED770062E589 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ADEB8E971B6BF94D004860D8 /* InfoPlist.strings */,
 				ADCA90D11B4AED770062E589 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -227,8 +250,6 @@
 			children = (
 				9AD680D21B4D98D600DD0C7E /* Persistence */,
 				AD14A97B1B54239800B67A8C /* Perguntas.json */,
-				ADCA90DC1B4AF40E0062E589 /* UnlockedCVCell.swift */,
-				ADCA90E11B4B00A30062E589 /* LockedCVCell.swift */,
 				9AF720921B4C7730002B3170 /* AccessJSON.swift */,
 				9AF720941B4C773A002B3170 /* SwiftyJSON.swift */,
 			);
@@ -239,8 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				ADCA90BE1B4AED770062E589 /* ViewController.swift */,
+				9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */,
 				A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */,
-				A7412BA91B4C27A500E7F946 /* DraggableLabel.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -248,7 +269,8 @@
 		ADCA90E01B4B00380062E589 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADCA90C51B4AED770062E589 /* LaunchScreen.xib */,
+				9A6894EC1B6FBFBE0051C496 /* Labels */,
+				9A6894EB1B6FBFB00051C496 /* Cell */,
 				ADCA90C01B4AED770062E589 /* Main.storyboard */,
 			);
 			name = View;
@@ -316,7 +338,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 				pt,
 			);
@@ -338,9 +359,9 @@
 			files = (
 				ADCA90C21B4AED770062E589 /* Main.storyboard in Resources */,
 				A733CBF21B56D2010018838F /* star_empty.png in Resources */,
-				ADCA90C71B4AED770062E589 /* LaunchScreen.xib in Resources */,
 				A733CBE71B56CAB80018838F /* square.png in Resources */,
 				ADCA90C41B4AED770062E589 /* Images.xcassets in Resources */,
+				ADEB8E9B1B6BF94E004860D8 /* InfoPlist.strings in Resources */,
 				A733CBEF1B56CFBA0018838F /* locked.png in Resources */,
 				A74E62E91B58538400488243 /* laserlabel.png in Resources */,
 				A779FD8E1B5A8B2800AA01D8 /* two_globes.png in Resources */,
@@ -359,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADEB8E951B6BF94D004860D8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +392,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCA90BF1B4AED770062E589 /* ViewController.swift in Sources */,
+				9AC89F7E1B6BE14600FC1524 /* CreditsViewController.swift in Sources */,
+				9AC89F801B6BE3B100FC1524 /* CreditLabel.swift in Sources */,
 				9AD680CE1B4D97C500DD0C7E /* Level.swift in Sources */,
 				A7412BAC1B4C27FC00E7F946 /* ViewControllerGame.swift in Sources */,
 				9AD680D51B4D994300DD0C7E /* LevelDAO.swift in Sources */,
@@ -408,7 +432,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD14A97A1B54239800B67A8C /* Base */,
-				AD14A97C1B54239A00B67A8C /* en */,
 				AD14A97D1B5423B000B67A8C /* pt */,
 			);
 			name = Perguntas.json;
@@ -418,7 +441,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD6EFFB71B598FAD0067E5DB /* Base */,
-				AD6EFFB91B598FB00067E5DB /* en */,
 				AD6EFFBA1B598FB10067E5DB /* pt */,
 			);
 			name = Localizable.strings;
@@ -428,18 +450,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				ADCA90C11B4AED770062E589 /* Base */,
-				AD6EFFBC1B5991320067E5DB /* en */,
 				AD6EFFBE1B5991340067E5DB /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		ADCA90C51B4AED770062E589 /* LaunchScreen.xib */ = {
+		ADEB8E971B6BF94D004860D8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADCA90C61B4AED770062E589 /* Base */,
+				ADEB8E961B6BF94D004860D8 /* pt */,
 			);
-			name = LaunchScreen.xib;
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ADEB8E9D1B6BF94E004860D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADEB8E9C1B6BF94E004860D8 /* pt */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -530,7 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Geraldo (5NR423FMF7)";
 				INFOPLIST_FILE = LazerQuizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,7 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Geraldo (5NR423FMF7)";
 				INFOPLIST_FILE = LazerQuizz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

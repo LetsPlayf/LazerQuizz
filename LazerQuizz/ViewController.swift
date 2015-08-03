@@ -27,37 +27,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         //AccessJSON.accessTheAnswers("Qual a marca do carro?", level: "Facil", option1: String(stringInterpolationSegment : arrayOfOptions[0]), option2: String(stringInterpolationSegment: arrayOfOptions[1]))
         
-        let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
+
         
-        println(language)
+
         
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
             
-            //            if(language.isEqualToString("pt")) {
-            LevelServices.createLevel(0, score: 0, type: "Carros", block: false)
-            LevelServices.createLevel(1, score: 0, type: "Biologia", block: false)
-            LevelServices.createLevel(2, score: 0, type: "Geografia", block: true)
-            LevelServices.createLevel(3, score: 0, type: "Historia", block: true)
-            LevelServices.createLevel(4, score: 0, type: "Artes", block: true)
-            LevelServices.createLevel(5, score: 0, type: "Esporte", block: true)
+            
+            LevelServices.createLevel(0, score: 0, type: "Cars", block: false)
+            LevelServices.createLevel(1, score: 0, type: "Biology", block: false)
+            LevelServices.createLevel(2, score: 0, type: "Geography", block: true)
+            LevelServices.createLevel(3, score: 0, type: "History", block: true)
+            LevelServices.createLevel(4, score: 0, type: "Arts", block: true)
+            LevelServices.createLevel(5, score: 0, type: "Sports", block: true)
             LevelServices.createLevel(6, score: 0, type: "Series", block: true)
-            LevelServices.createLevel(7, score: 0, type: "Quimica", block: true)
-            //
-            //            } else {
-            //                //In English
-            //                LevelServices.createLevel(0, score: 0, type: "Cars", block: false)
-            //                LevelServices.createLevel(1, score: 0, type: "Biology", block: false)
-            //                LevelServices.createLevel(2, score: 0, type: "Art", block: true)
-            //                LevelServices.createLevel(3, score: 0, type: "Geography", block: true)
-            //                LevelServices.createLevel(4, score: 0, type: "History", block: true)
-            //                LevelServices.createLevel(5, score: 0, type: "Sport", block: true)
-            //                LevelServices.createLevel(6, score: 0, type: "Series", block: true)
-            //                LevelServices.createLevel(7, score: 0, type: "Chemistry", block: true)
-            //
-            //
-            //
-            //            }
+            LevelServices.createLevel(7, score: 0, type: "Chemestry", block: true)
+        
             
             println("Is a first launch")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
@@ -65,10 +51,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         arrayOfData = LevelDAO.returnAllValues()
-        //println(arrayOfData[2].level_block) FIXME: Array index out of range
+        
+  
+
         
         
-        //println(arrayOfData[0].level_block)
+      
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -89,10 +77,50 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
+        
+        
 
         if(!arrayOfData[indexPath.row].level_block){
             let unlockedCell:  UnlockedCVCell = collectionView.dequeueReusableCellWithReuseIdentifier("unlocked", forIndexPath: indexPath) as! UnlockedCVCell
+            
+            
             unlockedCell.lblCell.text = self.arrayOfData[indexPath.row].level_type
+            
+            let language = NSBundle.mainBundle().preferredLocalizations.first as! NSString
+            
+            if(language.isEqualToString("pt")){
+                
+                var auxName = arrayOfData[indexPath.row].level_type
+                    
+                switch (auxName){
+                    case "Cars" :
+                        unlockedCell.lblCell.text = "Carros"
+                        
+                    case "Biology" :
+                        unlockedCell.lblCell.text = "Biologia"
+                        
+                    case "Geografia" :
+                        unlockedCell.lblCell.text = "Geografia"
+                        
+                    case "History" :
+                        unlockedCell.lblCell.text = "História"
+                        
+                    case "Arts" :
+                        unlockedCell.lblCell.text = "Artes"
+                        
+                    case "Sports" :
+                        unlockedCell.lblCell.text = "Esportes"
+                        
+                    case "Series" :
+                        unlockedCell.lblCell.text = "Séries"
+                        
+                    case "Chemestry" :
+                        unlockedCell.lblCell.text = "Química"
+                    
+                    default :
+                        break
+                }
+            }
             
             switch(indexPath.row)
             {
@@ -173,11 +201,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+        if(segue.identifier == "toGame"){
         let destinationVC = segue.destinationViewController as! ViewControllerGame
         destinationVC.level = self.level
         destinationVC.difficulty = self.difficulty
         destinationVC.arrayOfData = self.arrayOfData
-    }
+        }
+        }
     
     func countStars() {
         self.stars = 0
@@ -218,6 +249,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collection.reloadData()
     }
     
+    @IBAction func toCredits(sender: AnyObject) {
+  
+        performSegueWithIdentifier("toCredits", sender: self)
+    
+    
+    }
     
 }
 

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="LazerQuizz/Base.lproj/LaunchScreen.xib" source-language="en" datatype="plaintext" target-language="pt">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="8ie-xW-0ye.text">
+        <source>  Copyright (c) 2015 LetsPlay. All rights reserved.</source>
+        <note>Class = "UILabel"; text = "  Copyright (c) 2015 LetsPlay. All rights reserved."; ObjectID = "8ie-xW-0ye";</note>
+      </trans-unit>
+      <trans-unit id="kId-c2-rCX.text">
+        <source>LazerQuizz</source>
+        <note>Class = "UILabel"; text = "LazerQuizz"; ObjectID = "kId-c2-rCX";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="LazerQuizz/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="pt">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="0xH-he-NRc.text">
+        <source>Faltam</source>
+        <target>Faltam</target>
+        <note>Class = "UILabel"; text = "Faltam"; ObjectID = "0xH-he-NRc";</note>
+      </trans-unit>
+      <trans-unit id="4kx-yI-pd7.text">
+        <source>Bloqueado</source>
+        <target>Bloqueado</target>
+        <note>Class = "UILabel"; text = "Bloqueado"; ObjectID = "4kx-yI-pd7";</note>
+      </trans-unit>
+      <trans-unit id="8fx-7r-pvQ.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "8fx-7r-pvQ";</note>
+      </trans-unit>
+      <trans-unit id="B8m-ox-mjs.text">
+        <source>Developed by</source>
+        <note>Class = "UILabel"; text = "Developed by"; ObjectID = "B8m-ox-mjs";</note>
+      </trans-unit>
+      <trans-unit id="JHt-go-qcz.normalTitle">
+        <source>Credits</source>
+        <note>Class = "UIButton"; normalTitle = "Credits"; ObjectID = "JHt-go-qcz";</note>
+      </trans-unit>
+      <trans-unit id="aLa-n8-HJj.normalTitle">
+        <source>Back</source>
+        <note>Class = "UIButton"; normalTitle = "Back"; ObjectID = "aLa-n8-HJj";</note>
+      </trans-unit>
+      <trans-unit id="eww-Id-xvR.normalTitle">
+        <source>How to play</source>
+        <note>Class = "UIButton"; normalTitle = "How to play"; ObjectID = "eww-Id-xvR";</note>
+      </trans-unit>
+      <trans-unit id="g7T-li-P0B.text">
+        <source>3 estrelas</source>
+        <target>3 estrelas</target>
+        <note>Class = "UILabel"; text = "3 estrelas"; ObjectID = "g7T-li-P0B";</note>
+      </trans-unit>
+      <trans-unit id="tc4-Qu-nNo.text">
+        <source>Label 2</source>
+        <target>Label 2</target>
+        <note>Class = "UILabel"; text = "Label 2"; ObjectID = "tc4-Qu-nNo";</note>
+      </trans-unit>
+      <trans-unit id="xwd-7V-it4.text">
+        <source>Label 1</source>
+        <target>Label 1</target>
+        <note>Class = "UILabel"; text = "Label 1"; ObjectID = "xwd-7V-it4";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="LazerQuizz/Info.plist" source-language="en" datatype="plaintext" target-language="pt">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="LazerQuizzTests/Info.plist" source-language="en" datatype="plaintext" target-language="pt">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Localizable.strings" source-language="en" datatype="plaintext" target-language="pt">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="ACERTOU">
+        <source>You got</source>
+        <target>Você acertou</target>
+        <note>Você acertou</note>
+      </trans-unit>
+      <trans-unit id="BLOQUEADO">
+        <source>Blocked</source>
+        <target>Bloqueado</target>
+        <note>name of label blocked</note>
+      </trans-unit>
+      <trans-unit id="DE">
+        <source>out of</source>
+        <target>de</target>
+        <note>de</note>
+      </trans-unit>
+      <trans-unit id="ESTRELA">
+        <source>more star</source>
+        <target>estrela</target>
+        <note>estrela</note>
+      </trans-unit>
+      <trans-unit id="ESTRELAS">
+        <source>more stars</source>
+        <target>estrelas</target>
+        <note>estrelas</note>
+      </trans-unit>
+      <trans-unit id="FALTA">
+        <source>You need</source>
+        <target>Falta</target>
+        <note>Falta</note>
+      </trans-unit>
+      <trans-unit id="FALTAM">
+        <source>You need</source>
+        <target>Faltam</target>
+        <note>Faltam</note>
+      </trans-unit>
+      <trans-unit id="PROXIMO">
+        <source>Next level</source>
+        <target>Próximo nível</target>
+        <note>Próximo nível</note>
+      </trans-unit>
+      <trans-unit id="REPETIR">
+        <source>REPETIR</source>
+        <note>Repetir nível</note>
+      </trans-unit>
+      <trans-unit id="TENTAR">
+        <source>Try again</source>
+        <target>Tentar novamente</target>
+        <note>Tentar novamente</note>
+      </trans-unit>
+      <trans-unit id="VOLTAR">
+        <source>Back to menu</source>
+        <target>Voltar ao menu</target>
+        <note>Voltar ao menu</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

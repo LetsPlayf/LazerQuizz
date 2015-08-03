@@ -1,6 +1,6 @@
 {
     "Perguntas": {
-        "Carros": {
+        "Cars": {
             "Qual a marca do carro?": {
                 "Facil": {
                     "Fiat": [
@@ -86,7 +86,7 @@
                                "Sequoia",
                                "Land Cruiser",
                                "Tundra",
-                               "Paseo",
+                               "Paseo"
                                ],
                     "Lamborghini": [
                                     "Diablo",
@@ -106,7 +106,7 @@
                 }
             }
         },
-        "Biologia": {
+        "Biology": {
             "Mamifero ou ave?": {
                 "Facil": {
                     "Mammal": [
@@ -148,7 +148,7 @@
                                "Mole"
                                ],
                     "Avian": [
-                              "Southern Lapwing",
+                              "Lapwing",
                               "Seriema",
                               "Woodpecker",
                               "Parrot",
@@ -254,7 +254,7 @@
                 }
             }
         },
-        "Artes": {
+        "Arts": {
             "Musico ou pintor": {
                 "Facil": {
                     "Musico": [
@@ -333,7 +333,7 @@
                 }
             }
         },
-        "Geografia": {
+        "Geography": {
             "Country or Capital?": {
                 "Facil": {
                     "Capital": [
@@ -345,7 +345,6 @@
                                 "Washington",
                                 "Nassau",
                                 "San Jose",
-                                "San Salvador",
                                 "Havana",
                                 "Montevideo",
                                 "Berlin",
@@ -380,9 +379,7 @@
                                 "Croatia",
                                 "Bulgaria",
                                 "Denmark",
-                                "Republic Theca",
-                                "Australia",
-                                "Marshall Islands"
+                                "Australia"
                                 ]
                 },
                 "Medio": {
@@ -462,7 +459,7 @@
                 }
             }
         },
-        "Historia": {
+        "History": {
             "Grego ou Romano?": {
                 "Facil": {
                     "Grego": [
