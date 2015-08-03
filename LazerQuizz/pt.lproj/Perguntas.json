@@ -86,7 +86,7 @@
                                "Sequoia",
                                "Land Cruiser",
                                "Tundra",
-                               "Paseo",
+                               "Paseo"
                                ],
                     "Lamborghini": [
                                     "Diablo",
@@ -521,6 +521,103 @@
                                "Promona",
                                "Proserpina"
                                ]
+                }
+            }
+        },
+        "Sports": {
+            "Qual a nacionalidade do time?": {
+                "Facil": {
+                    "Brasileiro": [
+                                   "Flamengo",
+                                   "Palmeiras",
+                                   "Corinthians",
+                                   "Vasco",
+                                   "Botafogo",
+                                   "Grêmio",
+                                   "São Paulo",
+                                   "Santos",
+                                   "Cruzeiro",
+                                   "Coritiba",
+                                   "Sport"
+                                   ],
+                    "Espanhol": [
+                                 "Barcelona",
+                                 "Real Madrid",
+                                 "Sevilla",
+                                 "Espanyol",
+                                 "Valencia",
+                                 "Getafe",
+                                 "Vilarreal",
+                                 "Atl.Madrid",
+                                 "Malaga",
+                                 "Betis"
+                                 ],
+                    "Inglês": [
+                               "Arsenal",
+                               "Aston Villa",
+                               "Chelsea",
+                               "Everton",
+                               "Liverpool",
+                               "Newcastle",
+                               "Tottenham",
+                               "Leicester"
+                               ]
+                },
+                "Medio": {
+                    "Brasileiro": [
+                                   "Vitoria",
+                                   "Paysandu",
+                                   "Bahia",
+                                   "Criciuma",
+                                   "Crb",
+                                   "Oeste"
+                                   ],
+                    "Inglês": [
+                               "Blackpool",
+                               "Brentford",
+                               "Reading",
+                               "Fulham",
+                               "Sheffield",
+                               "Brentford"
+                               ],
+                    "Português": [
+                                  "Boavista",
+                                  "Academica",
+                                  "FC Porto",
+                                  "Braga",
+                                  "Benfica",
+                                  "Rio Ave"
+                                  ]
+                },
+                "Dificil": {
+                    "Alemão": [
+                               "Augsburg",
+                               "Hamburgo",
+                               "Hannover",
+                               "Hoffenheim",
+                               "Mainz",
+                               "Wolfsburg",
+                               "Stuttgart"
+                               ],
+                    "Brasileiro": [
+                                   "Asa",
+                                   "Icasa",
+                                   "Guarani",
+                                   "Caixas",
+                                   "Londrina",
+                                   "Tombense"
+                                   ],
+                    "Francês": [
+                                "Lorient",
+                                "Lyon",
+                                "Monaco",
+                                "Nice",
+                                "Angers",
+                                "Bastia",
+                                "Caen",
+                                "Reims",
+                                "Rennes"
+                                ]
                 }
             }
         }

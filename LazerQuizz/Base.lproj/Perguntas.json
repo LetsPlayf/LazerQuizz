@@ -532,6 +532,103 @@
                                ]
                 }
             }
+        },
+        "Sports": {
+            "Qual a nacionalidade do time?": {
+                "Facil": {
+                    "Brazilian": [
+                                  "Flamengo",
+                                  "Palmeiras",
+                                  "Corinthians",
+                                  "Vasco",
+                                  "Botafogo",
+                                  "Grêmio",
+                                  "São Paulo",
+                                  "Santos",
+                                  "Cruzeiro",
+                                  "Coritiba",
+                                  "Sport"
+                                  ],
+                    "Spanish": [
+                                "Barcelona",
+                                "Real Madrid",
+                                "Sevilla",
+                                "Espanyol",
+                                "Valencia",
+                                "Getafe",
+                                "Vilarreal",
+                                "Atl.Madrid",
+                                "Malaga",
+                                "Betis"
+                                ],
+                    "English": [
+                                "Arsenal",
+                                "Aston Villa",
+                                "Chelsea",
+                                "Everton",
+                                "Liverpool",
+                                "Newcastle",
+                                "Tottenham",
+                                "Leicester"
+                                ]
+                },
+                "Medio": {
+                    "Brazilian": [
+                                  "Vitoria",
+                                  "Paysandu",
+                                  "Bahia",
+                                  "Criciuma",
+                                  "Crb",
+                                  "Oeste"
+                                  ],
+                    "English": [
+                                "Blackpool",
+                                "Brentford",
+                                "Reading",
+                                "Fulham",
+                                "Sheffield",
+                                "Brentford"
+                                ],
+                    "Portuguese": [
+                                   "Boavista",
+                                   "Academica",
+                                   "FC Porto",
+                                   "Braga",
+                                   "Benfica",
+                                   "Rio Ave"
+                                   ]
+                },
+                "Dificil": {
+                    "German" : [
+                                "Augsburg",
+                                "Hamburgo",
+                                "Hannover",
+                                "Hoffenheim",
+                                "Mainz",
+                                "Wolfsburg",
+                                "Stuttgart"
+                                ],
+                    "Brazilian" : [
+                                   "Asa",
+                                   "Icasa",
+                                   "Guarani",
+                                   "Caixas",
+                                   "Londrina",
+                                   "Tombense"
+                                   ],
+                    "French" : [ 
+                                "Lorient",
+                                "Lyon",
+                                "Monaco",
+                                "Nice",
+                                "Angers",
+                                "Bastia",
+                                "Caen",
+                                "Reims",
+                                "Rennes"
+                                ]
+                }
+            }
         }
     }
 }
