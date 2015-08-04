@@ -581,14 +581,6 @@
                                   "Crb",
                                   "Oeste"
                                   ],
-                    "English": [
-                                "Blackpool",
-                                "Brentford",
-                                "Reading",
-                                "Fulham",
-                                "Sheffield",
-                                "Brentford"
-                                ],
                     "Portuguese": [
                                    "Boavista",
                                    "Academica",
@@ -596,37 +588,44 @@
                                    "Braga",
                                    "Benfica",
                                    "Rio Ave"
-                                   ]
+                                   ],
+                    "Mexican":[
+                               "Pachuca",
+                               "San Luis",
+                               "Tijuana",
+                               "Monterrey",
+                               "Necaxa"
+                               ]
                 },
                 "Dificil": {
-                    "German" : [
-                                "Augsburg",
-                                "Hamburgo",
-                                "Hannover",
-                                "Hoffenheim",
-                                "Mainz",
-                                "Wolfsburg",
-                                "Stuttgart"
-                                ],
-                    "Brazilian" : [
-                                   "Asa",
-                                   "Icasa",
-                                   "Guarani",
-                                   "Caixas",
-                                   "Londrina",
-                                   "Tombense"
-                                   ],
-                    "French" : [ 
-                                "Lorient",
-                                "Lyon",
-                                "Monaco",
-                                "Nice",
-                                "Angers",
-                                "Bastia",
-                                "Caen",
-                                "Reims",
-                                "Rennes"
-                                ]
+                    "German": [
+                               "Augsburg",
+                               "Hamburgo",
+                               "Hannover",
+                               "Hoffenheim",
+                               "Mainz",
+                               "Wolfsburg",
+                               "Stuttgart"
+                               ],
+                    "French": [
+                               "Lorient",
+                               "Lyon",
+                               "Monaco",
+                               "Nice",
+                               "Angers",
+                               "Bastia",
+                               "Caen",
+                               "Reims",
+                               "Rennes"
+                               ],
+                    "Italian" : [
+                                 "Lazio",
+                                 "Napoli",
+                                 "Torino",
+                                 "Empoli",
+                                 "Chievo",
+                                 "Genoa"
+                                 ]
                 }
             }
         }
