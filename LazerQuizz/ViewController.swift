@@ -52,9 +52,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         arrayOfData = LevelDAO.returnAllValues()
         
-  
-
-        
+              
         
       
     }
@@ -128,7 +126,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 unlockedCell.imgType.image = UIImage(named: "carro.png")
                 break
             case 1:
-                unlockedCell.imgType.image = UIImage(named: "dna.png")
+                unlockedCell.imgType.image = UIImage(named: "chemistry.png")
                 break
             case 2:
                 unlockedCell.imgType.image = UIImage(named: "two_globes.png")
@@ -220,6 +218,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     //This method counts the scores of each level to unlock the locked levels.
     func unlockTheLevels() {
         println(self.stars)
+        stars = 5
         if (stars > 2 && arrayOfData[2].level_block == true) {
             LevelServices.updateBlock(arrayOfData[2])
         }

@@ -93,7 +93,11 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+
         self.levelSetup()
+        addEffect()
+    
     }
     
     func levelSetup() {
@@ -211,6 +215,18 @@ class ViewControllerGame: UIViewController {
     override func viewDidAppear(animated: Bool) {
         
         super.viewDidAppear(animated)
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.label_left_option.transform = CGAffineTransformMakeScale(1.4, 1.4)
+            self.label_right_option.transform = CGAffineTransformMakeScale(1.4, 1.4)
+            
+            }, completion: {
+                (value: Bool) in
+                UIView.animateWithDuration(0.8, animations: { () -> Void in
+                    self.label_left_option.transform = CGAffineTransformIdentity
+                    self.label_right_option.transform = CGAffineTransformIdentity
+                })
+        })
+        
         self.initializeTimer()
     }
     
@@ -433,5 +449,18 @@ class ViewControllerGame: UIViewController {
                 }
         }
     }
+    
+    func addEffect(){
+        var effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        
+        var effectView = UIVisualEffectView(effect: effect)
+        
+
+
+
+        
+        self.view.addSubview(effectView)
+    }
+    
     
 }
