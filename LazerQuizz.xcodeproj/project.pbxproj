@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A5C3BC71B75379800F1E724 /* 080.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5C3BC61B75379800F1E724 /* 080.png */; };
 		9AA47A661B729CF3004BE15F /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA47A651B729CF3004BE15F /* TutorialViewController.swift */; };
 		9AC89F7E1B6BE14600FC1524 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */; };
 		9AC89F801B6BE3B100FC1524 /* CreditLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A5C3BC61B75379800F1E724 /* 080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 080.png; sourceTree = "<group>"; };
 		9AA47A651B729CF3004BE15F /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditLabel.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				A733CBE81B56CAC30018838F /* danger_road.jpg */,
 				A779FD8D1B5A8B2800AA01D8 /* two_globes.png */,
 				A733CBF81B56DE1C0018838F /* dna.png */,
+				9A5C3BC61B75379800F1E724 /* 080.png */,
 				A733CBF61B56DA2E0018838F /* carro.png */,
 				A733CBEA1B56CB1B0018838F /* gameScreen.jpg */,
 				A733CBF01B56D2010018838F /* star_empty.png */,
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCA90C21B4AED770062E589 /* Main.storyboard in Resources */,
+				9A5C3BC71B75379800F1E724 /* 080.png in Resources */,
 				A733CBF21B56D2010018838F /* star_empty.png in Resources */,
 				A733CBE71B56CAB80018838F /* square.png in Resources */,
 				ADCA90C41B4AED770062E589 /* Images.xcassets in Resources */,

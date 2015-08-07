@@ -20,6 +20,9 @@ class TutorialViewController: UIViewController {
     var tutorialView : UIView?
     var tutorialLabel : UILabel?
     var tutorialImage : UIImageView?
+    var touchImage : UIImageView?
+    
+    
     var blurView : UIVisualEffectView?
     
     var time : Int = 0
@@ -89,36 +92,135 @@ class TutorialViewController: UIViewController {
             case 0:
                 self.firstTap()
                 self.time++
-            default:
+            
+        case 1:
+            
+                self.secondTap()
+                self.time++
+            
+            
+        case 2:
+
+            self.thirdTap()
+            self.time++
+            
+        default:
                 self.time = 0
         }
     }
     
     
     func firstTap() {
-        self.top.constant = CGFloat(0)
-        self.top2.constant = CGFloat(0)
         
-        
+        UIView.animateWithDuration(1.0, animations: {
+            self.tutorialView?.alpha = 0
+            }, completion: { (finished) -> Void in
+                self.tutorialLabel?.text = "qualquer coisa"
+                self.tutorialImage?.removeFromSuperview()
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    self.tutorialView?.alpha = 1
+                })
+        })
+/*
         UIView.animateKeyframesWithDuration(2.0, delay: 0.3, options: nil, animations: { () -> Void in
             
-            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.3, animations: { () -> Void in
-                
-                self.tutorialView?.alpha = 0
-            })
-            UIView.addKeyframeWithRelativeStartTime(0.4, relativeDuration: 0.40, animations: { () -> Void in
-                
-                self.animateBlur()
-            })
-            UIView.addKeyframeWithRelativeStartTime(0.6, relativeDuration: 0.4, animations: { () -> Void in
-                
-                self.view.layoutIfNeeded()
-            })
+            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.5, animations: { () -> Void in
             
-            }) { (result) -> Void in
-                self.blurView?.removeFromSuperview()
-        }
+                            self.tutorialView?.alpha = 0
+                            self.tutorialLabel?.alpha = 0
+
+                        })
+            
+            
+            
+            
+                         UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.5, animations: { () -> Void in
+            
+                          
+
+                            self.tutorialView?.alpha = 1
+                            
+                            
+                        })
+            
+            
+            
+            
+                        }) { (result) -> Void in
+                            self.tutorialLabel?.text = "qualquer coisa"
+                            self.tutorialLabel?.alpha = 1
+
+
+                    }*/
+            //self.tutorialLabel?.text = "qualquer coisa"
+        
+//        self.top.constant = CGFloat(0)
+//        self.top2.constant = CGFloat(0)
+//        
+//        
+//        UIView.animateKeyframesWithDuration(2.0, delay: 0.3, options: nil, animations: { () -> Void in
+//            
+//            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.3, animations: { () -> Void in
+//                
+//                self.tutorialView?.alpha = 0
+//            })
+//            UIView.addKeyframeWithRelativeStartTime(0.4, relativeDuration: 0.40, animations: { () -> Void in
+//                
+//                self.animateBlur()
+//            })
+//            UIView.addKeyframeWithRelativeStartTime(0.6, relativeDuration: 0.4, animations: { () -> Void in
+//                
+//                self.view.layoutIfNeeded()
+//            })
+//            
+//            }) { (result) -> Void in
+//                self.blurView?.removeFromSuperview()
+//        }
     }
+    
+    
+    func secondTap(){
+        
+                self.top.constant = CGFloat(0)
+                self.top2.constant = CGFloat(0)
+        
+        
+                UIView.animateKeyframesWithDuration(2.0, delay: 0.3, options: nil, animations: { () -> Void in
+        
+                    UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.3, animations: { () -> Void in
+        
+                        self.tutorialView?.alpha = 0
+                    })
+                    UIView.addKeyframeWithRelativeStartTime(0.4, relativeDuration: 0.40, animations: { () -> Void in
+        
+                        self.animateBlur()
+                    })
+                    UIView.addKeyframeWithRelativeStartTime(0.6, relativeDuration: 0.4, animations: { () -> Void in
+        
+                        self.view.layoutIfNeeded()
+                    })
+                    
+                    }) { (result) -> Void in
+                        self.blurView?.removeFromSuperview()
+        }
+        
+        
+        
+    }
+    
+    
+    func thirdTap(){
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.tutorialView?.alpha = 1.0
+            
+            }) { (Bool) -> Void in
+                
+        }
+        
+        
+    }
+    
+
 
     
     override func viewDidAppear(animated: Bool) {
@@ -127,6 +229,14 @@ class TutorialViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: { () -> Void in
             self.tutorialView!.frame.origin.y = self.view.center.y - self.tutorialView!.bounds.height + 10
         })
+        
+        
+        self.touchImage = UIImageView(frame: CGRectMake(self.view.bounds.width - 70, self.tutorialView!.bounds.height - 60, 50, 50))
+        self.touchImage?.image = UIImage(named: "080.png")
+        self.touchImage?.backgroundColor = UIColor.clearColor()
+        self.tutorialView?.addSubview(self.touchImage!)
+
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
