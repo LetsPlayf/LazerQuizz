@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6C8B0551-4D8F-459D-9E7C-0A1F2EDBA4A3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>LazerQuizz</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0D21C01EA7F239762D113DA31692511055564621</key>
 		<string>https://github.com/LetsPlayf/LazerQuizz.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LazerQuizz.xcodeproj</string>
+	<string>LazerQuizz.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0D21C01EA7F239762D113DA31692511055564621</key>
