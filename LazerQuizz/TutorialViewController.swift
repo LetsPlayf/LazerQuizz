@@ -34,13 +34,13 @@ class TutorialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         top.constant = CGFloat(1000)
         
-         top2.constant = CGFloat(1000)
+        top.constant = CGFloat(1000)
+        
+        top2.constant = CGFloat(1000)
         // Do any additional setup after loading the view.
         
-        self.tutorialView = UIView(frame: CGRectMake(10, -125, self.view.bounds.width - 20, 200))
+        self.tutorialView = UIView(frame: CGRectMake(10, -125, self.view.bounds.width - 20, self.view.bounds.height * 0.5))
         self.tutorialView!.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.9)
         self.tutorialView!.layer.masksToBounds = true
         self.tutorialView!.layer.cornerRadius = 3
@@ -48,20 +48,20 @@ class TutorialViewController: UIViewController {
         
         self.tutorialLabel = UILabel(frame: CGRectMake(0, 10, self.tutorialView!.bounds.width, self.tutorialView!.bounds.height * 0.40))
         
-            
+        
         self.tutorialLabel!.textAlignment = NSTextAlignment.Center
         self.tutorialLabel!.font = tutorialLabel?.font.fontWithSize(30)
         self.tutorialLabel?.text = "Bem vindo ao"
-
+        
         self.tutorialView?.addSubview(self.tutorialLabel!)
         
-        self.tutorialImage = UIImageView(frame: CGRectMake(0, self.tutorialLabel!.bounds.height + 20, self.tutorialView!.bounds.width, self.tutorialView!.bounds.height * 0.30))
+        self.tutorialImage = UIImageView(frame: CGRectMake(15, self.tutorialLabel!.bounds.height + 10, self.tutorialView!.bounds.width - 30, self.tutorialView!.bounds.height * 0.30))
         self.tutorialImage?.image = UIImage(named: "laserLabel.png")
         
         self.tutorialView?.addSubview(self.tutorialImage!)
-
+        
         var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
-
+        
         
         blurView = UIVisualEffectView(effect: blur)
         
@@ -71,13 +71,7 @@ class TutorialViewController: UIViewController {
         self.view.addSubview(blurView!)
         
         self.time = 0
-       
-        
-        
 
-        
-        
-        
     }
     
     func animateBlur(){
@@ -115,7 +109,7 @@ class TutorialViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: {
             self.tutorialView?.alpha = 0
             }, completion: { (finished) -> Void in
-                self.tutorialLabel?.text = "qualquer coisa"
+                self.tutorialLabel?.text = "Qualquer coisa "
                 self.tutorialImage?.removeFromSuperview()
                 UIView.animateWithDuration(1.0, animations: { () -> Void in
                     self.tutorialView?.alpha = 1
@@ -216,18 +210,12 @@ class TutorialViewController: UIViewController {
             }) { (Bool) -> Void in
                 
         }
-        
-        
     }
-    
-
-
-    
     override func viewDidAppear(animated: Bool) {
         
         self.view.addSubview(self.tutorialView!)
         UIView.animateWithDuration(1.0, animations: { () -> Void in
-            self.tutorialView!.frame.origin.y = self.view.center.y - self.tutorialView!.bounds.height + 10
+            self.tutorialView!.frame.origin.y = self.view.center.y - self.tutorialView!.bounds.height/2 - 20
         })
         
         
