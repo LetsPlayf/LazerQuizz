@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TutorialViewController: UIViewController {
 
     @IBOutlet weak var label1: UILabel!
@@ -22,12 +23,15 @@ class TutorialViewController: UIViewController {
     var tutorialImage : UIImageView?
     var touchImage : UIImageView?
     
+   // @IBOutlet weak var backgroundImage: UIImageView!
     
     var blurView : UIVisualEffectView?
     
     var time : Int = 0
     
     
+    @IBOutlet var tapGesture: UITapGestureRecognizer!
+     
     
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
@@ -68,9 +72,18 @@ class TutorialViewController: UIViewController {
         
         blurView!.frame = self.view.bounds
         
-        self.view.addSubview(blurView!)
+        
         
         self.time = 0
+
+        
+        //self.maxViews = 1
+
+        self.tutorialLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.tutorialLabel?.numberOfLines = 0
+        
+       self.view.addSubview(blurView!)
+        
 
     }
     
@@ -95,8 +108,17 @@ class TutorialViewController: UIViewController {
             
         case 2:
 
+            self.tutorialLabel?.text = "Então arraste a ? para o lado certo antes que o laser o atinja"
+            
+
             self.thirdTap()
             self.time++
+            
+        case 3:
+
+            self.fourthTap()
+            self.time++
+            
             
         default:
                 self.time = 0
@@ -109,7 +131,9 @@ class TutorialViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: {
             self.tutorialView?.alpha = 0
             }, completion: { (finished) -> Void in
-                self.tutorialLabel?.text = "Qualquer coisa "
+
+                self.tutorialLabel?.text = "Sempre haverá duas opções"
+
                 self.tutorialImage?.removeFromSuperview()
                 UIView.animateWithDuration(1.0, animations: { () -> Void in
                     self.tutorialView?.alpha = 1
@@ -178,6 +202,7 @@ class TutorialViewController: UIViewController {
                 self.top.constant = CGFloat(0)
                 self.top2.constant = CGFloat(0)
         
+                tapGesture.enabled = false
         
                 UIView.animateKeyframesWithDuration(2.0, delay: 0.3, options: nil, animations: { () -> Void in
         
@@ -195,6 +220,7 @@ class TutorialViewController: UIViewController {
                     })
                     
                     }) { (result) -> Void in
+                        self.tapGesture.enabled = true
                         self.blurView?.removeFromSuperview()
         }
         
@@ -204,13 +230,52 @@ class TutorialViewController: UIViewController {
     
     
     func thirdTap(){
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
-            self.tutorialView?.alpha = 1.0
-            
-            }) { (Bool) -> Void in
+        
+        UIView.animateWithDuration(1.0, animations: {
+            self.tutorialView?.alpha = 1
+            }, completion: { (finished) -> Void in
                 
-        }
+        
+        })
+    
+        
+        
+        
+
+        
+        
+        
     }
+    
+    
+    func fourthTap(){
+        
+        UIView.animateWithDuration(1.0, animations: {
+            self.tutorialView?.alpha = 0
+            }, completion: { (finished) -> Void in
+                
+                
+        })
+        
+        
+                var label = CreditLabel(frame: CGRectMake(50, 30, self.view.bounds.width / 3.5, 40))
+                label.text = "Macaco"
+                label.textAlignment = NSTextAlignment.Center
+                label.layer.masksToBounds = true
+                label.layer.cornerRadius = 4
+        
+                label.backgroundColor = UIColor.whiteColor()
+        
+        
+                self.view.addSubview(label)
+                
+
+
+        
+    }
+    
+    
+
     override func viewDidAppear(animated: Bool) {
         
         self.view.addSubview(self.tutorialView!)

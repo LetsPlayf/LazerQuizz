@@ -405,6 +405,7 @@
                     <connections>
                         <outlet property="label1" destination="xTs-ZY-mk6" id="KGH-Ps-X5d"/>
                         <outlet property="label2" destination="nJM-wS-D4O" id="m6c-qq-tG1"/>
+                        <outlet property="tapGesture" destination="sl5-ig-DgD" id="cJQ-9i-MqE"/>
                         <outlet property="top" destination="vRc-rq-ucr" id="EhO-EE-4ql"/>
                         <outlet property="top2" destination="jj7-Iv-utj" id="eaR-hx-n6h"/>
                         <outlet property="view2" destination="skt-h3-yD1" id="y83-Mh-Sig"/>
