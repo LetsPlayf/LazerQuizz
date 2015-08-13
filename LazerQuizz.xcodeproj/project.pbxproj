@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A5C3BC71B75379800F1E724 /* 080.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5C3BC61B75379800F1E724 /* 080.png */; };
+		9A8006BA1B7D082700F6FFEC /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8006B91B7D082700F6FFEC /* ViewControllerExtension.swift */; };
 		9AA47A661B729CF3004BE15F /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA47A651B729CF3004BE15F /* TutorialViewController.swift */; };
 		9AC89F7E1B6BE14600FC1524 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */; };
 		9AC89F801B6BE3B100FC1524 /* CreditLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		9A5C3BC61B75379800F1E724 /* 080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 080.png; sourceTree = "<group>"; };
+		9A8006B91B7D082700F6FFEC /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		9AA47A651B729CF3004BE15F /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		9AC89F7F1B6BE3B100FC1524 /* CreditLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditLabel.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			children = (
 				ADCA90BE1B4AED770062E589 /* ViewController.swift */,
 				9AA47A651B729CF3004BE15F /* TutorialViewController.swift */,
+				9A8006B91B7D082700F6FFEC /* ViewControllerExtension.swift */,
 				9AC89F7D1B6BE14600FC1524 /* CreditsViewController.swift */,
 				A7412BAB1B4C27FC00E7F946 /* ViewControllerGame.swift */,
 			);
@@ -412,6 +415,7 @@
 				ADCA90E21B4B00A30062E589 /* LockedCVCell.swift in Sources */,
 				ADCA90DD1B4AF40E0062E589 /* UnlockedCVCell.swift in Sources */,
 				9AF720951B4C773A002B3170 /* SwiftyJSON.swift in Sources */,
+				9A8006BA1B7D082700F6FFEC /* ViewControllerExtension.swift in Sources */,
 				ADCA90BA1B4AED770062E589 /* AppDelegate.swift in Sources */,
 				9AF720931B4C7730002B3170 /* AccessJSON.swift in Sources */,
 			);

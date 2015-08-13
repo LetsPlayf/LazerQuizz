@@ -1,5 +1,14 @@
 import UIKit
 
+protocol DraggableLabelDelegate {
+
+    
+    func draggableLabel(label: DraggableLabel, didMoveToPosition position: DraggableLabel.Position)
+    
+}
+
+
+
 class DraggableLabel: UILabel {
     var lastLocation:CGPoint = CGPointMake(0, 0)
     var panRecognizer : UIPanGestureRecognizer?
@@ -7,6 +16,7 @@ class DraggableLabel: UILabel {
     let snapTime : NSTimeInterval = 0.25
     let fastSnapTime: NSTimeInterval = 0.1
     var gameView : ViewControllerGame?
+    var delegate: DraggableLabelDelegate?
     
     enum Position {
         case Left
@@ -72,36 +82,38 @@ class DraggableLabel: UILabel {
         
         
         if (recognizer.state == UIGestureRecognizerState.Ended) {
-            switch (self.currentPosition) {
-            case .Middle:
-                if (self.frame.origin.x <= self.gameView?.leftBar!.frame.origin.x) {
-                    self.moveLeft()
-                } else if (self.frame.origin.x + self.frame.width >= self.gameView!.rightBar!.frame.origin.x + self.gameView!.rightBar!.frame.width) {
-                    self.moveRight()
-                }
-                break
-                
-            case .Left:
-                if (self.frame.origin.x + self.frame.width >= self.gameView!.leftBar!.frame.origin.x + self.gameView!.leftBar!.frame.width) {
-                    self.moveRight()
-                } else {
-                    self.fastSnapLeft()
-                }
-                break
-                
-            case .Right:
-                if (self.frame.origin.x <= self.gameView!.rightBar!.frame.origin.x) {
-                    self.moveLeft()
-                } else {
-                    self.fastSnapRight()
-                }
-                break
-                
-            default:
-                print ("Error: Draggable Label has no set position.\n")
-                exit(0)
-                break
-            }
+            delegate?.draggableLabel(self, didMoveToPosition: self.currentPosition)
+            
+//            switch (self.currentPosition) {
+//            case .Middle:
+//                if (self.frame.origin.x <= self.gameView?.leftBar!.frame.origin.x) {
+//                    self.moveLeft()
+//                } else if (self.frame.origin.x + self.frame.width >= self.gameView!.rightBar!.frame.origin.x + self.gameView!.rightBar!.frame.width) {
+//                    self.moveRight()
+//                }
+//                break
+//                
+//            case .Left:
+//                if (self.frame.origin.x + self.frame.width >= self.gameView!.leftBar!.frame.origin.x + self.gameView!.leftBar!.frame.width) {
+//                    self.moveRight()
+//                } else {
+//                    self.fastSnapLeft()
+//                }
+//                break
+//                
+//            case .Right:
+//                if (self.frame.origin.x <= self.gameView!.rightBar!.frame.origin.x) {
+//                    self.moveLeft()
+//                } else {
+//                    self.fastSnapRight()
+//                }
+//                break
+//                
+//            default:
+//                print ("Error: Draggable Label has no set position.\n")
+//                exit(0)
+//                break
+//            }
         }
     }
     

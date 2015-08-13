@@ -9,10 +9,15 @@
 import UIKit
 
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, DraggableLabelDelegate {
 
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
+    
+//    var leftBar : UIView?
+//    var rightBar : UIView?
+
+    
     
     @IBOutlet weak var top: NSLayoutConstraint!
 
@@ -32,7 +37,7 @@ class TutorialViewController: UIViewController {
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
      
-    
+
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     
@@ -77,7 +82,7 @@ class TutorialViewController: UIViewController {
         self.time = 0
 
         
-        //self.maxViews = 1
+        
 
         self.tutorialLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         self.tutorialLabel?.numberOfLines = 0
@@ -86,6 +91,72 @@ class TutorialViewController: UIViewController {
         
 
     }
+    
+    //            switch (self.currentPosition) {
+    //            case .Middle:
+    //                if (self.frame.origin.x <= self.gameView?.leftBar!.frame.origin.x) {
+    //                    self.moveLeft()
+    //                } else if (self.frame.origin.x + self.frame.width >= self.gameView!.rightBar!.frame.origin.x + self.gameView!.rightBar!.frame.width) {
+    //                    self.moveRight()
+    //                }
+    //                break
+    //
+    //            case .Left:
+    //                if (self.frame.origin.x + self.frame.width >= self.gameView!.leftBar!.frame.origin.x + self.gameView!.leftBar!.frame.width) {
+    //                    self.moveRight()
+    //                } else {
+    //                    self.fastSnapLeft()
+    //                }
+    //                break
+    //
+    //            case .Right:
+    //                if (self.frame.origin.x <= self.gameView!.rightBar!.frame.origin.x) {
+    //                    self.moveLeft()
+    //                } else {
+    //                    self.fastSnapRight()
+    //                }
+    //                break
+    //
+    //            default:
+    //                print ("Error: Draggable Label has no set position.\n")
+    //                exit(0)
+    //                break
+
+    
+    func draggableLabel(label: DraggableLabel, didMoveToPosition position: DraggableLabel.Position) {
+        switch (position) {
+        case .Middle:
+            if (label.frame.origin.x <= self.leftBar!.frame.origin.x) {
+                label.moveLeft()
+            } else if (label.frame.origin.x + label.frame.width >= self.rightBar!.frame.origin.x + self.rightBar!.frame.width) {
+                label.moveRight()
+            }
+            break
+            
+        case .Left:
+            if (label.frame.origin.x + label.frame.width >= self.leftBar!.frame.origin.x + self.leftBar!.frame.width) {
+                label.moveRight()
+            } else {
+                label.fastSnapLeft()
+            }
+            break
+            
+        case .Right:
+            if (label.frame.origin.x <= self.rightBar!.frame.origin.x) {
+                label.moveLeft()
+            } else {
+                label.fastSnapRight()
+            }
+            break
+            
+        default:
+            print ("Error: Draggable Label has no set position.\n")
+            exit(0)
+            break
+        }
+        
+    }
+    
     
     func animateBlur(){
         UIView.transitionWithView(self.blurView!, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
@@ -242,7 +313,27 @@ class TutorialViewController: UIViewController {
         
         
 
+        let labelWidth : CGFloat = self.view.bounds.width / 3
+        let labelHeight : CGFloat = 40
+        var pointX : CGFloat  = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth / 2)
+        var pointY : CGFloat = 120
         
+        
+
+        
+        var label = DraggableLabel(frame: CGRectMake(pointX, pointY, labelWidth, labelHeight))
+            label.text = "Macaco"
+            label.textAlignment = NSTextAlignment.Center
+            label.layer.masksToBounds = true
+            label.layer.cornerRadius = 4
+            //  label.gameView = self
+            
+            label.delegate = self
+            label.backgroundColor = UIColor.whiteColor()
+            
+            
+            self.view.addSubview(label)
+
         
         
     }
@@ -256,25 +347,12 @@ class TutorialViewController: UIViewController {
                 
                 
         })
-        
-        
-                var label = CreditLabel(frame: CGRectMake(50, 30, self.view.bounds.width / 3.5, 40))
-                label.text = "Macaco"
-                label.textAlignment = NSTextAlignment.Center
-                label.layer.masksToBounds = true
-                label.layer.cornerRadius = 4
-        
-                label.backgroundColor = UIColor.whiteColor()
-        
-        
-                self.view.addSubview(label)
-                
-
-
-        
+    
     }
+        
     
     
+        
 
     override func viewDidAppear(animated: Bool) {
         

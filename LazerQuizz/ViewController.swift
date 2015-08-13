@@ -34,6 +34,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
             //Put any code here and it will be executed only once.
             
+            let tutorial:TutorialViewController = TutorialViewController()
+            
+            self.presentViewController(tutorial, animated: true, completion: nil)
+            
             
             LevelServices.createLevel(0, score: 0, type: "Cars", block: false)
             LevelServices.createLevel(1, score: 0, type: "Biology", block: false)

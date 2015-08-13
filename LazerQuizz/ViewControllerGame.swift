@@ -61,8 +61,8 @@ class ViewControllerGame: UIViewController {
     var laser : UIView?
     var maxViews = 0
     var timer : NSTimer?
-    var leftBar : UIView?
-    var rightBar : UIView?
+//    var leftBar : UIView?
+//    var rightBar : UIView?
     var dictionaryOfAnswers = Dictionary<String,Int>()
     var arrayOfData = [Level]()
     var level = Int()
@@ -96,7 +96,7 @@ class ViewControllerGame: UIViewController {
         
 
         self.levelSetup()
-        addEffect()
+        
     
     }
     
@@ -313,15 +313,15 @@ class ViewControllerGame: UIViewController {
         self.labelWidth = self.view.bounds.width / 3
         self.labelHeight = 40
         
-        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height))
-        self.leftBar?.backgroundColor = UIColor.clearColor()
+//        self.leftBar = UIView(frame: CGRectMake(self.labelWidth!, -1, 3, self.view.bounds.height))
+//        self.leftBar?.backgroundColor = UIColor.clearColor()
         self.removableViews.append(self.leftBar!)
-        self.view.addSubview(self.leftBar!)
+        //self.view.addSubview(self.leftBar!)
         
-        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height))
-        self.rightBar?.backgroundColor = UIColor.clearColor()
+//        self.rightBar = UIView(frame: CGRectMake(self.view.bounds.width - self.labelWidth!, -1, 3, self.view.bounds.height))
+//        self.rightBar?.backgroundColor = UIColor.clearColor()
         self.removableViews.append(self.rightBar!)
-        self.view.addSubview(self.rightBar!)
+        //self.view.addSubview(self.rightBar!)
         
         let pointX : CGFloat = view.bounds.width / 2 + self.leftBar!.bounds.width / 2 - (labelWidth! / 2)
         var pointY : CGFloat = 120
